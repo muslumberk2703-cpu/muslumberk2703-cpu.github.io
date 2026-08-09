@@ -1,0 +1,93 @@
+====================================================================
+  FIVESTAR PROPERTY SCAN - WAS AUF DEN SERVER MUSS
+  Stand: 09.08.2026
+====================================================================
+
+DAS HIER IST DER AKTUELLE ORDNER. Alles, was in diesem Ordner liegt,
+gehoert in das Wurzelverzeichnis deines Webspace (dort, wo jetzt
+schon index.html liegt - meist "public_html", "httpdocs" oder "www").
+
+Andere Ordner im Projekt bitte IGNORIEREN, die sind veraltet:
+  - ZUM-HOCHLADEN\        (alter Handexport)
+  - 1-SEITE.zip           (alt)
+  - HOCHLADEN\            (Zwischenstand, identisch mit diesem hier)
+
+
+--------------------------------------------------------------------
+SCHRITT 1 - DRINGEND, DAUERT 30 SEKUNDEN
+--------------------------------------------------------------------
+
+PROBLEM: Wer www.fivepropscan.com aufruft, landet sofort auf der
+ARABISCHEN Seite. Grund: In der Wurzel deines Servers liegt die
+falsche Datei. Dort liegen 80 KB arabische Immobilienseite statt
+deiner 8 KB grossen Sprachauswahl.
+
+LOESUNG: Lade aus diesem Ordner NUR die Datei
+
+    index.html   (8.143 Bytes)
+
+in das Wurzelverzeichnis und ueberschreibe die vorhandene.
+
+DANACH PRUEFEN:
+  www.fivepropscan.com/            -> muss auf /de/ springen
+  www.fivepropscan.com/?choose=1   -> muss die 5 Sprachkarten zeigen
+
+Diese eine Datei enthaelt keine Geraete- oder Leistungsangaben.
+Du kannst sie also sofort hochladen, ohne dass sonst etwas
+durcheinandergeraet.
+
+
+--------------------------------------------------------------------
+SCHRITT 2 - DER GANZE REST
+--------------------------------------------------------------------
+
+Auf der Live-Seite stehen aktuell NOCH die alten Falschangaben:
+
+    "3DMakerPro Raven"        Geraet, das du nicht hast
+    "LiDAR, bis 50 m"         kann der Matterport Pro2 nicht
+    "2 cm auf 10 m"           falsche Genauigkeit
+    "auch draussen"           Pro2 misst nur innen
+    "Flugzeit ueber 100 Min"  real 45 Min je Akku
+    "CAD-Datei / Punktwolke"  wird nicht mehr angeboten
+    "Architekten, Planer"     Zielgruppe gestrichen
+
+Alles das ist in diesem Ordner korrigiert - in allen fuenf Sprachen.
+
+Lade dazu den KOMPLETTEN Inhalt dieses Ordners hoch und ueberschreibe
+alles. Wichtig: auch die Ordner css\ und js\ mitnehmen, sonst greift
+die neue Versionsnummer nicht und Besucher bekommen alte Dateien aus
+dem Browser-Zwischenspeicher.
+
+
+--------------------------------------------------------------------
+EIN PUNKT, DEN DU VORHER WISSEN MUSST
+--------------------------------------------------------------------
+
+In der Waermebild-Sektion steht jetzt die Methodik
+"Ein Befund, zwei Messungen": Waermebild findet die Stelle,
+FEUCHTEMESSGERAET bestaetigt sie, Taupunkt trennt eindringendes
+Wasser von Kondensat.
+
+Das Feuchtemessgeraet (Trotec T660) ist noch nicht geliefert.
+
+  - Wenn du es bestellt hast und es in wenigen Tagen kommt:
+    hochladen ist in Ordnung. Die alten Raven-Angaben sind seit
+    Wochen online und deutlich falscher als ein paar Tage Vorgriff.
+
+  - Wenn du das nicht willst: sag Bescheid, dann nehme ich die
+    zwei Stellen raus, du laedst hoch, und wir setzen sie wieder
+    rein, sobald das Geraet da ist.
+
+
+--------------------------------------------------------------------
+NACH DEM HOCHLADEN KONTROLLIEREN
+--------------------------------------------------------------------
+
+  1. www.fivepropscan.com/          landet auf deiner Sprache
+  2. www.fivepropscan.com/?choose=1 zeigt die Sprachauswahl
+  3. Auf /de/ nach "Raven" suchen (Strg+F)  -> darf NICHT vorkommen
+  4. Beim 3D-Aufmass muss "Matterport Pro2" stehen
+  5. Alle fuenf Sprachen kurz oeffnen: /de/ /en/ /tr/ /ru/ /ar/
+  6. Bei /ar/ pruefen, dass die Zahlen richtig herum stehen
+
+====================================================================
