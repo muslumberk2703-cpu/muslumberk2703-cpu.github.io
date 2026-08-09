@@ -2101,3 +2101,64 @@ body.splash-page { display: flex; flex-direction: column; min-height: 100svh; }
   .satz { padding: 18px 14px; margin-top: 30px; }
   .hero-vertrauen { font-size: 1.02rem; }
 }
+
+/* Kopfbereich der Unterseiten. Ersetzt den Hero, muss aber denselben
+   Abstand zum fixierten Header halten. */
+.seiten-kopf {
+  padding: calc(var(--header-h) + 54px) 0 10px;
+}
+.seiten-kopf h1 {
+  font-size: clamp(1.9rem, 5vw, 3rem);
+  line-height: 1.12;
+  margin: 10px 0 16px;
+}
+@media (max-width: 720px) {
+  .seiten-kopf { padding-top: calc(var(--header-h) + 30px); }
+}
+
+/* Aktive Seite in der Navigation. Wird von main.js zur Laufzeit gesetzt,
+   weil Kopf und Fuss auf allen deutschen Seiten identisch sind. */
+.nav-links a.aktiv { color: var(--cyan); }
+.mn-link.aktiv { color: var(--cyan); }
+
+/* Wegweiser-Kacheln auf der Startseite. Die ganze Karte ist ein Link,
+   deshalb Textfarbe erben und Unterstreichung unterdruecken. */
+.kachel { display: flex; flex-direction: column; color: inherit; text-decoration: none; }
+.kachel h3 { margin-bottom: 8px; }
+.kachel p { flex: 1; }
+.kachel:hover { border-color: var(--cyan); transform: translateY(-3px); }
+.kachel-mehr {
+  display: inline-flex; align-items: center; gap: 8px;
+  margin-top: 16px; font-weight: 500; color: var(--cyan); font-size: 0.95rem;
+}
+.kachel-mehr svg { width: 18px; height: 18px; }
+.kachel:hover .kachel-mehr svg { transform: translateX(3px); }
+.kachel-mehr svg { transition: transform 0.2s; }
+
+/* Geraeteband auf der Startseite. Bewusst ohne technische Datenblaetter -
+   der Besucher soll begreifen, dass hier gemessen und nicht geschaetzt wird. */
+.geraete-band { gap: 16px; }
+.geraet-karte p { font-size: 0.95rem; line-height: 1.7; }
+.g-name {
+  font-family: var(--font-display);
+  font-size: 1.02rem; font-weight: 500;
+  color: var(--cyan);
+  margin-bottom: 10px;
+}
+@media (max-width: 980px) {
+  .geraete-band { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 560px) {
+  .geraete-band { grid-template-columns: 1fr; }
+}
+
+/* "Was das fuer Sie bedeutet" auf der Ueber-mich-Seite. Uebersetzt die
+   Berufsbiografie in drei Nutzen statt sie als Gewerkeliste zu zeigen. */
+.koennen { margin-top: 40px; }
+.koennen .eyebrow { display: block; text-align: center; margin-bottom: 18px; }
+.koennen .card h3 { font-size: 1.05rem; margin-bottom: 10px; }
+.koennen .card p { font-size: 0.95rem; line-height: 1.75; }
+.koennen-intro {
+  max-width: 760px; margin: 0 auto 26px; text-align: center;
+  font-size: 1.02rem; line-height: 1.8; color: var(--muted);
+}

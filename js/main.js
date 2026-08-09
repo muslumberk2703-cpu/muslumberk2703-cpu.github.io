@@ -99,6 +99,34 @@ var CPC_FOTOS = {
     }
   }
 
+  /* ---------- Aktive Seite in der Navigation markieren ----------
+     Kopf und Fuss sind auf allen deutschen Seiten identisch (sie werden
+     von bauen.ps1 gespiegelt). Welcher Punkt aktiv ist, kann deshalb
+     nicht im HTML stehen - das entscheidet sich hier zur Laufzeit. */
+  (function () {
+    var datei = location.pathname.split("/").pop() || "index.html";
+    document.querySelectorAll('.nav-links a, .mn-link').forEach(function (a) {
+      var href = a.getAttribute("href") || "";
+      /* Nur Links auf die Seite selbst zaehlen. "index.html#ablauf" zeigt auf
+         einen Abschnitt der Startseite und ist deshalb NICHT der aktive Punkt -
+         sonst waeren auf der Startseite vier Punkte gleichzeitig markiert. */
+      if (href.indexOf("#") !== -1) return;
+      if (href === datei) {
+        a.setAttribute("aria-current", "page");
+        a.classList.add("aktiv");
+      }
+    });
+    /* Die geteilten Bausteine verlinken absolut (index.html#kontakt), damit
+       sie auf jeder Unterseite funktionieren. Auf der Startseite selbst waere
+       das ein unnoetiger Neuaufbau - dort machen wir daraus wieder Sprungmarken. */
+    if (datei === "index.html") {
+      document.querySelectorAll('a[href^="index.html"]').forEach(function (a) {
+        var h = a.getAttribute("href");
+        a.setAttribute("href", h === "index.html" ? "#top" : h.slice("index.html".length));
+      });
+    }
+  })();
+
   /* ---------- WhatsApp / E-Mail / Telefon verdrahten ---------- */
   var waDigits = String(CPC_CONFIG.whatsapp).replace(/\D/g, "");
   var waReady = /^\d{8,15}$/.test(waDigits) && !/x/i.test(String(CPC_CONFIG.whatsapp));
@@ -648,7 +676,11 @@ var CPC_FOTOS = {
   };
   var personMehr = PERSON_MEHR[(document.documentElement.lang || "de").slice(0, 2)] || PERSON_MEHR.en;
 
-  var personText = document.querySelector(".person > div:last-child");
+  /* Auf der Ueber-mich-Seite NICHT einklappen: Dort ist genau dieser Text
+     der Grund, warum der Besucher die Seite geoeffnet hat. Auf allen anderen
+     Seiten bleibt die Kurzfassung mit Aufklapper richtig. */
+  var istUeberSeite = /(^|\/)ueber\.html$/.test(location.pathname);
+  var personText = istUeberSeite ? null : document.querySelector(".person > div:last-child");
   if (personText && !personText.querySelector(".person-klapp")) {
     var absaetze = personText.querySelectorAll("p:not(.person-claim)");
     if (absaetze.length > 1) {
