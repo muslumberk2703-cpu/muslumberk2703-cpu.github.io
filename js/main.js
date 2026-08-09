@@ -42,7 +42,7 @@ var CPC_CONFIG = {
   phoneTR: "+90 568 687 86 86",
   email: "info@fivepropscan.com",
   web3formsKey: "6db0d6c8-1441-4b84-977a-54483c6b6f3d",
-  musterbericht: ""
+  musterbericht: "../BEISPIELBERICHT.pdf"
 };
 
 /* =========================================================
