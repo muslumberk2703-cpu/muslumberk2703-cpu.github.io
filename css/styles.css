@@ -2162,3 +2162,76 @@ body.splash-page { display: flex; flex-direction: column; min-height: 100svh; }
   max-width: 760px; margin: 0 auto 26px; text-align: center;
   font-size: 1.02rem; line-height: 1.8; color: var(--muted);
 }
+
+/* =========================================================
+   ABSTAENDE UND LEISTUNGSBLOECKE (10.08.2026)
+
+   Vorher: .section hatte 104px oben und unten, zwischen zwei
+   Abschnitten also 208px Leerraum. Und die Leistungsbloecke
+   standen auf align-items:center - dadurch schwebte das Video
+   mittig neben einer bis zu 1500px hohen Textspalte, mal
+   weiter oben, mal weiter unten. Das wirkte unruhig.
+   ========================================================= */
+
+.section { padding: 76px 0; }
+.section-head { margin-bottom: 42px; }
+
+/* Beide Spalten beginnen jetzt auf derselben Hoehe. Das allein
+   nimmt den Bloecken die Unruhe. */
+.service {
+  gap: 50px;
+  padding: 54px 0;
+  align-items: start;
+}
+
+/* Das Visual laeuft beim Lesen mit, statt am oberen Rand zu
+   verschwinden. Nur ab Zweispaltigkeit - einspaltig waere es
+   stoerend. */
+@media (min-width: 1081px) {
+  .service-visual {
+    position: sticky;
+    top: calc(var(--header-h) + 22px);
+  }
+}
+
+/* Die Illustration im letzten Block war nur halb so hoch wie
+   die Videos daneben. */
+.device-frame { min-height: 420px; }
+
+/* Feinabstimmung der neuen Bausteine, damit sie im gleichen
+   Raster sitzen wie der Rest. */
+.satz { margin-top: 34px; padding: 20px 26px; }
+.prosa p { margin-bottom: 16px; }
+.mitte { margin-top: 28px; }
+.koennen { margin-top: 34px; }
+.zwischen-titel { margin: 44px 0 6px; }
+
+@media (max-width: 1080px) {
+  .section { padding: 62px 0; }
+  .section-head { margin-bottom: 34px; }
+  .service { padding: 42px 0; gap: 34px; }
+}
+@media (max-width: 720px) {
+  .section { padding: 52px 0; }
+  .section-head { margin-bottom: 28px; }
+  .service { padding: 34px 0; gap: 26px; }
+  .device-frame { min-height: 300px; }
+}
+
+/* Bildunterschriften der Leistungsbloecke auf eine Linie bringen.
+   Sie waren zwischen 0 und 453 Pixel hoch - der Waermebild-Block
+   stach dadurch heraus und die Reihe wirkte unruhig. */
+.wb-video figcaption {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  min-height: 208px;
+}
+.wb-video figcaption b { order: 1; }
+.wb-video figcaption em { order: 2; }
+.wb-video figcaption span { order: 3; flex: 1; }
+.wb-video figcaption small { order: 4; }
+
+@media (max-width: 720px) {
+  .wb-video figcaption { min-height: 0; }
+}
