@@ -205,7 +205,6 @@
           <button class="pkg" data-pkg="komplett"><b>Komplett-Check</b><span>ab 299 € · + 3D &amp; Maße</span></button>
           <button class="pkg" data-pkg="premium"><b>Premium 360°</b><span>ab 429 € · + Drohne &amp; Rundgang</span></button>
           <button class="pkg" data-pkg="makler"><b>Makler-Paket</b><span>ab 249 € · Rundgang + Grundriss</span></button>
-          <button class="pkg" data-pkg="planer"><b>Planer-Paket</b><span>ab 299 € · + CAD &amp; Punktwolke</span></button>
           <button class="pkg" data-pkg="frei"><b>Frei zusammenstellen</b><span>nur Einzelleistungen</span></button>
         </div>
         <div class="hint">Paketpreis gilt bis zur jeweiligen Fläche; darüber greift automatisch die Staffel. „Frei" rechnet die Einzelpreise zusammen.</div>
@@ -324,9 +323,9 @@ var KM_FREI     = 20;      // erste x km inklusive (einfache Strecke)
 
 var LEISTUNGEN = [
   { gr:"3D-Scan & Aufmaß", items:[
-    { id:"l3d",   nm:"LiDAR-Scan komplettes Objekt", sub:"alle Räume, innen + außen", eur:149, min_ort:45, min_ber:30 },
+    { id:"l3d",   nm:"3D-Scan Innenräume (Matterport)", sub:"alle Räume innen, Grundriss & begehbares Modell", eur:149, min_ort:45, min_ber:30 },
     { id:"lplan", nm:"Maßhaltiger Grundriss aus dem Scan", sub:"Raummaße & Fläche je Zimmer", eur:59, min_ort:0, min_ber:35 },
-    { id:"ltour", nm:"360, sub:"Link zum Einbetten, 12 Monate online", eur:49, min_ort:0, min_ber:20 },
+    { id:"ltour", nm:"360°-Rundgang", sub:"Link zum Einbetten, 6 Monate online", eur:49, min_ort:0, min_ber:20 },
     { id:"lqm",   nm:"m²-Abgleich mit Kaufvertrag/Exposé", sub:"schriftliche Gegenüberstellung", eur:39, min_ort:10, min_ber:25 },
     { id:"leben", nm:"Ebenheit & Lot (Laser-Stichproben)", sub:"Estrich, Flucht, Winkel", eur:49, min_ort:20, min_ber:20 },
     { id:"lgef",  nm:"Gefälle Bad / Terrasse / Balkon", sub:"Neigungsmessung, Entwässerung", eur:39, min_ort:20, min_ber:15 },
@@ -348,10 +347,9 @@ var LEISTUNGEN = [
     { id:"lkurz", nm:"Kurzbericht PDF", sub:"Zusammenfassung + Fotos", eur:0, min_ort:0, min_ber:45 },
     { id:"lvoll", nm:"Ausführlicher Bericht + Mängelliste", sub:"priorisiert, mit Empfehlungen", eur:49, min_ort:0, min_ber:60 },
     { id:"lcall", nm:"Bericht-Besprechung (Videocall)", sub:"30–45 Min. mit dem Kunden", eur:49, min_ort:0, min_ber:40 },
-    { id:"lbau",  nm:"Baubegleitung – pro Termin", sub:"Fotos, 360, eur:149, min_ort:60, min_ber:45 }
+    { id:"lbau",  nm:"Baubegleitung – pro Termin", sub:"Fotos, 360°-Rundgang & Kurzbericht", eur:149, min_ort:60, min_ber:45 }
   ]},
   { gr:"Geschäftskunden (B2B)", items:[
-    { id:"bcad",  nm:"CAD-Export & Punktwolke", sub:"für Architekt / Planer", eur:99, min_ort:0, min_ber:40 },
     { id:"bdoku", nm:"Zustandsdokumentation Gewerbe", sub:"Übergabe / Versicherung, mit Stichtag", eur:129, min_ort:40, min_ber:45 },
     { id:"bexpo", nm:"Vermarktungs-Aufbereitung", sub:"Einbettung, Branding, Portal-Formate", eur:79, min_ort:0, min_ber:45 }
   ]}
@@ -362,7 +360,6 @@ var PAKETE = {
   komplett: { nm:"Komplett-Check", eur:299, bis:130, ids:["l3d","lplan","lqm","leben","lgef","lwb","lel","lfen","lfoto","lvoll"] },
   premium:  { nm:"Premium 360°",   eur:429, bis:200, ids:["l3d","lplan","ltour","lqm","leben","lgef","laus","lwb","lel","lfen","ldr","lvid","lfoto","lvoll","lcall"] },
   makler:   { nm:"Makler-Paket",   eur:249, bis:130, ids:["l3d","lplan","ltour","lfoto","bexpo"] },
-  planer:   { nm:"Planer-Paket",   eur:299, bis:130, ids:["l3d","lplan","bcad","lfoto"] },
   frei:     { nm:"Individuell",    eur:0,   bis:80,  ids:[] }
 };
 

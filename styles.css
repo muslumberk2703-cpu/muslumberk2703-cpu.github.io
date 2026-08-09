@@ -1,906 +1,1969 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fivestar Property Scan – فحص مستقل للعقارات في أنطاليا وألانيا | مسح ثلاثي الأبعاد، تصوير حراري ودرون</title>
-  <meta name="description" content="فحص فني مستقل للعقارات في أنطاليا وألانيا وجميع أنحاء تركيا: مسح ثلاثي الأبعاد مع جولة افتراضية، تصوير حراري، فحص بالدرون ومتابعة البناء. وأيضاً للوسطاء والمهندسين والشركات. تقرير رقمي خلال 48 ساعة – الموقع بخمس لغات.">
-  <meta name="theme-color" content="#0b1119">
-  <link rel="canonical" href="https://www.fivepropscan.com/ar/">
-  <link rel="alternate" hreflang="de" href="https://www.fivepropscan.com/de/">
-  <link rel="alternate" hreflang="en" href="https://www.fivepropscan.com/en/">
-  <link rel="alternate" hreflang="tr" href="https://www.fivepropscan.com/tr/">
-  <link rel="alternate" hreflang="ru" href="https://www.fivepropscan.com/ru/">
-  <link rel="alternate" hreflang="ar" href="https://www.fivepropscan.com/ar/">
-  <link rel="alternate" hreflang="x-default" href="https://www.fivepropscan.com/">
-  <meta property="og:type" content="website">
-  <meta property="og:site_name" content="Fivestar Property Scan">
-  <meta property="og:title" content="Fivestar Property Scan – اعرف قبل أن تشتري.">
-  <meta property="og:description" content="فحص فني للعقارات في أنطاليا وألانيا: مسح ثلاثي الأبعاد، تصوير حراري، درون ومتابعة البناء. تقرير خلال 48 ساعة.">
-  <meta property="og:locale" content="ar_AR">
-  <meta property="og:url" content="https://www.fivepropscan.com/ar/">
-  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
-  <link rel="preload" href="../fonts/vazirmatn-arabic.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="../fonts/vazirmatn-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="../css/styles.css">
-  <script defer src="../js/main.js"></script>
-</head>
-<body data-wa-text="مرحباً Fivestar Property Scan! أرغب في إجراء فحص لعقار في أنطاليا/ألانيا. هل يمكنكم إرسال عرض سعر؟" data-mail-subject="طلب فحص عقار – Fivestar Property Scan">
+/* ==========================================================================
+   Fivestar Property Scan (FPS) — Design-System "Anthrazit & Gold"
+   Statisch, ohne Build-Tools. Gilt für Splash + alle Sprachversionen.
+   Sprachen: de, en, tr, ru, ar (ar = RTL)
+   Hinweis: Auf dem Handy greift am Ende der Datei ein eigener Block, der
+   Hintergrund, Schrift und Farbverläufe aufhellt (Lesbarkeit bei Sonne).
+   ========================================================================== */
 
-  <svg aria-hidden="true" style="position:absolute;width:0;height:0" focusable="false">
-    <defs>
-      <linearGradient id="ig" x1="0" y1="0" x2="1" y2="1">
-        <stop offset="0" stop-color="#22D3EE"/>
-        <stop offset=".55" stop-color="#8B5CF6"/>
-        <stop offset="1" stop-color="#FB923C"/>
-      </linearGradient>
-      <linearGradient id="goldg" x1="0" y1="1" x2="1" y2="0">
-        <stop offset="0" stop-color="#8A6428"/>
-        <stop offset=".36" stop-color="#D6A952"/>
-        <stop offset=".62" stop-color="#F8DDA7"/>
-        <stop offset="1" stop-color="#C08A3E"/>
-      </linearGradient>
-      <path id="star" d="M11 2.5l2.3 4.7 5.2.75-3.75 3.65.9 5.15L11 14.3l-4.65 2.45.9-5.15L3.5 7.95l5.2-.75z"/>
-      <path id="ic-check" d="M5 13l4 4 10-11" stroke="url(#ig)" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-      <path id="ic-wa" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.297-.497.1-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/>
-    </defs>
-  </svg>
+/* ---------- Fonts ---------- */
+/* Playfair Display — Wortmarke "CPC" (Didone, wie Visitenkarte) */
+@font-face {
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-weight: 400 900;
+  font-display: swap;
+  src: url("../fonts/playfair-latin.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-weight: 400 900;
+  font-display: swap;
+  src: url("../fonts/playfair-latin-ext.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-weight: 400 900;
+  font-display: swap;
+  src: url("../fonts/playfair-cyrillic.woff2") format("woff2");
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
 
-  <div class="bg-fx" aria-hidden="true"></div>
-  <div class="bg-grid" aria-hidden="true"></div>
+/* Space Grotesk — Überschriften (latin) */
+@font-face {
+  font-family: "Space Grotesk";
+  font-style: normal;
+  font-weight: 300 700;
+  font-display: swap;
+  src: url("../fonts/space-grotesk-latin.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Space Grotesk";
+  font-style: normal;
+  font-weight: 300 700;
+  font-display: swap;
+  src: url("../fonts/space-grotesk-latin-ext.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
 
-  <!-- ================= الرأس ================= -->
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="logo" href="#top" aria-label="Fivestar Property Scan – العودة إلى الأعلى">
-        <img class="logo-icon" src="../images/logo-fps-mark.png" alt="">
-        <span class="logo-text"><b>FIVESTAR</b><span>Property Scan</span></span>
-      </a>
-      <nav class="nav-links" aria-label="القائمة الرئيسية">
-        <a href="#services">الخدمات</a>
-        <a href="#equipment">المعدات</a>
-        <a href="#business">للشركات</a>
-        <a href="#process">آلية العمل</a>
-        <a href="#packages">الباقات</a>
-        <a href="#faq">الأسئلة</a>
-        <a href="#contact">التواصل</a>
-      </nav>
-      <div class="lang-dd">
-        <button class="lang-btn" aria-expanded="false" aria-label="اختر لغتك">
-          <svg class="globe" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.7" fill="none"/><path d="M3 12h18M12 3c2.5 2.4 3.8 5.4 3.8 9s-1.3 6.6-3.8 9c-2.5-2.4-3.8-5.4-3.8-9S9.5 5.4 12 3Z" stroke="currentColor" stroke-width="1.7" fill="none"/></svg>
-          AR
-          <svg class="caret" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6" stroke="currentColor" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </button>
-        <div class="lang-menu">
-          <a href="../de/" data-lang="de" lang="de" dir="ltr"><span class="lc">DE</span><span class="ln">Deutsch</span></a>
-          <a href="../en/" data-lang="en" lang="en" dir="ltr"><span class="lc">EN</span><span class="ln">English</span></a>
-          <a href="../tr/" data-lang="tr" lang="tr" dir="ltr"><span class="lc">TR</span><span class="ln">Türkçe</span></a>
-          <a href="../ru/" data-lang="ru" lang="ru" dir="ltr"><span class="lc">RU</span><span class="ln">Русский</span></a>
-          <a class="active" href="../ar/" data-lang="ar" aria-current="page"><span class="lc">AR</span><span class="ln">العربية</span></a>
-        </div>
-      </div>
-      <a class="btn btn-wa btn-sm header-cta" data-wa href="#contact">
-        <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><use href="#ic-wa"/></svg>
-        واتساب
-      </a>
-      <button class="burger" aria-label="فتح القائمة" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-      <div class="progress-bar" aria-hidden="true"></div>
-    </div>
-  </header>
-  <nav class="mobile-nav" aria-label="قائمة الجوال">
-    <a class="mn-link" href="#services">الخدمات</a>
-    <a class="mn-link" href="#equipment">المعدات</a>
-    <a class="mn-link" href="#business">للشركات</a>
-    <a class="mn-link" href="#process">آلية العمل</a>
-    <a class="mn-link" href="#packages">الباقات</a>
-    <a class="mn-link" href="#faq">الأسئلة</a>
-    <a class="mn-link" href="#contact">التواصل</a>
-    <div class="mn-extra">
-      <div class="mn-langs">
-        <a href="../de/" data-lang="de">DE</a>
-        <a href="../en/" data-lang="en">EN</a>
-        <a href="../tr/" data-lang="tr">TR</a>
-        <a href="../ru/" data-lang="ru">RU</a>
-        <a class="active" href="../ar/" data-lang="ar">AR</a>
-      </div>
-      <a class="btn btn-wa btn-sm" data-wa href="#contact">واتساب</a>
-    </div>
-  </nav>
+/* Manrope — Überschriften kyrillisch (RU) */
+@font-face {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 200 800;
+  font-display: swap;
+  src: url("../fonts/manrope-cyrillic.woff2") format("woff2");
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 200 800;
+  font-display: swap;
+  src: url("../fonts/manrope-latin.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 200 800;
+  font-display: swap;
+  src: url("../fonts/manrope-latin-ext.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
 
-  <main id="top">
+/* Inter — Fließtext (latin + kyrillisch) */
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("../fonts/inter-latin.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("../fonts/inter-latin-ext.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("../fonts/inter-cyrillic.woff2") format("woff2");
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
 
-    <!-- ================= القسم الرئيسي ================= -->
-    <section class="hero">
-      <div class="container">
-        <div class="hero-grid">
-          <div>
-            <span class="hero-badge"><span class="dot"></span> أنطاليا · ألانيا · فحص فني للعقارات</span>
-            <h1>اعرف قبل أن <span class="grad-text">تشتري</span>.</h1>
-            <p class="lead">فحص مستقل للعقارات في أنطاليا وألانيا وجميع أنحاء تركيا – يجمع بين المسح ثلاثي الأبعاد والتصوير الحراري والفحص بالدرون. نكتشف العيوب الخفية قبل أن توقّع.</p>
-            <div class="hero-cta">
-              <a class="btn btn-wa btn-lg" data-wa href="#contact">
-                <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><use href="#ic-wa"/></svg>
-                استشارة أولية مجانية
-              </a>
-              <a class="btn btn-ghost btn-lg" href="#services">تصفح الخدمات</a>
-            </div>
-            <ul class="trust-chips">
-              <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> تقرير رقمي خلال <span class="ltr">48</span> ساعة</li>
-              <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> الموقع بخمس لغات</li>
-              <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> استقلالية تامة <span class="ltr">100 %</span></li>
-              <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> أنطاليا وألانيا والمناطق المحيطة</li>
-            </ul>
-          </div>
-          <div class="scan-card" aria-hidden="true">
-            <img class="scan-house" src="../images/hero-house.svg" alt="">
-            <span class="scan-tag"><span class="rec"></span> مسح مباشر</span>
-            <span class="scan-corner tl"></span><span class="scan-corner tr"></span>
-            <span class="scan-corner bl"></span><span class="scan-corner br"></span>
-            <span class="m-chip c1"><span class="ind"></span> <span class="ltr">98.2 m²</span> تم القياس</span>
-            <span class="m-chip c2"><span class="ind"></span> <span class="ltr">ΔT 4.2 °C</span> – جسر حراري</span>
-            <span class="m-chip c3"><span class="ind"></span> ميل <span class="ltr">1.8 %</span> ✓</span>
-            <span class="scanline"></span>
-          </div>
-        </div>
-      </div>
-      <span class="scroll-hint" aria-hidden="true"></span>
-    </section>
+/* Vazirmatn — Arabisch */
+@font-face {
+  font-family: "Vazirmatn";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("../fonts/vazirmatn-arabic.woff2") format("woff2");
+  unicode-range: U+0600-06FF, U+0750-077F, U+0870-088E, U+0890-0891, U+0897-08E1, U+08E3-08FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE70-FE74, U+FE76-FEFC;
+}
+@font-face {
+  font-family: "Vazirmatn";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("../fonts/vazirmatn-latin.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
 
-    <!-- ================= لماذا FPS ================= -->
-    <section class="section" id="why">
-      <div class="container">
-        <div class="section-head center reveal">
-          <span class="eyebrow">لماذا FPS</span>
-          <h2>شاهد ما لا تراه العين</h2>
-          <p class="lead">سوق العقارات في الريفييرا التركية ينمو بسرعة – ومعه خطر شراء مفاجآت مكلفة. الطلاء الجديد يخفي الرطوبة، والصور الجميلة تخفي الجدران المائلة. نحن نقدّم لك بيانات قياس موضوعية بدلاً من وعود البيع.</p>
-        </div>
-        <div class="grid-3">
-          <div class="card card-top reveal">
-            <div class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.5c3.5 3.8 5.5 6.7 5.5 9.3a5.5 5.5 0 1 1-11 0c0-2.6 2-5.5 5.5-9.3Z" stroke="url(#ig)" stroke-width="1.9" fill="none" stroke-linejoin="round"/><path d="M9.5 13.5a2.5 2.5 0 0 0 2.5 2.5" stroke="url(#ig)" stroke-width="1.9" fill="none" stroke-linecap="round"/></svg></div>
-            <h3>عيوب خفية</h3>
-            <p>رطوبة خلف الجدار، أنابيب مسرّبة، عزل ناقص: لا تُرى بالعين المجردة – لكنها تظهر فوراً في الصورة الحرارية.</p>
-          </div>
-          <div class="card card-top reveal" style="--d:.1s">
-            <div class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 17.5 17.5 3.5l3 3L6.5 20.5h-3v-3Z" stroke="url(#ig)" stroke-width="1.9" fill="none" stroke-linejoin="round"/><path d="m7 14 1.6 1.6M10 11l1.6 1.6M13 8l1.6 1.6" stroke="url(#ig)" stroke-width="1.9" stroke-linecap="round"/></svg></div>
-            <h3>فروقات في المساحة</h3>
-            <p>المساحة التي تدفع ثمنها ليست دائماً المساحة المبنية. نعيد القياس رقمياً ونقارنه بالإعلان وبالعقد – بشكل موثّق.</p>
-          </div>
-          <div class="card card-top reveal" style="--d:.2s">
-            <div class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 4.5 6v5c0 4.6 3.2 8 7.5 10 4.3-2 7.5-5.4 7.5-10V6L12 3Z" stroke="url(#ig)" stroke-width="1.9" fill="none" stroke-linejoin="round"/><path d="m8.8 11.8 2.3 2.3 4.2-4.6" stroke="url(#ig)" stroke-width="1.9" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-            <h3>جودة البناء الجديد</h3>
-            <p>جدران غير شاقولية، ميل خاطئ، عزل مائي ضعيف: نفحص مبناك الجديد قبل أن توقّع محضر التسليم.</p>
-          </div>
-        </div>
-        <div class="stats-band reveal">
-          <div class="stats-grid">
-            <div class="stat"><span class="stat-num ltr">±1.5 mm</span><span class="stat-label">دقة قياسات التحقّق لدينا</span></div>
-            <div class="stat"><span class="stat-num ltr">49,152</span><span class="stat-label">نقطة قياس في كل صورة حرارية</span></div>
-            <div class="stat"><span class="stat-num"><span data-count="48">0</span>&nbsp;ساعة</span><span class="stat-label">حتى تسليم تقريرك الرقمي</span></div>
-            <div class="stat"><span class="stat-num"><span data-count="5">0</span></span><span class="stat-label">لغات: <span class="ltr">AR·EN·DE·TR·RU</span></span></div>
-          </div>
-        </div>
-      </div>
-    </section>
+/* ---------- Variablen ---------- */
+:root {
+  --bg: #0B1119;          /* Anthrazit statt fast Schwarz */
+  --bg2: #111A26;
+  --panel: rgba(17, 26, 38, 0.7);
+  --line: rgba(148, 163, 184, 0.18);
+  --line-soft: rgba(148, 163, 184, 0.10);
+  --line-gold: rgba(214, 169, 82, 0.35);
+  --text: #E8EFF9;
+  --muted: #B6C6DA;   /* Fliesstext auf dunklem Grund - bewusst hell gehalten */
+  --cyan: #22D3EE;
+  --violet: #8B5CF6;
+  --orange: #FB923C;
+  --gold: #D6A952;
+  --gold-light: #F8DDA7;
+  --gold-deep: #8A6428;
+  --wa: #25d366;
+  --grad: linear-gradient(120deg, #22D3EE, #8B5CF6 52%, #FB923C);
+  --grad-soft: linear-gradient(120deg, #22D3EE, #8B5CF6 52%, #FB923C);
+  --gold-grad: linear-gradient(120deg, #8A6428, #D6A952 36%, #F8DDA7 62%, #C08A3E);
+  --font-display: "Space Grotesk", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-body: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mark: "Playfair Display", Georgia, "Times New Roman", serif;
+  --radius: 16px;
+  --radius-sm: 11px;
+  --shadow: 0 24px 70px rgba(2, 6, 12, 0.6);
+  --shadow-lg: 0 30px 80px rgba(2, 6, 12, 0.7);
+  --header-h: 86px;
+  --container: 1180px;
+  --ease: cubic-bezier(0.22, 0.7, 0.25, 1);
+}
 
-    <!-- ================= الخدمات ================= -->
-    <section class="section" id="services">
-      <div class="container">
-        <div class="section-head center reveal">
-          <span class="eyebrow">الخدمات</span>
-          <h2>خمس خدمات. صورة كاملة.</h2>
-          <p class="lead">المسح ثلاثي الأبعاد للأرقام الموثوقة، والتصوير الحراري لما هو خفي، والدرون لكل ما يصعب الوصول إليه، ومتابعة البناء حتى تسليم المفاتيح – والتوأم الرقمي الذي يجعل عقارك قابلاً للتجوّل من أي مكان.</p>
-        </div>
+/* Sprachspezifische Schriften */
+html[lang="ru"] { --font-display: "Manrope", system-ui, sans-serif; }
+html[lang="ar"] {
+  --font-display: "Vazirmatn", system-ui, sans-serif;
+  --font-body: "Vazirmatn", system-ui, sans-serif;
+}
 
-        <!-- المسح ثلاثي الأبعاد -->
-        <article class="service">
-          <div class="service-visual reveal">
-            <div class="device-frame">
-              <span class="df-num">01</span>
-              <img src="../images/equipment-scan.svg" alt="رسم توضيحي لنظام المسح ثلاثي الأبعاد لدينا">
-            </div>
-          </div>
-          <div class="reveal" style="--d:.1s">
-            <span class="service-tag">المسح ثلاثي الأبعاد</span>
-            <h3>المسح ثلاثي الأبعاد وفحص الهندسة</h3>
-            <p class="desc">نسجّل العقار بالكامل في ثلاثة أبعاد ونستخرج منه الأرقام الموثوقة: المساحة الفعلية، ومخطط بمقياس رسم صحيح، وارتفاعات الأسقف. أما المقاسات الحرجة فنتحقق منها إضافياً بالليزر بدقة المليمتر.</p>
-            <div class="feature-grid">
-              <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> قياس رقمي للمساحة والمخطط – مقارنة الأمتار المربعة بالإعلان والعقد</div>
-              <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> مخطط بمقياس رسم صحيح مع أبعاد الغرف وارتفاع الأسقف ومساحة كل غرفة</div>
-              <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> قياسات تحقّق دقيقة بالليزر – بدقة <span class="ltr">±1.5 mm</span></div>
-              <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> قياس الميل في التراسات والشرفات وحمامات الاستحمام – هل يصرّف الماء بشكل صحيح؟</div>
-              <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> المداخل والمنحدرات والأدراج: الميل وأبعاد الدرجات</div>
-              <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> فحص الشاقولية والاستقامة والاستواء في الجدران والأرضيات</div>
-            </div>
-            <details class="mehr">
-              <summary>عرض كل الخدمات</summary>
-              <div class="feature-grid">
-              <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> أخذ المقاسات للمطبخ والأثاث والتجديد – مباشرة من النموذج ثلاثي الأبعاد</div>
-              <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> الأبواب والنوافذ: مقاسات الفتحات للاستبدال والتعديل</div>
-              <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> تصدير كمخطط أو سحابة نقاط أو ملف <span class="ltr">CAD</span> لمهندسك</div>
-              <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> توثيق جميع القياسات في التقرير</div>
-              </div>
-            </details>
-            <p class="service-note"><b>حالة نموذجية:</b> التحقق من المساحة الفعلية قبل التوقيع – في الريفييرا التركية يتحوّل فرق بضعة أمتار مربعة بسرعة إلى مبلغ من خمسة أرقام.</p>
-          </div>
-        </article>
+/* ---------- Reset / Basis ---------- */
+*, *::before, *::after { box-sizing: border-box; }
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--header-h) + 14px);
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: 16.5px;
+  line-height: 1.65;
+  color: var(--text);
+  background: var(--bg);
+  overflow-x: hidden;
+}
 
-        <!-- التصوير الحراري -->
-        <article class="service flip">
-          <div class="service-visual reveal">
-            <div class="device-frame">
-              <span class="df-num">02</span>
-              <img src="../images/equipment-thermal.svg" alt="رسم توضيحي لكاميرا التصوير الحراري لدينا">
-            </div>
-          </div>
-          <div class="reveal" style="--d:.1s">
-            <span class="service-tag">تصوير حراري وأشعة تحت حمراء</span>
-            <h3>الفحص بالكاميرا الحرارية</h3>
-            <p class="desc">تكشف كاميرتنا الحرارية الاحترافية ما يجري خلف القصارة والبلاط والطلاء الجديد: الرطوبة والتسربات ونقص العزل والتحميل الزائد على الكهرباء – دون أي هدم ودون فتح جدار واحد.</p>
-            <div class="feature-grid">
-              <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> كشف التسربات: تحديد مواقع الأنابيب المكسورة والمسرّبة</div>
-              <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> تتبّع الرطوبة في الجدران والأسقف والأرضيات</div>
-              <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> تحديد مناطق خطر العفن قبل أن تصبح مرئية</div>
-              <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> فحص العزل: الفجوات وفقدان الحرارة</div>
-              <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> الجسور الحرارية في الواجهات والأسقف وصناديق الستائر</div>
-              <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> تسرّب الهواء من النوافذ والأبواب: التيارات والحشوات التالفة</div>
-            </div>
-            <details class="mehr">
-              <summary>عرض كل الخدمات</summary>
-              <div class="feature-grid">
-              <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> فحص السطح المستوي والعزل المائي</div>
-              <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> التدفئة الأرضية: إظهار مسار الأنابيب وعملها</div>
-              <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> تحديد مسار أنابيب المياه الساخنة والباردة داخل الجدران</div>
-              <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> فحص الكهرباء: المقابس ولوحة الكهرباء والوصلات المحمّاة</div>
-              <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> المكيّف والسخّان: الأداء وفقدان الطاقة</div>
-              <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> توثيق ما قبل وما بعد أعمال التجديد</div>
-              </div>
-            </details>
-            <p class="service-note"><b>معلومة مهمة:</b> طبقة طلاء جديدة تكلّف بضع مئات من اليوروهات – أما ضرر مياه لم يُلاحظ فيكلّف أضعاف ذلك بمئات المرات. الصورة الحرارية تُظهر الحقيقة تحت الطلاء.</p>
-          </div>
-        </article>
+/* ---------- Kein seitliches Verrutschen auf dem Handy ----------
+   Grid- und Flex-Kinder haben von Haus aus min-width:auto und können
+   dadurch nicht schmaler werden als ihr breitester Inhalt (z. B. ein
+   Button mit nowrap oder eine lange E-Mail-Adresse). Das sprengt auf
+   schmalen Displays die Seitenbreite. */
+.hero-grid > *, .contact-grid > *, .price-grid > *, .about-grid > *,
+.grid-3 > *, .grid-4 > *, .grid-5 > *, .steps > *, .service > *,
+.footer-grid > *, .form-grid > *, .lang-cards > * { min-width: 0; }
 
-        <!-- الدرون -->
-        <article class="service">
-          <div class="service-visual reveal">
-            <div class="device-frame">
-              <span class="df-num">03</span>
-              <img src="../images/equipment-drone.svg" alt="رسم توضيحي لطائرة الدرون الخاصة بالفحص">
-            </div>
-          </div>
-          <div class="reveal" style="--d:.1s">
-            <span class="service-tag">فحص جوي بدقة <span class="ltr">4K</span></span>
-            <h3>الفحص الخارجي بالدرون</h3>
-            <p class="desc">السطح والواجهة والأرض من زوايا تحتاج عادة إلى سقالات أو رافعة. توفّر طائرة الدرون لدينا مواد بدقة <span class="ltr">4K</span> عالية الوضوح لتقييم الحالة – بسرعة وأمان وتوثيق كامل.</p>
-            <div class="feature-grid">
-              <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> فحص السطح: القرميد والشقوق والانزياحات والعزل المائي</div>
-              <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> فحص الواجهة: الشقوق وتلف القصارة وآثار الرطوبة والهبوط</div>
-              <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> المداخن والهوائيات والمنشآت فوق السطح</div>
-              <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> المزاريب وتصريف مياه الأمطار</div>
-              <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> الألواح الشمسية وسخانات المياه من الأعلى</div>
-              <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> نظرة عامة على الأرض والمساحات الخارجية من الجو</div>
-            </div>
-            <details class="mehr">
-              <summary>عرض كل الخدمات</summary>
-              <div class="feature-grid">
-              <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> توثيق تقدّم البناء للمشترين خارج البلاد</div>
-              <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> فيديو <span class="ltr">4K</span> وصور عالية الدقة كدليل موثّق</div>
-              <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> المناطق صعبة الوصول دون تكاليف السقالات</div>
-              <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> العقارات الكبيرة في زيارة واحدة: أكثر من <span class="ltr">100</span> دقيقة طيران</div>
-              </div>
-            </details>
-            <p class="service-note"><b>طيران مسؤول:</b> نستخدم طائرة درون بوزن إقلاع أقل من <span class="ltr">249</span> غراماً. في تركيا قواعد واضحة: يجب تسجيل الطائرة، ويُمنع الطيران قرب المطارات والموانئ والمناطق العسكرية. نتحقق من التصاريح قبل كل مهمة ولا نطير إلا حيث يُسمح بذلك.</p>
-          </div>
-        </article>
+/* Lange Wörter (E-Mail, URLs) dürfen umbrechen */
+.contact-line, .contact-line a, .modal-box p, .footer-about p,
+[data-email-text], [data-phone] { overflow-wrap: anywhere; }
 
-        <!-- التوأم الرقمي -->
-        <article class="service flip">
-          <div class="service-visual reveal">
-            <div class="device-frame">
-              <span class="df-num">04</span>
-              <img src="../images/equipment-twin.svg" alt="رسم توضيحي لتوأم رقمي: محل تجاري مع نقاط الجولة">
-            </div>
-          </div>
-          <div class="reveal" style="--d:.1s">
-            <span class="service-tag">التوأم الرقمي</span>
-            <h3>عقارك قابل للتجوّل – في أي وقت ومن أي مكان</h3>
-            <p class="desc">من المسح نفسه يخرج منتج ثانٍ: توأم رقمي تسير داخله كما لو كنت هناك فعلاً. العملاء والمهتمّون والشركاء يتفقّدون المكان على مهلهم دون سفر – على مدار الساعة ومن أي جهاز.</p>
-            <div class="feature-grid">
-              <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> جولة ثلاثية الأبعاد قابلة للتجوّل – كأنك تمشي في المكان الحقيقي</div>
-              <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> عرض «بيت الدمى»: المبنى كاملاً كنموذج ثلاثي الأبعاد من الخارج وبالمقطع</div>
-              <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> <b>للمحال والمطاعم:</b> الزبائن وشركاء الامتياز يرون مسبقاً ما ينتظرهم</div>
-              <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> <b>للفنادق وبيوت الضيافة:</b> اعرض الغرف والمرافق بدل أن تصفها</div>
-              <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> <b>للمكاتب والمساحات التجارية:</b> المهتمّون يعاينون دون موعد</div>
-              <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> <b>للشقق والفلل:</b> المشترون من الخارج يتجوّلون من منازلهم</div>
-            </div>
-            <details class="mehr">
-              <summary>عرض كل الخدمات</summary>
-              <div class="feature-grid">
-              <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> رابط واحد لموقعك و<span class="ltr">Instagram</span> و<span class="ltr">WhatsApp</span> ومنصات العقارات</div>
-              <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> يمكن أخذ المقاسات لاحقاً من النموذج – دون زيارة ثانية</div>
-              <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> يبقى متاحاً بشكل دائم – وأيضاً كأرشيف للحالة في تاريخ محدّد</div>
-              <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> يمكن دمجه مع الصور والفيديو واللقطات الجوية من الزيارة نفسها</div>
-              </div>
-            </details>
-            <p class="service-note"><b>حالة نموذجية:</b> محل تجاري في ألانيا سيُؤجَّر لمستثمر في دبي. بدل السفر وتحديد موعد، يرسل الوسيط رابطاً – والمهتمّ يتجوّل في المكان بنفسه.</p>
-          </div>
-        </article>
+/* Sicherheitsnetz: falls doch einmal etwas übersteht, wird es
+   abgeschnitten statt scrollbar (clip erlaubt weiterhin sticky/fixed). */
+html { overflow-x: clip; }
+html[lang="ar"] body { line-height: 1.95; font-size: 16px; }
+img, svg { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+/* Das hidden-Attribut setzt display:none nur im Browser-Grundstil - jede
+   eigene display-Regel (z. B. .btn mit inline-flex) gewinnt dagegen.
+   Ohne diese Zeile blieben ausgeblendete Knöpfe sichtbar. */
+[hidden] { display: none !important; }
+button { font: inherit; color: inherit; background: none; border: 0; cursor: pointer; }
+h1, h2, h3, h4 { font-family: var(--font-display); line-height: 1.14; margin: 0 0 0.5em; letter-spacing: -0.015em; }
+html[lang="ar"] h1, html[lang="ar"] h2, html[lang="ar"] h3, html[lang="ar"] h4 { letter-spacing: 0; line-height: 1.5; }
+p { margin: 0 0 1em; }
+ul { margin: 0; padding: 0; list-style: none; }
+::selection { background: rgba(34, 211, 238, 0.35); color: #fff; }
+:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; border-radius: 4px; }
+.sr-only {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+}
+/* Zahlen/Preise in RTL-Text immer LTR darstellen */
+.ltr { direction: ltr; unicode-bidi: isolate; }
 
-        <!-- متابعة البناء -->
-        <article class="service">
-          <div class="service-visual reveal">
-            <div class="device-frame">
-              <span class="df-num">05</span>
-              <img src="../images/service-baubegleitung.svg" alt="رسم توضيحي لمتابعة البناء: هيكل إنشائي مع رافعة وتوثيق مصوّر وخط زمني للمراحل">
-            </div>
-          </div>
-          <div class="reveal" style="--d:.1s">
-            <span class="service-tag">متابعة البناء والتوثيق</span>
-            <h3>مبناك الجديد تحت السيطرة – حتى من خارج البلاد</h3>
-            <p class="desc">تشتري على المخطط ولست في البلد؟ نذهب إلى الموقع بانتظام نيابةً عنك ونوثّق ما يجري فعلاً – بالصور والجولات ثلاثية الأبعاد ولقطات الدرون وبيانات القياس. وهكذا تُكتشف العيوب وهي ما تزال مكشوفة ويسهل إصلاحها بتكلفة قليلة.</p>
-            <div class="feature-grid">
-              <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> زيارات ميدانية منتظمة بالوتيرة التي تناسبك – شهرياً أو ربع سنوي أو حسب مراحل البناء</div>
-              <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> <b>جولة ثلاثية الأبعاد لسير العمل:</b> تتجوّل بنفسك في عقارك وتنظر في كل زاوية</div>
-              <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> توثيق بالصور والفيديو بعد كل زيارة</div>
-              <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> لقطات درون: تقدّم البناء والسطح من الجو</div>
-              <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> فحص المراحل الحرجة: الهيكل والصبّة والعزل المائي والكهرباء والسباكة – قبل إغلاق كل شيء</div>
-              <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> قياس الاستواء والشاقولية والميل ما دام التصحيح ممكناً</div>
-            </div>
-            <details class="mehr">
-              <summary>عرض كل الخدمات</summary>
-              <div class="feature-grid">
-              <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> فحص حراري للأنابيب والتدفئة الأرضية قبل تغطيتها</div>
-              <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> التحقق من الأمتار المربعة أثناء البناء – لا عند التسليم فقط</div>
-              <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> المقارنة مع المخططات والمواصفات الفنية</div>
-              <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> تقرير موجز بعد كل زيارة – رقمي وبلغتك</div>
-              <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> تواصل مباشر عبر واتساب لأي استفسار بين الزيارات</div>
-              <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> توثيق متواصل حتى تسليم المفاتيح</div>
-              </div>
-            </details>
-            <p class="service-note"><b>لماذا هذا حاسم:</b> يُباع عدد كبير من العقارات في أنطاليا وألانيا على المخطط. من ينظر بدقة عند التسليم فقط يتفاوض من أضعف موقف – فالثمن يكون قد دُفع والعيب أصبح مدفوناً داخل البناء.</p>
-          </div>
-        </article>
-      </div>
-    </section>
+::-webkit-scrollbar { width: 11px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: #24344c; border-radius: 8px; border: 2px solid var(--bg); }
+::-webkit-scrollbar-thumb:hover { background: #32476a; }
 
-    <!-- ================= لمن هذه الخدمة ================= -->
-    <section class="section" id="for-whom">
-      <div class="container">
-        <div class="section-head center reveal">
-          <span class="eyebrow">لمن هذه الخدمة</span>
-          <h2>لكل من يشتري في تركيا – أو اشترى بالفعل</h2>
-        </div>
-        <div class="grid-4">
-          <div class="card card-top reveal">
-            <div class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5" stroke="url(#ig)" stroke-width="1.9" fill="none"/><path d="m16 16 4.5 4.5" stroke="url(#ig)" stroke-width="1.9" stroke-linecap="round"/></svg></div>
-            <h3>المشترون المحتملون</h3>
-            <p>الفحص قبل التوقيع: الحالة والمقاسات والعيوب الخفية مكتوبة بوضوح – وحجّة قوية أيضاً عند التفاوض على السعر.</p>
-          </div>
-          <div class="card card-top reveal" style="--d:.08s">
-            <div class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="4" width="14" height="17" rx="2.5" stroke="url(#ig)" stroke-width="1.9" fill="none"/><path d="M9 4.5V3h6v1.5" stroke="url(#ig)" stroke-width="1.9" fill="none" stroke-linecap="round"/><path d="m8.8 13 2.1 2.1 4.3-4.6" stroke="url(#ig)" stroke-width="1.9" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-            <h3>استلام البناء الجديد</h3>
-            <p>لا تستلم إلا إذا كان كل شيء سليماً: نعدّ قائمة العيوب للمطوّر قبل أن تتحوّل عيوب البناء إلى مشكلتك أنت.</p>
-          </div>
-          <div class="card card-top reveal" style="--d:.16s">
-            <div class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5" stroke="url(#ig)" stroke-width="1.9" fill="none"/><path d="M3.5 12h17M12 3.5c2.6 2.3 3.9 5.2 3.9 8.5s-1.3 6.2-3.9 8.5c-2.6-2.3-3.9-5.2-3.9-8.5s1.3-6.2 3.9-8.5Z" stroke="url(#ig)" stroke-width="1.9" fill="none"/></svg></div>
-            <h3>المشترون من الخارج</h3>
-            <p>لست في تركيا؟ نفحص في الموقع، ونتابع البناء، ونسلّم كل شيء رقمياً – بما في ذلك جولة ثلاثية الأبعاد، وبلغتك.</p>
-          </div>
-          <div class="card card-top reveal" style="--d:.24s">
-            <div class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20.5V8.7L10.5 4l6.5 4.7v11.8" stroke="url(#ig)" stroke-width="1.9" fill="none" stroke-linejoin="round"/><path d="M2.5 20.5h19M17 11h3.5v9.5" stroke="url(#ig)" stroke-width="1.9" fill="none" stroke-linecap="round"/><path d="M8.5 20.5v-4.5a2 2 0 0 1 4 0v4.5" stroke="url(#ig)" stroke-width="1.9" fill="none"/></svg></div>
-            <h3>المالكون والمؤجّرون</h3>
-            <p>توثيق الحالة للتأجير أو التأمين أو البيع – وتشخيص سريع عندما يتسرّب الماء أو تضيع الطاقة في مكان ما.</p>
-          </div>
-        </div>
-      </div>
-    </section>
+/* ---------- Hintergrund-Atmosphäre ---------- */
+.bg-fx {
+  position: fixed; inset: 0; z-index: -2; pointer-events: none;
+  background:
+    radial-gradient(900px 620px at 85% -12%, rgba(34, 211, 238, 0.15), transparent 62%),
+    radial-gradient(820px 620px at -12% 34%, rgba(139, 92, 246, 0.12), transparent 60%),
+    radial-gradient(940px 720px at 72% 112%, rgba(251, 146, 60, 0.11), transparent 62%),
+    var(--bg);
+}
+.bg-grid {
+  position: fixed; inset: 0; z-index: -1; pointer-events: none; opacity: 0.8;
+  background-image:
+    linear-gradient(rgba(148, 163, 184, 0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(148, 163, 184, 0.055) 1px, transparent 1px);
+  background-size: 46px 46px;
+  -webkit-mask-image: radial-gradient(ellipse 120% 70% at 50% 0%, #000 25%, transparent 78%);
+          mask-image: radial-gradient(ellipse 120% 70% at 50% 0%, #000 25%, transparent 78%);
+}
 
-    <!-- ================= معاييرنا ================= -->
-    <section class="section" id="equipment">
-      <div class="container">
-        <div class="section-head center reveal">
-          <span class="eyebrow">معداتنا</span>
-          <h2>تقنية قياس احترافية وفق المعايير الألمانية</h2>
-          <p class="lead">لا أدوات من متاجر البناء ولا تطبيقات هاتف. هذه هي الأجهزة التي نعمل بها – بكل بياناتها التي يمكنك التحقق منها.</p>
-        </div>
-        <div class="grid-4">
-          <div class="card card-top tech-card reveal">
-            <img src="../images/equipment-scan.svg" alt="">
-            <div class="tech-name ltr">Matterport Pro2</div>
-            <div class="tech-sub">مسح ثلاثي الأبعاد ومخطط بمقياس رسم</div>
-            <ul class="spec-list">
-              <li><span>الدقة</span><span class="ltr">134 MP</span></li>
-              <li><span>نقاط القياس</span><span><span class="ltr">1.5</span> مليون لكل موضع</span></li>
-              <li><span>التصوير</span><span><span class="ltr">20</span> ثانية لكل موضع</span></li>
-              <li><span>التصدير</span><span><span class="ltr">CAD</span>، سحابة نقاط، مخطط</span></li>
-            </ul>
-          </div>
-          <div class="card card-top tech-card reveal" style="--d:.1s">
-            <img src="../images/equipment-thermal.svg" alt="">
-            <div class="tech-name ltr">Thermal Master Thor 001</div>
-            <div class="tech-sub">تشخيص احترافي بالأشعة تحت الحمراء</div>
-            <ul class="spec-list">
-              <li><span>دقة الأشعة</span><span class="ltr">256 × 192</span></li>
-              <li><span>نقاط القياس</span><span><span class="ltr">49,152</span> لكل صورة</span></li>
-              <li><span>الحساسية</span><span class="ltr">&lt; 0.035 °C</span></li>
-              <li><span>مدى القياس</span><span class="ltr">−20 … +550 °C</span></li>
-            </ul>
-          </div>
-          <div class="card card-top tech-card reveal" style="--d:.2s">
-            <img src="../images/equipment-drone.svg" alt="">
-            <div class="tech-name ltr">DJI Mini 4 Pro</div>
-            <div class="tech-sub">تصوير جوي للسطح والواجهة</div>
-            <ul class="spec-list">
-              <li><span>الفيديو</span><span class="ltr">4K/60 HDR</span></li>
-              <li><span>الصور</span><span class="ltr">48 MP · 1/1.3″</span></li>
-              <li><span>زمن الطيران</span><span class="ltr">100+ min</span></li>
-              <li><span>الأمان</span><span>استشعار محيطي للعوائق</span></li>
-            </ul>
-          </div>
-          <div class="card card-top tech-card reveal" style="--d:.3s">
-            <img src="../images/equipment-twin.svg" alt="">
-            <div class="tech-name ltr">Matterport Pro2</div>
-            <div class="tech-sub">جولة 360 درجة وتوأم رقمي</div>
-            <ul class="spec-list">
-              <li><span>البانوراما</span><span><span class="ltr">360°</span> بدقة <span class="ltr">4K</span></span></li>
-              <li><span>التعريض</span><span><span class="ltr">5</span> لقطات <span class="ltr">HDR</span> للإطار</span></li>
-              <li><span>العرض</span><span>جولة + بيت الدمى</span></li>
-              <li><span>الناتج</span><span>رابط قابل للتضمين</span></li>
-            </ul>
-          </div>
-        </div>
-        <p class="tech-note reveal"><b>كيف نعمل:</b> تُجمع البيانات رقمياً في الموقع، وتُحلَّل على الحاسوب، وتُسلَّم كتقرير <span class="ltr">PDF</span> – ونتنقّل بسيارتنا الخاصة، لذلك يبقى الوصول إليك في المنطقة مشمولاً.</p>
-      </div>
-    </section>
+/* ---------- Layout-Utilities ---------- */
+.container { max-width: var(--container); margin: 0 auto; padding: 0 22px; }
+.section { position: relative; padding: 104px 0; }
+.section-head { max-width: 780px; margin-bottom: 54px; }
+.section-head.center { margin-left: auto; margin-right: auto; text-align: center; }
+.eyebrow {
+  display: inline-flex; align-items: center; gap: 10px;
+  font-family: var(--font-display); font-size: 0.78rem; font-weight: 600;
+  letter-spacing: 0.22em; text-transform: uppercase;
+  background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent;
+  margin-bottom: 16px;
+}
+html[lang="ar"] .eyebrow { letter-spacing: 0.06em; }
+.eyebrow::before {
+  content: ""; width: 26px; height: 2px; border-radius: 2px;
+  background: linear-gradient(90deg, transparent, var(--cyan));
+}
+.section-head.center .eyebrow::after {
+  content: ""; width: 26px; height: 2px; border-radius: 2px;
+  background: linear-gradient(90deg, var(--orange), transparent);
+}
+h2 { font-size: clamp(1.85rem, 3.6vw, 2.8rem); font-weight: 700; }
+.lead { font-size: clamp(1.02rem, 1.5vw, 1.16rem); color: var(--muted); }
+.grad-text { background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
 
-    <!-- ================= للشركات ================= -->
-    <section class="section section-b2b" id="business">
-      <div class="container">
-        <div class="section-head center reveal">
-          <span class="eyebrow">للشركات</span>
-          <h2>للوسطاء والمطوّرين والمهندسين والمنشآت</h2>
-          <p class="lead">التقنية نفسها بهدف مختلف: بدلاً من تقرير فحص، نسلّمك الأساس الرقمي للتسويق والتصميم والتوثيق – جاهزاً وقابلاً للاستخدام مباشرة.</p>
-        </div>
-        <div class="grid-3">
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+  padding: 14px 26px; border-radius: 999px;
+  font-family: var(--font-display); font-weight: 600; font-size: 0.98rem;
+  letter-spacing: 0.01em; white-space: nowrap;
+  transition: transform 0.25s var(--ease), box-shadow 0.25s var(--ease), background 0.25s, border-color 0.25s;
+}
+.btn svg { width: 19px; height: 19px; flex: none; }
+.btn-primary {
+  background: var(--grad); color: #071018;
+  box-shadow: 0 10px 30px rgba(34, 211, 238, 0.22);
+}
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 16px 40px rgba(139, 92, 246, 0.32); }
+.btn-ghost { border: 1px solid var(--line); color: var(--text); background: rgba(148, 163, 184, 0.06); }
+.btn-ghost:hover { transform: translateY(-2px); border-color: rgba(34, 211, 238, 0.55); background: rgba(34, 211, 238, 0.09); }
+.btn-wa { background: var(--wa); color: #04240f; box-shadow: 0 10px 30px rgba(37, 211, 102, 0.22); }
+.btn-wa:hover { transform: translateY(-2px); box-shadow: 0 16px 40px rgba(37, 211, 102, 0.32); }
+.btn-lg { padding: 17px 32px; font-size: 1.05rem; }
+.btn-sm { padding: 10px 18px; font-size: 0.88rem; }
 
-          <div class="card card-top b2b-card reveal">
-            <div class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11.4 3H20.5v9.1l-8.9 8.9-9.1-9.1L11.4 3Z" stroke="url(#ig)" stroke-width="1.9" fill="none" stroke-linejoin="round"/><circle cx="16.2" cy="7.8" r="1.7" fill="url(#ig)"/></svg></div>
-            <div class="b2b-role">تسويق العقارات</div>
-            <h3>الوسطاء والمطوّرون</h3>
-            <p>بِع قبل أن يستقلّ أحد الطائرة: عقاراتك قابلة للتجوّل على مدار الساعة – من برلين أو موسكو أو دبي.</p>
-            <div class="b2b-list">
-                <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> جولة ثلاثية الأبعاد لموقعك الإلكتروني وملف العرض ومنصات العقارات</div>
-                <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> المهتمّون يفرزون أنفسهم مسبقاً – معاينات أقل بكثير بلا نتيجة</div>
-                <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> مخطط بمقياس رسم صحيح بدلاً من رسم يدوي</div>
-              </div>
-              <details class="mehr b2b-mehr">
-                <summary>المزيد</summary>
-                <div class="b2b-list">
-                <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> لقطات جوية للموقع والسطح والمحيط</div>
-                <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> حزمة صور وفيديو من الزيارة نفسها</div>
-                <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> امسح الشقة النموذجية مرة واحدة واستخدمها لكل الوحدات المماثلة</div>
-                </div>
-              </details>
-            <p class="b2b-out"><b>ما تحصل عليه:</b> رابط واحد تُضمّنه في أي مكان – جاهز خلال <span class="ltr">48</span> ساعة.</p>
-          </div>
+/* ---------- Header ---------- */
+.site-header {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 70;
+  height: var(--header-h);
+  transition: background 0.35s, border-color 0.35s;
+  border-bottom: 1px solid transparent;
+}
+.site-header.scrolled {
+  background: rgba(11, 17, 25, 0.8);
+  -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px);
+  border-bottom-color: var(--line-soft);
+}
+.header-inner { display: flex; align-items: center; gap: 22px; height: var(--header-h); }
 
-          <div class="card card-top b2b-card reveal" style="--d:.1s">
-            <div class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 20.5 12 3l8.5 17.5Z" stroke="url(#ig)" stroke-width="1.9" fill="none" stroke-linejoin="round"/><path d="M7.6 13.5h8.8" stroke="url(#ig)" stroke-width="1.9" stroke-linecap="round"/></svg></div>
-            <div class="b2b-role">الرفع المساحي والوضع القائم</div>
-            <h3>المعماريون والمصمّمون والمهندسون</h3>
-            <p>امسح بدل أن تقيس: زيارة مسح واحدة تغني عن أيام من القياس اليدوي – وتعطيك بيانات يقرأها برنامجك.</p>
-            <div class="b2b-list">
-                <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> رفع مساحي رقمي للوضع القائم خلال ساعات بدل أيام</div>
-                <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> مخططات بمقياس رسم صحيح كأساس للتصميم</div>
-                <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> بيانات متوافقة مع <span class="ltr">CAD</span> وسحابة نقاط</div>
-              </div>
-              <details class="mehr b2b-mehr">
-                <summary>المزيد</summary>
-                <div class="b2b-list">
-                <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> توثيق الوضع القائم قبل التعديل والترميم والهدم</div>
-                <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> إعادة القياس داخل النموذج – دون زيارة ثانية</div>
-                <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> تصوير حراري إضافي لأضرار البناء والرطوبة والعزل</div>
-                </div>
-              </details>
-            <p class="b2b-out"><b>ما تحصل عليه:</b> سحابة نقاط ومخطط بالصيغة التي تريدها، مع النموذج القابل للتجوّل كمرجع.</p>
-          </div>
+/* Logo / Wortmarke */
+.logo { display: flex; align-items: center; gap: 11px; margin-right: auto; }
+.logo-icon { height: 58px; width: auto; flex: none; }
+.logo-text { display: flex; flex-direction: column; line-height: 1; }
+.logo-text b {
+  font-family: var(--font-display); font-size: 1.32rem; font-weight: 700;
+  letter-spacing: 0.13em;
+  background: var(--gold-grad); -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.logo-text span {
+  font-family: var(--font-display); font-size: 0.66rem; font-weight: 600;
+  letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--muted); margin-top: 6px;
+}
+.nav-links { display: flex; align-items: center; gap: 2px; }
+/* Ohne nowrap bricht „Für Firmen" / „Для бизнеса" mitten im Menü um und
+   der Kopf wird zweizeilig. */
+.nav-links a { white-space: nowrap; }
+.nav-links a {
+  padding: 9px 12px; border-radius: 8px; font-size: 0.92rem; font-weight: 500;
+  color: var(--muted); transition: color 0.2s, background 0.2s;
+}
+.nav-links a:hover { color: var(--text); background: rgba(148, 163, 184, 0.09); }
+.nav-links a.active { color: var(--cyan); }
 
-          <div class="card card-top b2b-card reveal" style="--d:.2s">
-            <div class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20.5V9.2l6-2.7v14M9 20.5V11l6-2.7v12.2M15 20.5v-7.6l6-2.3v9.9" stroke="url(#ig)" stroke-width="1.9" fill="none" stroke-linejoin="round"/><path d="M2 20.5h20" stroke="url(#ig)" stroke-width="1.9" stroke-linecap="round"/></svg></div>
-            <div class="b2b-role">التوثيق</div>
-            <h3>المنشآت التجارية والصناعية</h3>
-            <p>المساحات والتجهيزات والحالة موثّقة – متاحة وقت أن يسأل عنها أحد: شركة التأمين أو المشغّل أو المستأجر الجديد.</p>
-            <div class="b2b-list">
-                <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> الفنادق والمتاجر والمكاتب والمستودعات ومساحات الإنتاج</div>
-                <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> توثيق الحالة لشركات التأمين والمشغّلين</div>
-                <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> محاضر التسليم والاستلام في عقود الإيجار</div>
-              </div>
-              <details class="mehr b2b-mehr">
-                <summary>المزيد</summary>
-                <div class="b2b-list">
-                <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> إدارة المرافق بنموذج قابل للتجوّل</div>
-                <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> حساب المساحات للعقود والرسوم التشغيلية</div>
-                <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> توثيق الأضرار بالتصوير الحراري واللقطات الجوية</div>
-                </div>
-              </details>
-            <p class="b2b-out"><b>ما تحصل عليه:</b> توأم رقمي يثبت الحالة في تاريخ محدّد.</p>
-          </div>
+/* Sprach-Dropdown */
+.lang-dd { position: relative; flex: none; }
+.lang-btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  border: 1px solid var(--line); border-radius: 999px;
+  background: rgba(148, 163, 184, 0.06);
+  padding: 8px 13px;
+  font-family: var(--font-display); font-size: 0.84rem; font-weight: 600;
+  color: var(--text); transition: border-color 0.2s, background 0.2s;
+}
+.lang-btn:hover { border-color: rgba(34, 211, 238, 0.5); background: rgba(34, 211, 238, 0.1); }
+.lang-btn .globe { width: 16px; height: 16px; flex: none; }
+.lang-btn .caret { width: 10px; height: 10px; flex: none; transition: transform 0.28s var(--ease); }
+.lang-dd.open .caret { transform: rotate(180deg); }
+.lang-menu {
+  position: absolute; top: calc(100% + 10px); right: 0; z-index: 80;
+  min-width: 208px; padding: 7px;
+  border: 1px solid var(--line); border-radius: 14px;
+  background: rgba(14, 21, 32, 0.97);
+  -webkit-backdrop-filter: blur(16px); backdrop-filter: blur(16px);
+  box-shadow: var(--shadow);
+  opacity: 0; visibility: hidden; transform: translateY(-8px);
+  transition: opacity 0.24s var(--ease), transform 0.24s var(--ease), visibility 0.24s;
+}
+.lang-dd.open .lang-menu { opacity: 1; visibility: visible; transform: none; }
+.lang-menu a {
+  display: flex; align-items: center; gap: 11px;
+  padding: 9px 12px; border-radius: 9px;
+  font-size: 0.93rem; color: var(--muted);
+  transition: background 0.18s, color 0.18s;
+}
+.lang-menu a:hover { background: rgba(148, 163, 184, 0.1); color: var(--text); }
+.lang-menu a.active { color: var(--cyan); background: rgba(34, 211, 238, 0.08); }
+.lang-menu .lc {
+  font-family: var(--font-display); font-size: 0.72rem; font-weight: 700;
+  letter-spacing: 0.08em; opacity: 0.65; min-width: 24px;
+}
+.lang-menu .ln { font-family: var(--font-body); }
+[dir="rtl"] .lang-menu { right: auto; left: 0; }
 
-        </div>
+.header-cta { flex: none; }
+.progress-bar {
+  position: absolute; left: 0; bottom: -1px; height: 2px; width: 0;
+  background: var(--grad); border-radius: 2px; z-index: 71;
+}
+[dir="rtl"] .progress-bar { left: auto; right: 0; }
 
-        <div class="size-note reveal">
-          <h3>شروط عملاء الشركات</h3>
-          <p>في التعاون المستمر نحسب بطريقة مختلفة عن الفحص الفردي للمشتري – بشكل واضح ودون مفاجآت:</p>
-          <ul class="size-list">
-            <li><span>شقة حتى <span class="ltr">130 m²</span></span><span>جولة ثلاثية الأبعاد + مخطط من <span class="ltr">249 €</span></span></li>
-            <li><span>فيلا حتى <span class="ltr">350 m²</span></span><span>من <span class="ltr">449 €</span></span></li>
-            <li><span>مساحة تجارية من <span class="ltr">500 m²</span></span><span>عرض بسعر ثابت خاص بك</span></li>
-            <li><span>من <span class="ltr">5</span> عقارات شهرياً</span><span>سعر إطاري بشروط ثابتة</span></li>
-            <li><span>وحدات متماثلة</span><span>بسعر مخفّض ابتداءً من العقار الثاني</span></li>
-          </ul>
-          <p class="size-hint">يمكن إضافة اللقطات الجوية وحزمة الصور والفيديو والتصوير الحراري بشكل منفصل. أخبرنا كم عقاراً تسوّقه أو تصمّمه شهرياً، وستحصل على عرض يناسبك.</p>
-        </div>
-        <div class="b2b-cta reveal">
-          <a class="btn btn-primary" href="#contact" data-package="طلب للشركات">اطلب عرضاً للشركات</a>
-        </div>
-      </div>
-    </section>
+/* Burger + Mobile-Nav */
+.burger { display: none; width: 44px; height: 44px; position: relative; z-index: 75; flex: none; }
+.burger span {
+  position: absolute; left: 10px; right: 10px; height: 2px; border-radius: 2px;
+  background: var(--gold); transition: transform 0.3s var(--ease), opacity 0.2s, top 0.3s var(--ease);
+}
+.burger span:nth-child(1) { top: 15px; }
+.burger span:nth-child(2) { top: 21px; }
+.burger span:nth-child(3) { top: 27px; }
+body.nav-open .burger span:nth-child(1) { top: 21px; transform: rotate(45deg); }
+body.nav-open .burger span:nth-child(2) { opacity: 0; }
+body.nav-open .burger span:nth-child(3) { top: 21px; transform: rotate(-45deg); }
+.mobile-nav {
+  display: none; position: fixed; z-index: 69; left: 0; right: 0; top: 0;
+  padding: calc(var(--header-h) + 18px) 22px 28px;
+  background: rgba(11, 17, 25, 0.97);
+  -webkit-backdrop-filter: blur(18px); backdrop-filter: blur(18px);
+  border-bottom: 1px solid var(--line-soft);
+  transform: translateY(-102%); transition: transform 0.4s var(--ease);
+  max-height: 100svh; overflow-y: auto;
+}
+body.nav-open .mobile-nav { transform: translateY(0); }
+.mobile-nav a.mn-link {
+  display: block; padding: 13px 6px; font-family: var(--font-display);
+  font-size: 1.12rem; font-weight: 600; border-bottom: 1px solid var(--line-soft);
+}
+.mobile-nav .mn-extra { display: flex; align-items: center; gap: 14px; margin-top: 20px; flex-wrap: wrap; }
+.mn-langs { display: flex; flex-wrap: wrap; gap: 7px; }
+.mn-langs a {
+  border: 1px solid var(--line); border-radius: 999px; padding: 7px 13px;
+  font-family: var(--font-display); font-size: 0.8rem; font-weight: 600; color: var(--muted);
+}
+.mn-langs a.active { background: var(--grad); color: #071018; border-color: transparent; }
 
-    <!-- ================= آلية العمل ================= -->
-    <section class="section" id="process">
-      <div class="container">
-        <div class="section-head center reveal">
-          <span class="eyebrow">آلية العمل</span>
-          <h2>أربع خطوات نحو اليقين</h2>
-        </div>
-        <div class="steps">
-          <div class="card step reveal">
-            <span class="step-num">01</span>
-            <h3>الطلب</h3>
-            <p>عبر واتساب أو النموذج: العقار والموقع والموعد المفضّل. ستحصل سريعاً على عرض بسعر ثابت.</p>
-          </div>
-          <div class="card step reveal" style="--d:.08s">
-            <span class="step-num">02</span>
-            <h3>زيارة الموقع</h3>
-            <p>نأتي إلى العقار – برفقتك أو برفقة وسيطك إن رغبت. تستغرق من 1 إلى 4 ساعات حسب الباقة.</p>
-          </div>
-          <div class="card step reveal" style="--d:.16s">
-            <span class="step-num">03</span>
-            <h3>القياس والتوثيق</h3>
-            <p>مسح ثلاثي الأبعاد ومسح حراري وصور – وحسب الباقة رحلة درون. بشكل منهجي وفق قائمة فحص.</p>
-          </div>
-          <div class="card step reveal" style="--d:.24s">
-            <span class="step-num">04</span>
-            <h3>التقرير خلال 48 ساعة</h3>
-            <p>تقرير <span class="ltr">PDF</span> رقمي يضم القياسات والصور الحرارية والصور وقائمة عيوب مرتّبة حسب الأولوية – بلغتك.</p>
-          </div>
-        </div>
-      </div>
-    </section>
+/* ---------- Hero ---------- */
+.hero {
+  position: relative; min-height: 100svh;
+  display: flex; align-items: center;
+  padding: calc(var(--header-h) + 70px) 0 90px;
+  overflow: hidden;
+}
+.hero-grid { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 60px; align-items: center; }
+.hero-badge {
+  display: inline-flex; align-items: center; gap: 9px;
+  border: 1px solid var(--line); border-radius: 999px;
+  background: rgba(148, 163, 184, 0.07);
+  padding: 7px 15px; font-size: 0.84rem; font-weight: 500; color: var(--muted);
+  margin-bottom: 24px;
+}
+/* Der Puls lief früher über `box-shadow`. Das lässt sich nicht auf dem
+   Compositor rechnen – jedes Bild kostet ein Neuzeichnen, dauerhaft.
+   Jetzt macht ein Pseudo-Element denselben Ring über transform+opacity.
+   scale(3.25) auf 8 px ergibt 26 px – exakt die alte Ringgröße
+   (8 px Punkt + 2 × 9 px Streuung). */
+.hero-badge .dot {
+  position: relative;
+  width: 8px; height: 8px; border-radius: 50%; background: var(--cyan);
+}
+.hero-badge .dot::after {
+  content: ""; position: absolute; inset: 0; border-radius: 50%;
+  background: rgba(34, 211, 238, 0.5);
+  animation: pulse-dot 2.2s infinite;
+}
+@keyframes pulse-dot {
+  0%   { transform: scale(1);    opacity: .5; }
+  70%  { transform: scale(3.25); opacity: 0; }
+  100% { transform: scale(3.25); opacity: 0; }
+}
+.hero h1 { font-size: clamp(2.4rem, 5.4vw, 4.2rem); font-weight: 700; letter-spacing: -0.03em; margin-bottom: 22px; }
+html[lang="ar"] .hero h1 { letter-spacing: 0; }
+.hero .lead { max-width: 560px; margin-bottom: 34px; }
+.hero-cta { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 34px; }
+.trust-chips { display: flex; flex-wrap: wrap; gap: 9px 18px; color: var(--muted); font-size: 0.9rem; }
+.trust-chips li { display: inline-flex; align-items: center; gap: 8px; }
+.trust-chips svg { width: 16px; height: 16px; flex: none; }
 
-    <!-- ================= الباقات ================= -->
-    <section class="section" id="packages">
-      <div class="container">
-        <div class="section-head center reveal">
-          <span class="eyebrow">الباقات والأسعار</span>
-          <h2>باقات واضحة. أسعار واضحة.</h2>
-          <p class="lead">كل عقار مختلف – لذلك الأسعار تبدأ من. بعد وصف قصير للعقار تحصل على سعرك الثابت مسبقاً.</p>
-        </div>
-        <div class="price-grid">
-          <div class="card price-card reveal">
-            <div class="p-name">الفحص الأساسي</div>
-            <div class="p-for">للشقق والعقارات الصغيرة</div>
-            <div class="price"><span class="p-from">من</span><span class="ltr">179 €</span></div>
-            <div class="p-hint"><b style="color:var(--text)">حتى <span class="ltr">80 m²</span></b> · نحو 1–2 ساعة في الموقع</div>
-            <ul class="p-feats">
-              <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> فحص بصري منهجي من الداخل</li>
-              <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> مسح حراري لجميع الغرف</li>
-              <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> فحص الرطوبة وخطر العفن</li>
-              <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> فحص عيّنة من الكهرباء (المقابس، اللوحة)</li>
-              <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> توثيق بالصور</li>
-              <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> تقرير موجز بصيغة <span class="ltr">PDF</span></li>
-            </ul>
-            <a class="btn btn-ghost" href="#contact" data-package="الفحص الأساسي">اطلب الفحص الأساسي</a>
-          </div>
-          <div class="card price-card featured reveal" style="--d:.1s">
-            <span class="p-badge">الأكثر طلباً</span>
-            <div class="p-name">الفحص الشامل</div>
-            <div class="p-for">لقرار الشراء والتسليم</div>
-            <div class="price"><span class="p-from">من</span><span class="ltr">299 €</span></div>
-            <div class="p-hint"><b style="color:var(--text)">حتى <span class="ltr">130 m²</span></b> · نحو 2–4 ساعات في الموقع</div>
-            <ul class="p-feats">
-              <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> كل ما في الفحص الأساسي</li>
-              <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> مسح ثلاثي الأبعاد: المساحات والغرف والارتفاعات</li>
-              <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> مقارنة الأمتار المربعة بالإعلان / العقد</li>
-              <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> الاستواء والشاقولية والميل (الحمام، التراس، الشرفة)</li>
-              <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> فحص النوافذ والأبواب مع الحشوات</li>
-              <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> تقرير <span class="ltr">PDF</span> مفصّل + قائمة العيوب</li>
-            </ul>
-            <a class="btn btn-primary" href="#contact" data-package="الفحص الشامل">اطلب الفحص الشامل</a>
-          </div>
-          <div class="card price-card reveal" style="--d:.2s">
-            <div class="p-name">Premium 360°</div>
-            <div class="p-for">أقصى درجات الاطمئنان شاملاً الخارج</div>
-            <div class="price"><span class="p-from">من</span><span class="ltr">429 €</span></div>
-            <div class="p-hint"><b style="color:var(--text)">حتى <span class="ltr">200 m²</span></b> · نحو 3–5 ساعات في الموقع</div>
-            <ul class="p-feats">
-              <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> كل ما في الفحص الشامل</li>
-              <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> فحص بالدرون: السطح والواجهة بدقة <span class="ltr">4K</span></li>
-              <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> المساحات الخارجية: الميل والتصريف ومحيط المسبح</li>
-              <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> توثيق بالفيديو للعقار</li>
-              <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> مراجعة شخصية للتقرير (مكالمة فيديو)</li>
-              <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> مثالي لفحص التسليم والفلل</li>
-            </ul>
-            <a class="btn btn-ghost" href="#contact" data-package="Premium 360°">اطلب <span class="ltr">Premium 360°</span></a>
-          </div>
-        </div>
-        <div class="size-note reveal">
-          <h3>كيف يتحدّد السعر حسب مساحة العقار</h3>
-          <p>الأسعار المذكورة تنطبق على المساحة المحددة في كل باقة. العقارات الأكبر تحتاج وقتاً أطول في الموقع – لذلك نعتمد تدرّجاً عادلاً وواضحاً:</p>
-          <ul class="size-list">
-            <li><span>حتى <span class="ltr">80 m²</span></span><span>الفحص الأساسي من <span class="ltr">179 €</span> · الشامل من <span class="ltr">299 €</span></span></li>
-            <li><span class="ltr">80–130 m²</span><span>الفحص الشامل من <span class="ltr">299 €</span> · <span class="ltr">Premium 360°</span> من <span class="ltr">429 €</span></span></li>
-            <li><span class="ltr">130–200 m²</span><span>رسوم إضافية نحو <span class="ltr">80 €</span> لكل <span class="ltr">50 m²</span></span></li>
-            <li><span><span class="ltr">200–350 m²</span> (فيلا)</span><span>الفحص الشامل من <span class="ltr">490 €</span> · <span class="ltr">Premium 360°</span> من <span class="ltr">690 €</span></span></li>
-            <li><span>أكثر من <span class="ltr">350 m²</span></span><span>عرض سعر ثابت مخصّص</span></li>
-          </ul>
-          <p class="size-hint"><b>مثال:</b> فيلا بمساحة <span class="ltr">300 m²</span> تحتاج نحو 6–8 ساعات بدلاً من 2–4 – لذا يبدأ الفحص الشامل هناك من <span class="ltr">490 €</span> بدلاً من <span class="ltr">299 €</span>. تعرف ذلك <b>مسبقاً وليس لاحقاً</b>: أرسل لنا نوع العقار والمساحة التقريبية والموقع، وستحصل على سعر ثابت مُلزم قبل أن تقرر. لا نضيف أي رسوم لاحقاً.</p>
-        </div>
-        <p class="price-note reveal"><b style="color:var(--text)">متابعة البناء باشتراك:</b> للمباني الجديدة نقدّم زيارات متكررة مع صور وجولة ثلاثية الأبعاد وتقرير موجز – بسعر يعتمد على الوتيرة ومساحة العقار، ويفضَّل كباقة شهرية. تواصل معنا.<br><br>جميع الأسعار تبدأ من وتعتمد على مساحة العقار وموقعه. الخدمات المفردة (مثل كشف التسربات فقط أو القياس فقط) عند الطلب. التنقل داخل منطقة أنطاليا/ألانيا مشمول.</p>
-      </div>
-    </section>
+/* Hero-Visual: Scan-Display */
+.scan-card {
+  position: relative; border-radius: 22px;
+  border: 1px solid var(--line);
+  background: linear-gradient(160deg, rgba(20, 30, 46, 0.9), rgba(11, 17, 25, 0.95));
+  box-shadow: var(--shadow);
+  aspect-ratio: 5 / 4.05;
+  display: grid; place-items: center;
+  overflow: hidden;
+}
+.scan-house { position: relative; z-index: 1; width: 97%; padding: 2% 0 1%; }
+.scan-card::after {
+  content: ""; position: absolute; inset: 0; pointer-events: none; z-index: 2;
+  background:
+    radial-gradient(340px 240px at 22% 76%, rgba(251, 146, 60, 0.13), transparent 65%),
+    radial-gradient(360px 260px at 78% 26%, rgba(34, 211, 238, 0.13), transparent 65%);
+}
+/* Der Scanstreifen lief früher über `top` – das löst bei JEDEM Einzelbild
+   ein Layout aus, und zwar dauerhaft, weil die Animation endlos ist.
+   Jetzt über `transform`: das läuft auf dem Compositor, ohne Layout und
+   ohne Neuzeichnen. Damit die Prozentwerte stimmen, ist das Element so
+   hoch wie die Karte; der sichtbare 76-px-Streifen entsteht über
+   background-size und sitzt an seiner Oberkante. */
+.scanline {
+  position: absolute; left: 0; right: 0; top: 0; height: 100%; z-index: 4;
+  background: linear-gradient(180deg, transparent, rgba(34, 211, 238, 0.16) 62%, rgba(34, 211, 238, 0.75) 98%, transparent);
+  background-size: 100% 76px;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  filter: drop-shadow(0 4px 14px rgba(34, 211, 238, 0.45));
+  /* linear, NICHT var(--ease): Die Ease-out-Kurve ließ den Streifen in den
+     ersten 10 % der Zeit schon über die halbe Karte schießen und danach
+     kriechen – das sah aus wie ein Aufblitzen, nicht wie ein Abtasten.
+     Ein Scanner bewegt sich gleichmäßig; genau das sagt `linear`. */
+  animation: scan-sweep 5.4s linear infinite;
+  pointer-events: none;
+}
+@keyframes scan-sweep {
+  0%   { transform: translateY(-84px); opacity: 0; }
+  8%   { opacity: 1; }
+  46%  { transform: translateY(100%);  opacity: 1; }
+  54%  { transform: translateY(100%);  opacity: 0; }
+  100% { transform: translateY(-84px); opacity: 0; }
+}
+.scan-corner { position: absolute; width: 28px; height: 28px; border: 2px solid rgba(34, 211, 238, 0.8); z-index: 5; }
+.scan-corner.tl { top: 14px; left: 14px; border-right: 0; border-bottom: 0; border-radius: 8px 0 0 0; }
+.scan-corner.tr { top: 14px; right: 14px; border-left: 0; border-bottom: 0; border-radius: 0 8px 0 0; }
+.scan-corner.bl { bottom: 14px; left: 14px; border-right: 0; border-top: 0; border-radius: 0 0 0 8px; }
+.scan-corner.br { bottom: 14px; right: 14px; border-left: 0; border-top: 0; border-radius: 0 0 8px 0; }
+.scan-tag {
+  position: absolute; top: 20px; left: 50%; transform: translateX(-50%); z-index: 5;
+  display: inline-flex; align-items: center; gap: 8px;
+  font-family: var(--font-display); font-size: 0.7rem; font-weight: 600; letter-spacing: 0.24em;
+  color: rgba(239, 231, 216, 0.9); text-transform: uppercase;
+}
+.scan-tag .rec { width: 7px; height: 7px; border-radius: 50%; background: var(--orange); animation: blink 1.4s steps(2) infinite; }
+@keyframes blink { 50% { opacity: 0.15; } }
+.m-chip {
+  position: absolute; z-index: 6;
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 8px 13px; border-radius: 10px;
+  background: rgba(8, 13, 20, 0.86); color: var(--text);
+  -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px);
+  border: 1px solid var(--line);
+  font-family: var(--font-display); font-size: 0.78rem; font-weight: 600; letter-spacing: 0.02em;
+  box-shadow: 0 10px 26px rgba(2, 6, 12, 0.55);
+  animation: float-y 5.6s ease-in-out infinite;
+  max-width: 46%;
+}
+.m-chip .ind { width: 8px; height: 8px; border-radius: 2px; background: var(--grad); flex: none; }
+.m-chip.c1 { top: 6%; left: 3.5%; animation-delay: 0s; }
+.m-chip.c2 { top: 44%; right: 3.5%; animation-delay: 1.4s; }
+.m-chip.c3 { bottom: 6%; left: 3.5%; animation-delay: 2.6s; }
+@keyframes float-y { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-9px); } }
+/* ---------- Drohne umkreist das Haus ----------
+   Zwei ineinander verschachtelte Bewegungen ergeben die Ellipse: der äußere
+   Rahmen wandert waagerecht, das Bild darin senkrecht – mit halber Periode
+   und Phasenversatz. Das ist die verlässlichste Variante; offset-path wäre
+   eleganter, wird aber von älteren Handy-Browsern noch übergangen.
+   Die hintere Bahnhälfte läuft kleiner, blasser und HINTER dem Haus
+   (z-index 0 gegen z-index 1 der Hausgrafik) – das erzeugt die Tiefe.
+   Bewusst langsam (14 s pro Runde): eine Drohne, die hektisch kreist,
+   wirkt wie ein Spielzeug. */
+.drohne {
+  /* --umlauf ist der halbe Bahndurchmesser. Er MUSS zur Kartenbreite
+     passen: die Karte schneidet ab (overflow:hidden), sonst fliegt die
+     Drohne an den Umkehrpunkten halb aus dem Bild. Faustregel:
+     --umlauf + halbe Drohnenbreite < halbe Kartenbreite. */
+  --umlauf: 165px;
+  --drohne-b: 116px;
+  position: absolute; top: 41%; left: 50%; z-index: 3;
+  width: var(--drohne-b); margin-left: calc(var(--drohne-b) / -2);
+  pointer-events: none;
+  animation: drohne-x 14s cubic-bezier(0.42, 0, 0.58, 1) infinite;
+}
+.drohne img {
+  width: 100%;
+  filter: drop-shadow(0 8px 16px rgba(2, 6, 12, 0.55));
+  animation: drohne-y 14s cubic-bezier(0.42, 0, 0.58, 1) infinite;
+}
+@keyframes drohne-x {
+  0%   { transform: translateX(calc(var(--umlauf) * -1)); z-index: 0; }
+  25%  { transform: translateX(0); z-index: 0; }
+  50%  { transform: translateX(var(--umlauf)); z-index: 3; }
+  75%  { transform: translateX(0); z-index: 3; }
+  100% { transform: translateX(calc(var(--umlauf) * -1)); z-index: 0; }
+}
+@keyframes drohne-y {
+  /* hinten: höher, kleiner, blasser – vorne: tiefer, größer, klar */
+  0%   { transform: translateY(0) scale(0.86); opacity: 0.72; }
+  25%  { transform: translateY(-34px) scale(0.7); opacity: 0.5; }
+  50%  { transform: translateY(0) scale(0.86); opacity: 0.72; }
+  75%  { transform: translateY(34px) scale(1.06); opacity: 1; }
+  100% { transform: translateY(0) scale(0.86); opacity: 0.72; }
+}
+/* Karte schmaler → Bahn enger. Werte gegen die tatsächliche Kartenbreite
+   geprüft (Karte 354 px bei 390 px Fenster: 110 + 46 = 156 < 177). */
+@media (max-width: 1080px) { .drohne { --umlauf: 128px; --drohne-b: 100px; } }
+@media (max-width: 620px)  { .drohne { --umlauf: 110px; --drohne-b: 92px; } }
+@media (max-width: 400px)  { .drohne { --umlauf: 92px;  --drohne-b: 82px; } }
+@media (prefers-reduced-motion: reduce) {
+  /* Nicht ausblenden – die Drohne gehört zur Aussage. Nur stillstellen,
+     an der vorderen, gut sichtbaren Position. */
+  .drohne { animation: none; transform: translateX(calc(var(--umlauf) * 0.72)); z-index: 3; }
+  .drohne img { animation: none; transform: translateY(26px); opacity: 1; }
+}
 
-    <!-- ================= الأسئلة الشائعة ================= -->
-    <section class="section" id="faq">
-      <div class="container">
-        <div class="section-head center reveal">
-          <span class="eyebrow">الأسئلة</span>
-          <h2>الأسئلة الشائعة</h2>
-        </div>
-        <div class="faq-wrap reveal">
-          <div class="faq-item">
-            <button class="faq-q" aria-expanded="false">لماذا لا تكفي المعاينة مع الوسيط العقاري؟<span class="fx" aria-hidden="true"></span></button>
-            <div class="faq-a"><div class="faq-a-inner"><p>الوسيط يريد أن يبيع – ونحن لا. الرطوبة خلف الطلاء الجديد ونقص العزل والميل الخاطئ والكهرباء المحمّاة لا تُرى بالعين المجردة. نحن نوفّر بيانات قياس محايدة تستطيع أن تقرر وتفاوض بناءً عليها.</p></div></div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-q" aria-expanded="false">ماذا سيتضمن التقرير بالضبط؟<span class="fx" aria-hidden="true"></span></button>
-            <div class="faq-a"><div class="faq-a-inner"><p>جميع القياسات (المساحات والاستواء والشاقولية والميل)، وصور حرارية مع شرح، وصور فوتوغرافية – وحسب الباقة لقطات درون. إضافة إلى قائمة عيوب مرتّبة حسب الأولوية مع توصيات. بصيغة <span class="ltr">PDF</span> بالإنجليزية أو الألمانية أو التركية؛ ولغات أخرى عند الطلب.</p></div></div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-q" aria-expanded="false">بأي لغات يمكنني التواصل معكم؟<span class="fx" aria-hidden="true"></span></button>
-            <div class="faq-a"><div class="faq-a-inner"><p>هذا الموقع متاح بخمس لغات: العربية والإنجليزية والألمانية والتركية والروسية. اكتب لنا عبر واتساب أو البريد الإلكتروني بلغتك – ونردّ عليك باللغة نفسها، عادةً خلال ساعات قليلة. بهذا يفهم الجميع الموضوع بدقة.</p></div></div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-q" aria-expanded="false">كم يستغرق الحصول على موعد وعلى التقرير؟<span class="fx" aria-hidden="true"></span></button>
-            <div class="faq-a"><div class="faq-a-inner"><p>المواعيد ممكنة عادةً خلال أيام قليلة – وأسرع إن كنت في مرحلة تفاوض. وتستلم التقرير الجاهز خلال 48 ساعة من الزيارة.</p></div></div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-q" aria-expanded="false">كم سيكلفني الفحص بالضبط؟<span class="fx" aria-hidden="true"></span></button>
-            <div class="faq-a"><div class="faq-a-inner"><p>تبدأ الباقات من <span class="ltr">179 €</span>. ويعتمد السعر النهائي على مساحة العقار وموقعه. أرسل لنا عبر واتساب نوع العقار والمساحة التقريبية والموقع – وستحصل فوراً على سعر ثابت قبل أن تلتزم بأي شيء.</p></div></div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-q" aria-expanded="false">لست في تركيا – هل يمكنني الطلب رغم ذلك؟<span class="fx" aria-hidden="true"></span></button>
-            <div class="faq-a"><div class="faq-a-inner"><p>نعم – وهذه من أكثر الحالات شيوعاً لدينا. بالتنسيق مع وسيطك أو المقاول نفحص العقار في الموقع ونرسل لك التقرير والصور والفيديوهات رقمياً. وبكل سرور نستعرض كل شيء معك في مكالمة فيديو.</p></div></div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-q" aria-expanded="false">هل تعملون أيضاً مع الوسطاء والمطوّرين والمهندسين؟<span class="fx" aria-hidden="true"></span></button>
-            <div class="faq-a"><div class="faq-a-inner"><p>نعم، وهذا مجال مستقل في عملنا. للوسطاء والمطوّرين ننتج جولات افتراضية ثلاثية الأبعاد مع مخطط بمقياس رسم صحيح لأغراض التسويق، وللمعماريين والمصمّمين رفعاً مساحياً رقمياً ببيانات متوافقة مع <span class="ltr">CAD</span>، وللمنشآت توثيق الحالة والمساحات. وفي التعاون المستمر نعمل بأسعار إطارية ثابتة – والشروط مذكورة في قسم «للشركات».</p></div></div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-q" aria-expanded="false">هل تفحصون المباني الجديدة قبل التسليم؟<span class="fx" aria-hidden="true"></span></button>
-            <div class="faq-a"><div class="faq-a-inner"><p>نعم – فحص ما قبل التسليم من خدماتنا الأساسية. نوثّق كل عيب قبل أن توقّع محضر التسليم، ليقوم المقاول بالإصلاح ما دامت المسؤولية عليه.</p></div></div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-q" aria-expanded="false">هل يمكن للدرون الطيران في كل مكان؟<span class="fx" aria-hidden="true"></span></button>
-            <div class="faq-a"><div class="faq-a-inner"><p>لا – في تركيا قواعد واضحة: يجب تسجيل الطائرة، والطيران ممنوع قرب المطارات والموانئ والمناطق العسكرية. نتحقق من التصاريح قبل كل مهمة ولا نطير إلا حيث يُسمح. وإن كان الطيران غير ممكن، نخبرك بذلك بصراحة مسبقاً.</p></div></div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-q" aria-expanded="false">هل يحلّ هذا الفحص محل تقرير مهندس إنشائي؟<span class="fx" aria-hidden="true"></span></button>
-            <div class="faq-a"><div class="faq-a-inner"><p>نحن نقدّم تشخيصاً للحالة قائماً على القياس – لا حسابات إنشائية ولا استشارات قانونية. وإذا لاحظنا مؤشرات على مشكلات إنشائية، نوصي بفحص متخصص موجّه. وتقريرنا أساس مثالي ومحايد لذلك.</p></div></div>
-          </div>
-        </div>
-      </div>
-    </section>
+.scroll-hint {
+  position: absolute; left: 50%; bottom: 26px; transform: translateX(-50%);
+  width: 24px; height: 40px; border: 1.5px solid var(--line); border-radius: 999px;
+}
+/* Auch hier lief die Bewegung über `top` – gleiche Geschichte wie beim
+   Scanstreifen, nur kleiner. Jetzt über translateY, das translateX(-50%)
+   für die Zentrierung bleibt dabei erhalten. */
+.scroll-hint::after {
+  content: ""; position: absolute; left: 50%; top: 8px; width: 3px; height: 8px;
+  transform: translateX(-50%); border-radius: 4px; background: var(--cyan);
+  animation: wheel 1.9s ease-in-out infinite;
+}
+@keyframes wheel {
+  0%   { transform: translate(-50%, 0);    opacity: 1; }
+  70%  { transform: translate(-50%, 14px); opacity: 0; }
+  100% { transform: translate(-50%, 0);    opacity: 0; }
+}
 
-    <!-- ================= من نحن ================= -->
-    <section class="section" id="about">
-      <div class="container">
-        <div class="about-grid">
-          <div class="reveal">
-            <span class="eyebrow">من نحن</span>
-            <h2>مستقلون. دقيقون. متعددو اللغات.</h2>
-            <p class="lead">‏Fivestar Property Scan خدمة مستقلة للقياس والتشخيص الفني للعقارات في تركيا.</p>
-            <p>نحن لا نبيع العقارات ولا نتقاضى عمولات – نعمل حصرياً لصالحك أنت كعميل. وما نقيسه نوثّقه بحياد: أرقام وصور وحقائق. لكي يقوم قرارك على أساس متين في سوق مليء بالوعود.</p>
-            <p>أنطاليا وألانيا مدينتان دوليتان – لذلك موقعنا متاح بخمس لغات ويمكنك التواصل معنا بأي منها.</p>
-          </div>
-          <ul class="about-points reveal" style="--d:.12s">
-            <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg><div><b>استقلالية تامة</b><span>لا ارتباط بالوسطاء ولا عمولة بيع – طلبك أنت وحده هو ما يهم.</span></div></li>
-            <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg><div><b>معدات احترافية حديثة</b><span>مسح ثلاثي الأبعاد وتصوير حراري ودرون – تُفحص وتُعاير بانتظام.</span></div></li>
-            <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg><div><b>خمس لغات</b><span>العربية والإنجليزية والألمانية والتركية والروسية.</span></div></li>
-            <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg><div><b>أنطاليا وألانيا</b><span>من كمر مروراً بسيدة وبيليك وصولاً إلى ألانيا – التنقل مشمول.</span></div></li>
-          </ul>
-        </div>
-      </div>
-    </section>
+/* ---------- Karten & Grids ---------- */
+.card {
+  position: relative; border: 1px solid var(--line); border-radius: var(--radius);
+  background: linear-gradient(165deg, rgba(23, 34, 51, 0.82), rgba(13, 20, 31, 0.86));
+  padding: 30px 28px;
+  transition: transform 0.32s var(--ease), border-color 0.32s, box-shadow 0.32s;
+}
+.card:hover { transform: translateY(-5px); border-color: rgba(34, 211, 238, 0.42); box-shadow: 0 18px 46px rgba(2, 6, 12, 0.55); }
+.card-top::before {
+  content: ""; position: absolute; top: -1px; left: 22px; right: 22px; height: 2px;
+  background: var(--grad); opacity: 0.9; border-radius: 2px;
+}
+.card h3 { font-size: 1.16rem; margin-bottom: 10px; }
+.card p { color: var(--muted); font-size: 0.95rem; margin: 0; }
+.card-icon {
+  width: 46px; height: 46px; border-radius: 12px; margin-bottom: 18px;
+  display: grid; place-items: center;
+  background: rgba(34, 211, 238, 0.09); border: 1px solid rgba(34, 211, 238, 0.26);
+}
+.card-icon svg { width: 24px; height: 24px; }
+.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+.grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; }
+/* 5 Equipment-Karten: verteilt sich selbst (5 → 3 → 2 → 1 Spalten) */
+.grid-5 { display: grid; grid-template-columns: repeat(auto-fit, minmax(196px, 1fr)); gap: 18px; }
 
-    <!-- ================= شريط العلامة ================= -->
-    <section class="brand-band reveal">
-      <div class="container">
-        <img src="../images/logo-fps.png" alt="Fivestar Property Scan">
-        <p class="bb-claim">اعرف قبل أن <span class="grad-text">تشتري</span>.</p>
-        <p class="bb-sub">فحص فني مستقل للعقارات · أنطاليا · ألانيا · تركيا</p>
-        <span class="bb-stars" aria-hidden="true"><svg viewBox="0 0 22 20" fill="url(#goldg)"><use href="#star"/></svg><svg viewBox="0 0 22 20" fill="url(#goldg)"><use href="#star"/></svg><svg viewBox="0 0 22 20" fill="url(#goldg)"><use href="#star"/></svg><svg viewBox="0 0 22 20" fill="url(#goldg)"><use href="#star"/></svg><svg viewBox="0 0 22 20" fill="url(#goldg)"><use href="#star"/></svg><svg viewBox="0 0 22 20" fill="url(#goldg)"><use href="#star"/></svg></span>
-      </div>
-    </section>
+/* ---------- Stats ---------- */
+/* Kennzahlen-Leiste als eigene Karte, damit sie zum übrigen Raster passt */
+.stats-band {
+  margin-top: 58px; padding: 6px 10px;
+  border: 1px solid var(--line); border-radius: var(--radius);
+  background:
+    radial-gradient(600px 220px at 50% 0%, rgba(34, 211, 238, 0.07), transparent 70%),
+    linear-gradient(165deg, rgba(20, 30, 46, 0.7), rgba(11, 17, 25, 0.75));
+}
+.stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); }
+.stat { padding: 34px 20px; text-align: center; position: relative; }
+.stat + .stat::before {
+  content: ""; position: absolute; left: 0; top: 26%; bottom: 26%; width: 1px; background: var(--line-soft);
+}
+[dir="rtl"] .stat + .stat::before { left: auto; right: 0; }
+.stat-num {
+  font-family: var(--font-display); font-weight: 700;
+  font-size: clamp(1.9rem, 3.4vw, 2.6rem); letter-spacing: -0.02em;
+  background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent;
+  display: block; line-height: 1.1; margin-bottom: 6px;
+}
+.stat-label { color: var(--muted); font-size: 0.88rem; }
 
-    <!-- ================= التواصل ================= -->
-    <section class="section" id="contact">
-      <div class="container">
-        <div class="section-head center reveal">
-          <span class="eyebrow">التواصل</span>
-          <h2>لنتحدث عن عقارك</h2>
-          <p class="lead">صف لنا عقارك في بضعة أسطر – وستحصل سريعاً على عرض بسعر ثابت ودون أي التزام.</p>
-        </div>
-        <div class="contact-grid">
-          <div class="card card-top contact-card wa-card reveal">
-            <div class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true" fill="#25D366"><use href="#ic-wa"/></svg></div>
-            <h3>تواصل مباشر</h3>
-            <p style="color:var(--muted);font-size:.95rem">أسرع طريقة للوصول إلينا هي واتساب – ويمكنك إرفاق صور أو رابط إعلان العقار.</p>
-            <div class="lang-note">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="url(#ig)" stroke-width="1.8" fill="none"/><path d="M3 12h18M12 3c2.5 2.4 3.8 5.4 3.8 9s-1.3 6.6-3.8 9c-2.5-2.4-3.8-5.4-3.8-9S9.5 5.4 12 3Z" stroke="url(#ig)" stroke-width="1.8" fill="none"/></svg>
-              <span><b>اكتب لنا بلغتك.</b> العربية أو الإنجليزية أو الألمانية أو التركية أو الروسية – راسلنا عبر واتساب أو البريد الإلكتروني ونردّ عليك باللغة التي كتبت بها.</span>
-            </div>
-            <div style="margin:2px 0 4px">
-              <div class="contact-line" data-phone-line><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 3.5 9 3l1.7 4-2 1.6a13.5 13.5 0 0 0 6.7 6.7l1.6-2 4 1.7-.5 2.4c-.2 1-1.1 1.7-2.1 1.6C10.6 18.9 5.1 13.4 4.9 5.6c0-1 .7-1.9 1.7-2.1Z" stroke="url(#ig)" stroke-width="1.9" fill="none" stroke-linejoin="round"/></svg><a data-phone class="ltr" href="#"></a><span class="tel-tag">ألمانيا</span></div>
-              <div class="contact-line" data-phone-tr-line><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 3.5 9 3l1.7 4-2 1.6a13.5 13.5 0 0 0 6.7 6.7l1.6-2 4 1.7-.5 2.4c-.2 1-1.1 1.7-2.1 1.6C10.6 18.9 5.1 13.4 4.9 5.6c0-1 .7-1.9 1.7-2.1Z" stroke="url(#ig)" stroke-width="1.9" fill="none" stroke-linejoin="round"/></svg><a data-phone-tr class="ltr" href="#"></a><span class="tel-tag">تركيا</span></div>
-              <div class="contact-line"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2.5" stroke="url(#ig)" stroke-width="1.9" fill="none"/><path d="m4 7 8 6 8-6" stroke="url(#ig)" stroke-width="1.9" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><a data-email href="#contact" class="ltr"></a></div>
-              <div class="contact-line"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5" stroke="url(#ig)" stroke-width="1.9" fill="none"/><path d="M12 7.5V12l3 2" stroke="url(#ig)" stroke-width="1.9" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><span>الاثنين–السبت · <span class="ltr">09:00–18:00</span></span></div>
-            </div>
-            <p style="color:var(--muted);font-size:.85rem;margin-bottom:6px">مناطق خدمتنا:</p>
-            <ul class="area-chips">
-              <li>أنطاليا</li><li>ألانيا</li><li>سيدة</li><li>بيليك</li><li>كمر</li><li>مانافغات</li><li>محمودلار</li><li>كونيا آلتي</li><li>لارا</li><li>كاش وكالكان</li>
-            </ul>
-            <p class="zypern-hinweis"><b>شمال قبرص:</b> نأتي إلى شمال قبرص عند الطلب – تواصل معنا لتحديد الموعد.</p>
-            <a class="btn btn-wa btn-lg" data-wa href="#contact">
-              <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><use href="#ic-wa"/></svg>
-              ابدأ محادثة واتساب
-            </a>
-          </div>
-          <div class="card card-top contact-card reveal" style="--d:.1s">
-            <h3>أرسل طلبك</h3>
-            <form data-contact data-subject="طلب فحص عقار (الموقع)" data-sending="جارٍ الإرسال …" data-ok="شكراً لك! وصلنا طلبك – نردّ عادةً خلال ساعات قليلة." data-err="تعذّر الإرسال. راسلنا مباشرة عبر واتساب – فهي أسرع وسيلة للوصول إلينا." data-wa-sent="تم فتح واتساب – اضغط على إرسال هناك." novalidate>
-              <div class="form-grid">
-                <div class="field">
-                  <label for="f-name">الاسم</label>
-                  <input id="f-name" name="name" type="text" autocomplete="name" required>
-                </div>
-                <div class="field">
-                  <label for="f-email">البريد الإلكتروني</label>
-                  <input id="f-email" name="email" type="email" autocomplete="email" required dir="ltr">
-                </div>
-                <div class="field">
-                  <label for="f-phone">الهاتف / واتساب (اختياري)</label>
-                  <input id="f-phone" name="phone" type="tel" autocomplete="tel" dir="ltr">
-                </div>
-                <div class="field">
-                  <label for="f-ort">موقع العقار</label>
-                  <input id="f-ort" name="location" type="text" placeholder="مثلاً ألانيا، محمودلار">
-                </div>
-                <div class="field full">
-                  <label for="f-paket">الباقة المطلوبة</label>
-                  <select id="f-paket" name="package">
-                    <option>لست متأكداً بعد – أرجو النصيحة</option>
-                    <option>الفحص الأساسي</option>
-                    <option>الفحص الشامل</option>
-                    <option>Premium 360°</option>
-                    <option>طلب للشركات</option>
-                    <option>خدمة مفردة (مثل كشف التسربات)</option>
-                  </select>
-                </div>
-                <div class="field full">
-                  <label for="f-msg">رسالتك</label>
-                  <textarea id="f-msg" name="message" placeholder="نوع العقار، المساحة التقريبية، سنة البناء، الإطار الزمني …"></textarea>
-                </div>
-              </div>
-              <p class="form-status" data-form-status hidden></p><p class="form-note">يُرسل طلبك عبر اتصال مشفّر ويُستخدم فقط للرد عليك.</p>
-              <div style="display:flex;gap:12px;flex-wrap:wrap">
-                <button class="btn btn-primary" type="submit">أرسل الطلب بالبريد الإلكتروني</button>
-                <button class="btn btn-ghost" type="button" data-form-wa>… أو عبر واتساب</button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
+/* ---------- Leistungen ---------- */
+.service { display: grid; grid-template-columns: 0.92fr 1.08fr; gap: 58px; align-items: center; padding: 64px 0; }
+.service + .service { border-top: 1px solid var(--line-soft); }
+.service.flip .service-visual { order: 2; }
 
-  <!-- ================= التذييل ================= -->
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-about">
-          <a class="logo footer-logo-big" href="#top" aria-label="Fivestar Property Scan"><img src="../images/logo-fps.png" alt="Fivestar Property Scan"></a><a class="logo footer-brand-small" href="#top" style="margin-bottom:14px">
-            <img class="logo-icon" src="../images/logo-fps-mark.png" alt="">
-            <span class="logo-text"><b>FIVESTAR</b><span>Property Scan</span></span>
-          </a>
-          <span class="footer-stars" aria-hidden="true" style="margin-bottom:14px">
-            <svg viewBox="0 0 22 20" fill="url(#goldg)"><use href="#star"/></svg>
-            <svg viewBox="0 0 22 20" fill="url(#goldg)"><use href="#star"/></svg>
-            <svg viewBox="0 0 22 20" fill="url(#goldg)"><use href="#star"/></svg>
-            <svg viewBox="0 0 22 20" fill="url(#goldg)"><use href="#star"/></svg>
-            <svg viewBox="0 0 22 20" fill="url(#goldg)"><use href="#star"/></svg>
-            <svg viewBox="0 0 22 20" fill="url(#goldg)"><use href="#star"/></svg>
-          </span>
-          <p>فحص فني مستقل للعقارات في أنطاليا وألانيا وجميع أنحاء تركيا: مسح ثلاثي الأبعاد وتصوير حراري وفحص بالدرون – مع تقرير رقمي خلال 48 ساعة.</p>
-        </div>
-        <div>
-          <h4>الخدمات</h4>
-          <a href="#services">المسح ثلاثي الأبعاد</a>
-          <a href="#services">التصوير الحراري</a>
-          <a href="#services">الفحص بالدرون</a>
-          <a href="#services">متابعة البناء</a>
-          <a href="#packages">الباقات والأسعار</a>
-        </div>
-        <div>
-          <h4>التنقل</h4>
-          <a href="#business">للوسطاء والمهندسين</a>
-          <a href="#equipment">معداتنا</a>
-          <a href="#process">آلية العمل</a>
-          <a href="#faq">الأسئلة</a>
-          <a href="#contact">التواصل</a>
-        </div>
-        <div>
-          <h4>قانوني واللغة</h4>
-          <button type="button" data-open-modal="modal-impressum">بيانات الناشر</button>
-          <button type="button" data-open-modal="modal-datenschutz">الخصوصية</button>
-          <a href="../?choose=1">تغيير اللغة</a>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <span>© <span data-year>2026</span> Fivestar Property Scan · أنطاليا · تركيا</span>
-        <span>اعرف قبل أن تشتري.</span>
-      </div>
-    </div>
-  </footer>
+/* ---------- Leistungen als Aufklapper ----------
+   Die Klasse .klappbar setzt JavaScript. Ohne JavaScript greift keine
+   dieser Regeln und die Leistungen stehen weiterhin vollständig da. */
+.service.klappbar { display: block; padding: 0; align-items: initial; }
+.service.klappbar .service-innen {
+  display: grid; grid-template-columns: 0.92fr 1.08fr; gap: 58px;
+  align-items: center; padding: 8px 0 58px;
+}
+.service.klappbar.flip .service-innen .service-visual { order: 2; }
+/* Etikett und Überschrift stehen schon in der Kopfzeile – im aufgeklappten
+   Text noch einmal wäre doppelt. Sie bleiben im Quelltext stehen (für
+   Suchmaschinen), nur sichtbar sind sie nicht mehr. */
+.service.klappbar .service-innen > div > .service-tag,
+.service.klappbar .service-innen > div > h3 { display: none; }
+.service.klappbar .service-innen .desc { margin-top: 0; }
 
-  <!-- ================= النوافذ ================= -->
-  <div class="modal" id="modal-impressum" hidden role="dialog" aria-modal="true" aria-labelledby="mi-title">
-    <div class="modal-backdrop"></div>
-    <div class="modal-box">
-      <button class="modal-close" data-close-modal aria-label="إغلاق">✕</button>
-      <h3 id="mi-title">بيانات الناشر</h3>
-      <p><b>Fivestar Property Scan (FPS)</b><br>
-      فحص فني للعقارات<br>
-      أنطاليا، تركيا</p>
-      <p>المالك: <em>[يُضاف الاسم]</em><br>
-      العنوان: <em>[يُضاف العنوان]</em></p>
-      <p>البريد الإلكتروني: <span data-email-text class="ltr"></span><br>
-هاتف: <span data-phone class="ltr"></span> / <span data-phone-tr class="ltr"></span></p>
-      <p>المسؤول عن محتوى هذا الموقع: ‏Fivestar Property Scan. جميع المعلومات دون ضمان.</p>
-    </div>
-  </div>
-  <div class="modal" id="modal-datenschutz" hidden role="dialog" aria-modal="true" aria-labelledby="md-title">
-    <div class="modal-backdrop"></div>
-    <div class="modal-box">
-      <button class="modal-close" data-close-modal aria-label="إغلاق">✕</button>
-      <h3 id="md-title">الخصوصية</h3>
-      <p>هذا الموقع صفحة معلومات ثابتة بالكامل. لا يوجد تتبّع ولا أدوات تحليل ولا ملفات تعريف ارتباط إعلانية.</p>
-      <ul>
-        <li><b>اختيار اللغة:</b> تُحفظ لغتك المختارة محلياً في متصفحك فقط <span class="ltr">(localStorage)</span> ولا تُنقل إلينا.</li>
-        <li><b>نموذج التواصل:</b> تُرسل بياناتك عبر خدمة النماذج Web3Forms بشكل مشفّر إلى بريدنا وتُستخدم فقط للرد على طلبك. ولا تُحفظ على هذا الموقع.</li>
-        <li><b>واتساب:</b> عند التواصل عبر واتساب تسري سياسة الخصوصية الخاصة بواتساب <span class="ltr">(Meta Platforms)</span>. لا ترسل هناك سوى البيانات التي ترغب بمشاركتها.</li>
-        <li><b>الخطوط:</b> جميع الخطوط مستضافة محلياً على هذا الخادم – ولا يتم إنشاء أي اتصال بخوادم جوجل.</li>
-        <li><b>التقارير واللقطات:</b> نتعامل مع بيانات القياس والصور ولقطات الدرون بسرية تامة ونسلّمها لك حصرياً بصفتك العميل.</li>
-      </ul>
-      <p>أسئلة حول الخصوصية: <span data-email-text class="ltr"></span></p>
-    </div>
-  </div>
+.service-kopf {
+  display: flex; align-items: center; gap: 20px; width: 100%;
+  padding: 24px 6px; text-align: start;
+  border-radius: var(--radius-sm);
+  transition: background 0.25s;
+}
+.service-kopf:hover { background: rgba(148, 163, 184, 0.06); }
+.service-kopf:focus-visible { outline: 2px solid var(--cyan); outline-offset: 2px; }
+.kopf-bild {
+  width: 62px; height: 62px; flex: none; border-radius: 14px;
+  display: grid; place-items: center; overflow: hidden;
+  border: 1px solid var(--line);
+  background: linear-gradient(160deg, rgba(20, 30, 46, 0.9), rgba(11, 17, 25, 0.95));
+}
+.kopf-bild img { width: 78%; height: auto; }
+.kopf-text { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 3px; }
+.kopf-etikett {
+  font-family: var(--font-display); font-size: 0.72rem; font-weight: 600;
+  letter-spacing: 0.16em; text-transform: uppercase;
+  background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+html[lang="ar"] .kopf-etikett { letter-spacing: 0.04em; }
+.kopf-titel { font-family: var(--font-display); font-size: 1.16rem; font-weight: 600; color: var(--text); }
+.kopf-pfeil {
+  width: 11px; height: 11px; flex: none; margin-inline-end: 6px;
+  border-right: 2px solid var(--cyan); border-bottom: 2px solid var(--cyan);
+  transform: rotate(45deg) translate(-2px, -2px);
+  transition: transform 0.3s var(--ease);
+}
+.service.offen .kopf-pfeil { transform: rotate(-135deg) translate(-2px, -2px); }
 
-  <!-- واتساب عائم -->
-  <a class="wa-float" data-wa href="#contact" aria-label="ابدأ محادثة واتساب">
-    <svg viewBox="0 0 24 24" aria-hidden="true" fill="#04240f"><use href="#ic-wa"/></svg>
-  </a>
+/* Auf- und Zuklappen ohne gemessene Höhen: das Raster wächst von 0fr auf
+   1fr. Funktioniert bei beliebig langem Inhalt und braucht kein JavaScript
+   für die Animation. */
+.service-koerper {
+  display: grid; grid-template-rows: 0fr;
+  transition: grid-template-rows 0.4s var(--ease);
+}
+.service.offen .service-koerper { grid-template-rows: 1fr; }
+.service-koerper > .service-innen { overflow: hidden; min-height: 0; }
+.service:not(.offen) .service-koerper > .service-innen { padding-bottom: 0; }
+@media (prefers-reduced-motion: reduce) {
+  .service-koerper { transition: none; }
+  .kopf-pfeil { transition: none; }
+}
+@media (max-width: 900px) {
+  .service.klappbar .service-innen { grid-template-columns: 1fr; gap: 26px; padding-bottom: 40px; }
+  .service-kopf { gap: 15px; padding: 20px 4px; }
+  .kopf-bild { width: 54px; height: 54px; }
+  .kopf-titel { font-size: 1.05rem; }
+}
+.service-visual { position: relative; }
+.device-frame {
+  position: relative; border-radius: 20px; border: 1px solid var(--line);
+  background: linear-gradient(160deg, rgba(20, 30, 46, 0.85), rgba(11, 17, 25, 0.9));
+  padding: 34px; display: grid; place-items: center; min-height: 330px;
+  overflow: hidden; box-shadow: var(--shadow);
+}
+.device-frame::before {
+  content: ""; position: absolute; width: 340px; height: 340px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(34, 211, 238, 0.13), rgba(139, 92, 246, 0.08) 45%, transparent 70%);
+  filter: blur(6px);
+}
+.device-frame img { position: relative; width: min(78%, 320px); }
+/* Echte Fotos haben andere Seitenverhaeltnisse als die Zeichnungen: sie
+   fuellen den Rahmen und werden beschnitten statt verzerrt. */
+.device-frame img.echtes-foto,
+.tech-card img.echtes-foto {
+  width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 12px;
+}
+.kopf-bild img.echtes-foto { width: 100%; height: 100%; object-fit: cover; }
+.scan-house.echtes-foto { width: 100%; border-radius: 14px; }
+.device-frame .df-num {
+  position: absolute; top: 12px; right: 20px;
+  font-family: var(--font-mark); font-weight: 500; font-size: 3rem; letter-spacing: 0.02em;
+  color: rgba(214, 169, 82, 0.3);
+}
+[dir="rtl"] .device-frame .df-num { right: auto; left: 20px; }
+.service-tag {
+  display: inline-flex; align-items: center; gap: 8px;
+  border: 1px solid rgba(34, 211, 238, 0.35); border-radius: 999px;
+  background: rgba(34, 211, 238, 0.08); color: var(--cyan);
+  font-family: var(--font-display); font-size: 0.74rem; font-weight: 600;
+  letter-spacing: 0.14em; text-transform: uppercase;
+  padding: 6px 14px; margin-bottom: 16px;
+}
+html[lang="ar"] .service-tag { letter-spacing: 0.04em; }
+.service h3 { font-size: clamp(1.5rem, 2.6vw, 2rem); }
+.service .desc { color: var(--muted); max-width: 600px; }
+.feature-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px 22px; margin-top: 24px; }
+.feat { display: flex; gap: 10px; align-items: flex-start; font-size: 0.93rem; color: #C8D4E4; }
+.feat svg { width: 17px; height: 17px; flex: none; margin-top: 3px; }
+/* Ohne das hier wuerde ein <b> im Punkt zu einem eigenen Flex-Element und
+   die Zeile bräche in zwei Spalten ("Für Hotels:" | "Zimmer zeigen ..."). */
+.feat > b { display: contents; }
+.service-note {
+  margin-top: 26px; padding: 15px 18px; border-radius: var(--radius-sm);
+  border: 1px solid var(--line); border-left: 3px solid var(--orange);
+  background: rgba(251, 146, 60, 0.07);
+  font-size: 0.9rem; color: #D8E1EE;
+}
+[dir="rtl"] .service-note { border-left: 1px solid var(--line); border-right: 3px solid var(--orange); }
+.service-note b { color: var(--orange); }
 
-</body>
-</html>
+/* ---------- Technik-Showcase ---------- */
+.tech-card { text-align: center; padding: 26px 18px 22px; }
+.tech-card img { width: 88px; margin: 0 auto 14px; }
+.tech-card .tech-name { font-family: var(--font-display); font-weight: 700; font-size: 0.98rem; line-height: 1.25; }
+.tech-card .tech-sub { color: var(--muted); font-size: 0.78rem; margin-bottom: 16px; line-height: 1.35; }
+.spec-list { text-align: left; margin-top: 6px; }
+[dir="rtl"] .spec-list { text-align: right; }
+.spec-list li {
+  display: flex; justify-content: space-between; gap: 8px;
+  padding: 7px 1px; font-size: 0.76rem; border-top: 1px solid var(--line-soft);
+  line-height: 1.35;
+}
+.tech-note {
+  text-align: center; color: var(--muted); font-size: 0.88rem;
+  max-width: 760px; margin: 34px auto 0;
+}
+.tech-note b { color: var(--text); font-weight: 600; }
+.spec-list li span:first-child { color: var(--muted); }
+.spec-list li span:last-child { font-weight: 600; text-align: right; color: var(--text); }
+[dir="rtl"] .spec-list li span:last-child { text-align: left; }
+
+/* ---------- Geraetedaten in der Leistungskarte ----------
+   Frueher stand die Technik in einem eigenen Abschnitt weiter unten. Die
+   Zahlen erklaeren sich aber nur dort, wo auch die Leistung beschrieben ist –
+   deshalb stehen sie jetzt direkt unter der jeweiligen Illustration. Der
+   separate Technik-Abschnitt ist dafuer entfallen. */
+.geraet {
+  margin-top: 14px; padding: 15px 18px 13px;
+  border: 1px solid var(--line); border-radius: 14px;
+}
+.geraet-name {
+  font-family: var(--font-display); font-weight: 700;
+  font-size: 0.95rem; line-height: 1.25;
+}
+.geraet-sub { color: var(--muted); font-size: 0.78rem; margin-top: 2px; line-height: 1.35; }
+.geraet .spec-list { margin-top: 9px; }
+.geraet .spec-list li:first-child { border-top: none; padding-top: 2px; }
+
+/* ---------- Ablauf ---------- */
+.steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; position: relative; }
+.step { position: relative; padding: 28px 24px; }
+.step-num {
+  font-family: var(--font-mark); font-weight: 500; font-size: 2.5rem; line-height: 1;
+  background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent;
+  margin-bottom: 14px; display: block; letter-spacing: 0.02em;
+}
+.step h3 { font-size: 1.06rem; }
+.step p { color: var(--muted); font-size: 0.92rem; margin: 0; }
+.step::after {
+  content: ""; position: absolute; top: 42px; right: -18px; width: 14px; height: 1px;
+  background: linear-gradient(90deg, var(--gold), transparent); opacity: 0.7;
+}
+[dir="rtl"] .step::after { right: auto; left: -18px; background: linear-gradient(270deg, var(--gold), transparent); }
+.step:last-child::after { display: none; }
+
+/* ---------- Pakete ---------- */
+.price-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; align-items: stretch; }
+.price-card { display: flex; flex-direction: column; padding: 34px 30px; }
+.price-card .p-name { font-family: var(--font-display); font-weight: 700; font-size: 1.18rem; margin-bottom: 4px; }
+.price-card .p-for { color: var(--muted); font-size: 0.88rem; margin-bottom: 22px; }
+.price {
+  font-family: var(--font-mark); font-weight: 500; font-size: 2.6rem; letter-spacing: 0.01em;
+  line-height: 1; margin-bottom: 4px;
+  background: var(--gold-grad); -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.price .p-from { font-family: var(--font-body); font-size: 0.9rem; font-weight: 500; color: var(--muted); letter-spacing: 0; margin-right: 7px; }
+[dir="rtl"] .price .p-from { margin-right: 0; margin-left: 7px; }
+.p-hint { color: var(--muted); font-size: 0.8rem; margin-bottom: 24px; }
+.p-feats { flex: 1; margin-bottom: 26px; }
+.p-feats li { display: flex; gap: 10px; align-items: flex-start; padding: 7px 0; font-size: 0.92rem; color: #C8D4E4; }
+.p-feats svg { width: 17px; height: 17px; flex: none; margin-top: 3px; }
+.price-card .btn { width: 100%; }
+/* Empfohlenes Paket. Es reicht nicht, die eine Karte hübsch zu machen –
+   erst wenn die beiden Nachbarn sichtbar zurücktreten, wird die Mitte zur
+   Empfehlung statt zu einer von drei gleichwertigen Optionen. */
+.price-card.featured {
+  border: 1px solid transparent;
+  background:
+    linear-gradient(165deg, #1B2942, #0D1420) padding-box,
+    var(--grad) border-box;
+  box-shadow: 0 30px 80px rgba(139, 92, 246, 0.3), 0 0 0 1px rgba(34, 211, 238, 0.18);
+  transform: scale(1.06);
+  z-index: 2;
+}
+.price-card.featured:hover { transform: scale(1.06) translateY(-5px); }
+.price-card.featured .price { font-size: 3.1rem; }
+.price-card.featured .p-name { font-size: 1.32rem; }
+.price-card.featured .p-feats li { color: var(--text); }
+
+/* Die Nebenkarten treten zurück: kleiner, ruhiger, ohne Goldpreis.
+   Beim Überfahren kommen sie auf volle Deckkraft – zurücktreten heißt
+   nicht wegsperren. */
+.price-card:not(.featured) {
+  transform: scale(0.97);
+  opacity: 0.88;
+  background: linear-gradient(165deg, rgba(17, 26, 38, 0.55), rgba(11, 17, 25, 0.7));
+  transition: opacity 0.3s, transform 0.3s var(--ease), border-color 0.3s;
+}
+.price-card:not(.featured):hover { opacity: 1; transform: scale(0.97) translateY(-4px); }
+.price-card:not(.featured) .price { font-size: 2.2rem; }
+.price-card:not(.featured) .price,
+.price-card:not(.featured) .price .p-from {
+  background: none; -webkit-background-clip: border-box; background-clip: border-box;
+  color: var(--muted);
+}
+.p-badge {
+  position: absolute; top: -12px; left: 50%; transform: translateX(-50%);
+  background: var(--grad); color: #071018;
+  font-family: var(--font-display); font-size: 0.7rem; font-weight: 700;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  border-radius: 999px; padding: 5px 15px; white-space: nowrap;
+  box-shadow: 0 8px 22px rgba(34, 211, 238, 0.35);
+}
+html[lang="ar"] .p-badge { letter-spacing: 0; }
+.price-note { text-align: center; color: var(--muted); font-size: 0.88rem; max-width: 720px; margin: 28px auto 0; }
+
+/* ---------- Muster-Bericht ----------
+   Der teuerste Einwand vor dem Kauf ist „ich weiß nicht, was ich dafür
+   kriege". Deshalb steht das Ergebnis direkt unter den Preisen – nicht
+   erst im FAQ. */
+.bericht {
+  margin: 46px auto 0; max-width: 940px;
+  display: grid; grid-template-columns: 250px 1fr; gap: 34px; align-items: center;
+  padding: 34px 34px 30px;
+  border: 1px solid var(--line); border-radius: var(--radius);
+  background:
+    radial-gradient(600px 260px at 88% 0%, rgba(214, 169, 82, 0.10), transparent 66%),
+    linear-gradient(165deg, rgba(20, 30, 46, 0.9), rgba(11, 17, 25, 0.92));
+}
+.bericht-vorschau img { width: 100%; border-radius: 10px; }
+.bericht-text h3 { font-size: clamp(1.2rem, 2.2vw, 1.6rem); margin-bottom: 8px; }
+.bericht-text > p { color: var(--muted); font-size: 0.96rem; margin: 0 0 18px; }
+.bericht-list { display: grid; gap: 9px; margin-bottom: 22px; }
+.bericht-list li {
+  position: relative; padding-inline-start: 26px;
+  font-size: 0.95rem; color: #D5E0EE;
+}
+.bericht-list li::before {
+  content: ""; position: absolute; inset-inline-start: 0; top: 0.55em;
+  width: 9px; height: 9px; border-radius: 50%;
+  background: var(--gold-grad);
+}
+.bericht-list b { color: var(--text); font-weight: 600; }
+.bericht-cta { display: flex; gap: 12px; flex-wrap: wrap; }
+.bericht-note { margin: 16px 0 0; font-size: 0.84rem; color: var(--muted); }
+@media (max-width: 780px) {
+  .bericht { grid-template-columns: 1fr; gap: 24px; padding: 26px 22px 24px; }
+  .bericht-vorschau { max-width: 220px; margin: 0 auto; }
+  .bericht-cta .btn { width: 100%; }
+}
+
+/* Preisstaffel nach Objektgröße */
+.size-note {
+  max-width: 820px; margin: 40px auto 0;
+  border: 1px solid var(--line); border-radius: var(--radius);
+  background: linear-gradient(165deg, rgba(20, 30, 46, 0.75), rgba(11, 17, 25, 0.85));
+  padding: 30px 30px 26px;
+}
+.size-note h3 { font-size: 1.12rem; margin-bottom: 12px; }
+.size-note p { color: var(--muted); font-size: 0.92rem; }
+.size-list { margin: 18px 0 16px; }
+.size-list li {
+  display: flex; justify-content: space-between; gap: 18px; align-items: baseline;
+  padding: 11px 2px; border-top: 1px solid var(--line-soft); font-size: 0.9rem;
+}
+.size-list li:last-child { border-bottom: 1px solid var(--line-soft); }
+.size-list li span:first-child { color: var(--text); font-weight: 600; font-family: var(--font-display); white-space: nowrap; }
+.size-list li span:last-child { color: var(--muted); text-align: right; }
+[dir="rtl"] .size-list li span:last-child { text-align: left; }
+.size-hint {
+  border-left: 2px solid var(--cyan); padding: 12px 16px; margin: 0;
+  background: rgba(34, 211, 238, 0.06); border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  font-size: 0.88rem;
+}
+[dir="rtl"] .size-hint { border-left: 0; border-right: 2px solid var(--cyan); border-radius: var(--radius-sm) 0 0 var(--radius-sm); }
+.size-hint b { color: var(--text); }
+
+/* ---------- Aufklappbare Punktelisten ----------
+   Die Leistungsblöcke haben 10–12 Punkte. Offen wirkt das erschlagend,
+   gekürzt verliert man Inhalt (auch für Google). Deshalb: die stärksten
+   Punkte stehen offen, der Rest kommt hinter einen Schalter.
+   Bewusst ohne JavaScript gelöst (<details>), damit es auch dann
+   funktioniert, wenn Skripte blockiert sind. */
+.mehr { margin-top: 12px; }
+.mehr > summary {
+  display: inline-flex; align-items: center; gap: 8px; cursor: pointer;
+  font-family: var(--font-display); font-size: 0.9rem; font-weight: 600;
+  color: var(--cyan); padding: 7px 2px; list-style: none;
+  transition: color 0.2s;
+}
+.mehr > summary::-webkit-details-marker { display: none; }
+.mehr > summary::after {
+  content: ""; width: 8px; height: 8px; flex: none;
+  border-right: 2px solid currentColor; border-bottom: 2px solid currentColor;
+  transform: rotate(45deg) translate(-2px, -2px); transition: transform 0.25s var(--ease);
+}
+.mehr[open] > summary::after { transform: rotate(-135deg) translate(-2px, -2px); }
+.mehr > summary:hover { color: var(--text); }
+.mehr > summary:focus-visible { outline: 2px solid var(--cyan); outline-offset: 3px; border-radius: 4px; }
+.mehr .feature-grid, .mehr .b2b-list { margin-top: 12px; }
+@media (prefers-reduced-motion: reduce) { .mehr > summary::after { transition: none; } }
+
+/* ---------- „Weitere Leistungen" unter den Paketen ----------
+   Derselbe <details>-Mechanismus, aber als ganzer Kasten statt als Textlink:
+   Zugeklappt steht dort nur eine Zeile, damit der Preisbereich nicht länger
+   wird. Wer mehr braucht (Villa, Abnahme, Zusatzleistungen), klappt auf. */
+details.size-note { padding: 0; }
+details.size-note > summary {
+  display: flex; align-items: center; justify-content: space-between; gap: 14px;
+  cursor: pointer; list-style: none;
+  font-family: var(--font-display); font-size: 1.05rem; font-weight: 600;
+  color: var(--text); padding: 22px 30px; transition: color 0.2s;
+}
+details.size-note > summary::-webkit-details-marker { display: none; }
+details.size-note > summary::after {
+  content: ""; width: 9px; height: 9px; flex: none; color: var(--cyan);
+  border-right: 2px solid currentColor; border-bottom: 2px solid currentColor;
+  transform: rotate(45deg) translateY(-3px); transition: transform 0.25s var(--ease);
+}
+details.size-note[open] > summary::after { transform: rotate(-135deg) translateY(-1px); }
+details.size-note > summary:hover { color: var(--cyan); }
+details.size-note > summary:focus-visible { outline: 2px solid var(--cyan); outline-offset: -3px; border-radius: var(--radius); }
+details.size-note > :not(summary) { padding-left: 30px; padding-right: 30px; }
+details.size-note > :last-child { padding-bottom: 26px; }
+@media (max-width: 700px) {
+  details.size-note > summary { padding: 18px 20px; font-size: 1rem; }
+  details.size-note > :not(summary) { padding-left: 20px; padding-right: 20px; }
+}
+@media (prefers-reduced-motion: reduce) { details.size-note > summary::after { transition: none; } }
+
+/* Rueckmeldung beim Kopieren von E-Mail/Telefon (Desktop) */
+.kopier-toast {
+  position: fixed; left: 50%; bottom: 26px; transform: translate(-50%, 14px);
+  z-index: 200; max-width: min(92vw, 520px);
+  background: linear-gradient(165deg, #1D2A3C, #131C29);
+  border: 1px solid var(--line); border-radius: 999px;
+  padding: 12px 22px; font-size: 0.9rem; color: var(--text);
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.45);
+  opacity: 0; pointer-events: none;
+  transition: opacity 0.25s, transform 0.25s var(--ease);
+  overflow-wrap: anywhere; text-align: center;
+}
+.kopier-toast.an { opacity: 1; transform: translate(-50%, 0); }
+@media (prefers-reduced-motion: reduce) { .kopier-toast { transition: none; } }
+
+/* ==========================================================================
+   REIHENFOLGE DER ABSCHNITTE
+   Die Seite folgt der Kundenreise, nicht der Reihenfolge im Quelltext:
+     Problem → Bin ich gemeint? → Wie läuft das? → Was genau? → Was kostet es?
+     → Wer macht das? → Womit? → Stimmen → Fragen → Kontakt → (Firmenkunden)
+   Gelöst über flex/order statt über Umsortieren im HTML: Das ist gefahrlos
+   umkehrbar und macht die Absicht an einer Stelle sichtbar.
+   Die Sprachen benutzen unterschiedliche IDs, deshalb sind alle gelistet.
+
+   Geändert am 02.08.2026 – „Für Firmen" ist ans Ende gewandert:
+   Der Abschnitt stand zwischen Preisen und Kontaktformular und zeigte einem
+   Privatkäufer ausgerechnet kurz vor der Anfrage Bauträger-Konditionen, also
+   Inhalt für eine andere Zielgruppe. Zwischen Preis und Formular liegen jetzt
+   nur noch die Vertrauensbausteine: Wer macht das (Über uns), womit (Technik),
+   was sagen andere (Stimmen) und was ist noch offen (FAQ).
+   Der Weg vom Preis zum Formular ist damit rund 1,6 Bildschirme kürzer.
+   Firmenkunden verlieren nichts – sie kommen über den eigenen Menüpunkt.
+   ========================================================================== */
+main { display: flex; flex-direction: column; }
+.hero                                                            { order: 0; }
+#warum, #why, #neden, #pochemu                                   { order: 1; }
+#fuer-wen, #for-whom, #kimler-icin, #dlya-kogo                   { order: 2; }
+#einfach                                                         { order: 3; }
+#leistungen, #services, #hizmetler, #uslugi                      { order: 4; }
+#pakete, #packages, #paketler, #pakety                           { order: 5; }
+#ueber, #about, #hakkimizda, #o-nas                              { order: 6; }
+#technik, #equipment, #ekipman, #oborudovanie                    { order: 7; }
+#stimmen                                                         { order: 8; }
+#faq, #sss                                                       { order: 9; }
+#kontakt, #contact, #iletisim                                    { order: 10; }
+#firmen, #business, #kurumsal, #biznes                           { order: 11; }
+.brand-band                                                      { order: 12; }
+
+/* ==========================================================================
+   ABSCHNITTSTRENNER
+   Bis hierhin liefen alle Abschnitte auf demselben Untergrund ineinander –
+   die Seite wirkte wie ein einziger langer Textblock. Jetzt wechselt der
+   Untergrund im Rhythmus, dazu eine Haarlinie mit Goldakzent in der Mitte.
+   Man sieht damit auch beim schnellen Scrollen, wo ein Thema endet.
+   Wieder über die IDs statt über Klassen im HTML – wie die Reihenfolge oben,
+   damit die Abschnittslogik an EINER Stelle steht und nicht in 5 Dateien.
+   ========================================================================== */
+#fuer-wen, #for-whom, #kimler-icin, #dlya-kogo,
+#pakete, #packages, #paketler, #pakety,
+#technik, #equipment, #ekipman, #oborudovanie,
+#faq, #sss {
+  background:
+    linear-gradient(180deg, rgba(148, 163, 184, 0.055), rgba(148, 163, 184, 0.02) 55%, transparent);
+}
+
+/* Trennlinie zwischen den Hauptblöcken, mit Goldpunkt in der Mitte */
+#fuer-wen, #for-whom, #kimler-icin, #dlya-kogo,
+#einfach,
+#leistungen, #services, #hizmetler, #uslugi,
+#pakete, #packages, #paketler, #pakety,
+#ueber, #about, #hakkimizda, #o-nas,
+#technik, #equipment, #ekipman, #oborudovanie,
+#faq, #sss,
+#kontakt, #contact, #iletisim { border-top: 1px solid var(--line-soft); }
+
+#fuer-wen::before, #for-whom::before, #kimler-icin::before, #dlya-kogo::before,
+#einfach::before,
+#leistungen::before, #services::before, #hizmetler::before, #uslugi::before,
+#pakete::before, #packages::before, #paketler::before, #pakety::before,
+#ueber::before, #about::before, #hakkimizda::before, #o-nas::before,
+#technik::before, #equipment::before, #ekipman::before, #oborudovanie::before,
+#faq::before, #sss::before,
+#kontakt::before, #contact::before, #iletisim::before {
+  content: ""; position: absolute; top: -3px; left: 50%; transform: translateX(-50%);
+  width: 46px; height: 5px; border-radius: 999px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  opacity: 0.55;
+}
+
+/* ---------- Persönliche Vorstellung ----------
+   Die Seite wirkte bis hierhin anonym. Ein Gesicht und ein paar ehrliche
+   Sätze wiegen bei einem Fremden mehr als jede Leistungsliste. */
+.person {
+  margin-top: 46px; padding: 30px;
+  display: grid; grid-template-columns: 260px 1fr; gap: 30px; align-items: start;
+  border: 1px solid var(--line); border-radius: var(--radius);
+  background: linear-gradient(165deg, rgba(20, 30, 46, 0.75), rgba(11, 17, 25, 0.85));
+}
+/* Querformat 3:2 – so bleiben Person UND das Logo im Hintergrund sichtbar */
+.person-foto {
+  width: 260px; aspect-ratio: 3 / 2; border-radius: 14px; overflow: hidden;
+  border: 1px solid var(--line); background: rgba(34, 211, 238, 0.05);
+  display: grid; place-items: center; text-align: center;
+}
+.person-foto img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.person-foto .platzhalter { padding: 16px; font-size: 0.78rem; color: var(--muted); line-height: 1.5; }
+.person-foto .platzhalter svg { width: 34px; height: 34px; margin-bottom: 8px; opacity: 0.5; }
+.person h3 { font-size: 1.3rem; margin-bottom: 4px; }
+.person .rolle {
+  font-family: var(--font-display); font-size: 0.82rem; letter-spacing: 0.14em;
+  text-transform: uppercase; color: var(--cyan); margin-bottom: 16px; display: block;
+}
+.person p { color: var(--muted); margin: 0 0 12px; font-size: 0.98rem; }
+.person p:last-child { margin-bottom: 0; }
+.person p b { color: var(--text); font-weight: 600; }
+/* Der Dreiklang über dem persönlichen Text – die drei Wörter, auf die
+   sich alles Weitere stützt. Bewusst als Aussage gesetzt, nicht als
+   weitere Überschrift: es soll gelesen klingen wie gesprochen. */
+.person .person-claim {
+  font-family: var(--font-display); font-weight: 600;
+  font-size: clamp(1.02rem, 1.6vw, 1.16rem); line-height: 1.45;
+  color: var(--text); margin: 0 0 14px; padding-bottom: 14px;
+  border-bottom: 1px solid var(--line-soft);
+}
+@media (max-width: 720px) {
+  .person { grid-template-columns: 1fr; gap: 18px; padding: 22px 18px; justify-items: center; text-align: center; }
+  .person-foto { width: min(280px, 100%); }
+  .person .rolle { display: block; }
+}
+
+/* ---------- Kundenstimmen ---------- */
+.stimmen { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.stimme {
+  padding: 26px 24px; border-radius: var(--radius);
+  border: 1px solid var(--line-soft); background: rgba(20, 30, 46, 0.55);
+  display: flex; flex-direction: column;
+}
+.stimme-text { color: #D5E0EE; font-size: 0.97rem; margin: 0 0 18px; }
+.stimme-text::before { content: "„"; color: var(--cyan); font-size: 1.6rem; line-height: 0; margin-inline-end: 3px; }
+.stimme-quelle {
+  margin-top: auto; padding-top: 14px; border-top: 1px solid var(--line-soft);
+  font-size: 0.84rem; color: var(--muted);
+}
+.stimme-quelle b { color: var(--text); font-weight: 600; display: block; margin-bottom: 2px; }
+.stimmen-hinweis {
+  margin: 22px auto 0; max-width: 760px; text-align: center;
+  font-size: 0.86rem; color: var(--muted);
+  padding: 14px 18px; border-radius: var(--radius-sm);
+  border: 1px solid var(--line-soft); background: rgba(214, 169, 82, 0.07);
+}
+@media (max-width: 860px) { .stimmen { grid-template-columns: 1fr; } }
+
+/* ---------- „So einfach läuft das" ----------
+   Laien-Erklärung vor den technischen Details. Viele Kunden hören zum
+   ersten Mal von Wärmebilddiagnostik – hier ohne einen einzigen Fachbegriff. */
+.einfach-steps {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 18px; margin-bottom: 26px;
+}
+.einfach-steps > div {
+  padding: 26px 24px; border-radius: var(--radius);
+  border: 1px solid var(--line-soft); background: rgba(20, 30, 46, 0.5);
+}
+.einfach-steps .nr {
+  display: grid; place-items: center; width: 40px; height: 40px; border-radius: 50%;
+  margin-bottom: 16px; font-family: var(--font-display); font-weight: 700; font-size: 1.05rem;
+  background: rgba(34, 211, 238, 0.12); border: 1px solid rgba(34, 211, 238, 0.34); color: var(--cyan);
+}
+.einfach-steps h3 { font-size: 1.08rem; margin-bottom: 8px; }
+.einfach-steps p { color: var(--muted); font-size: 0.95rem; margin: 0; }
+.einfach-frage {
+  padding: 24px 26px; border-radius: var(--radius);
+  border: 1px solid var(--line); border-inline-start: 3px solid var(--cyan);
+  background: rgba(34, 211, 238, 0.06);
+}
+.einfach-frage h3 { font-size: 1.05rem; margin-bottom: 8px; color: var(--cyan); }
+.einfach-frage p { color: #D5E0EE; font-size: 0.96rem; margin: 0 0 12px; }
+.einfach-frage p:last-child { margin-bottom: 0; }
+@media (max-width: 860px) {
+  .einfach-steps { grid-template-columns: 1fr; gap: 14px; }
+  .einfach-steps > div { padding: 22px 20px; }
+  .einfach-frage { padding: 20px 18px; }
+}
+
+/* ---------- „Das bekommen Sie" ----------
+   Sammelt am Ende der Leistungen, was beim Kunden tatsächlich ankommt.
+   Bewusst als geschlossener Block: Die Einzelinfos stehen zwar in den
+   Leistungspunkten, aber dort verstreut über 70 Zeilen. */
+.liefer {
+  margin-top: 64px; padding: 38px 34px 34px;
+  border: 1px solid var(--line); border-radius: var(--radius);
+  background:
+    radial-gradient(700px 300px at 12% 0%, rgba(34, 211, 238, 0.09), transparent 65%),
+    linear-gradient(165deg, rgba(20, 30, 46, 0.9), rgba(11, 17, 25, 0.9));
+}
+.liefer > .eyebrow { margin-bottom: 10px; }
+.liefer h3 { font-size: clamp(1.3rem, 2.4vw, 1.8rem); margin-bottom: 8px; }
+.liefer > p { color: var(--muted); max-width: 640px; margin: 0 0 26px; }
+.liefer-list { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 30px; }
+.liefer-list > div {
+  display: flex; gap: 12px; align-items: flex-start;
+  font-size: 0.97rem; color: #D5E0EE; min-width: 0;
+}
+.liefer-list svg { width: 20px; height: 20px; flex: none; margin-top: 2px; }
+.liefer-list b { color: var(--text); font-weight: 600; }
+.liefer-mehr {
+  margin-top: 16px; padding: 8px 2px;
+  display: inline-flex; align-items: center; gap: 8px;
+  font-family: var(--font-display); font-size: 0.9rem; font-weight: 600;
+  color: var(--cyan); transition: color 0.2s;
+}
+.liefer-mehr::after {
+  content: ""; width: 8px; height: 8px; flex: none;
+  border-right: 2px solid currentColor; border-bottom: 2px solid currentColor;
+  transform: rotate(45deg) translate(-2px, -2px); transition: transform 0.25s var(--ease);
+}
+.liefer-mehr[aria-expanded="true"]::after { transform: rotate(-135deg) translate(-2px, -2px); }
+.liefer-mehr:hover { color: var(--text); }
+.liefer-note {
+  margin: 26px 0 0; padding-top: 20px; border-top: 1px solid var(--line-soft);
+  font-size: 0.9rem; color: var(--muted);
+}
+.liefer-note b { color: var(--cyan); font-weight: 600; }
+@media (max-width: 860px) {
+  .liefer { padding: 28px 22px 26px; }
+  .liefer-list { grid-template-columns: 1fr; gap: 13px; }
+}
+
+/* Hinweis auf Nordzypern unter den Einsatzorten */
+.zypern-hinweis {
+  margin: 12px 0 4px; padding: 11px 14px;
+  border-inline-start: 2px solid var(--gold);
+  background: rgba(214, 169, 82, 0.08);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  font-size: 0.86rem; color: var(--muted);
+}
+[dir="rtl"] .zypern-hinweis { border-radius: var(--radius-sm) 0 0 var(--radius-sm); }
+.zypern-hinweis b { color: var(--text); font-weight: 600; }
+
+/* Laender-Kennzeichnung hinter den Telefonnummern */
+.tel-tag {
+  font-size: 0.76rem; color: var(--muted); font-weight: 500;
+  border: 1px solid var(--line-soft); border-radius: 999px;
+  padding: 2px 9px; margin-inline-start: 8px; white-space: nowrap;
+}
+@media (max-width: 560px) {
+  .size-note { padding: 24px 20px 22px; }
+  .size-list li { flex-direction: column; gap: 4px; }
+  .size-list li span:last-child { text-align: left; }
+  [dir="rtl"] .size-list li span:last-child { text-align: right; }
+}
+
+/* ---------- Fuer Firmen (Makler, Planer, Gewerbe) ----------
+   Eigener Hintergrund, damit der Bereich sich sichtbar vom
+   Privatkunden-Teil absetzt: andere Zielgruppe, andere Ansprache. */
+.section-b2b {
+  background:
+    radial-gradient(1000px 460px at 50% -6%, rgba(139, 92, 246, 0.12), transparent 68%),
+    linear-gradient(180deg, rgba(16, 24, 39, 0.85), rgba(11, 17, 25, 0));
+  border-top: 1px solid var(--line-soft);
+  border-bottom: 1px solid var(--line-soft);
+}
+/* Firmenkarten violett getönt, Equipment-Karten kühl/cyan – so ist auf einen
+   Blick erkennbar, dass es zwei verschiedene Seitenbereiche sind. */
+.b2b-card {
+  display: flex; flex-direction: column;
+  border-color: rgba(139, 92, 246, 0.32);
+  background: linear-gradient(165deg, rgba(32, 26, 56, 0.85), rgba(17, 15, 32, 0.9));
+}
+.b2b-card::before { background: linear-gradient(90deg, var(--violet), var(--orange)); }
+.b2b-card .card-icon {
+  background: rgba(139, 92, 246, 0.12); border-color: rgba(139, 92, 246, 0.32);
+}
+.tech-card {
+  border-color: rgba(34, 211, 238, 0.24);
+  background: linear-gradient(165deg, rgba(16, 34, 46, 0.8), rgba(11, 20, 30, 0.88));
+}
+.b2b-role {
+  font-family: var(--font-display); font-size: 0.73rem; font-weight: 600;
+  letter-spacing: 0.17em; text-transform: uppercase;
+  color: var(--cyan); margin-bottom: 8px;
+}
+html[lang="ar"] .b2b-role { letter-spacing: 0.05em; }
+.b2b-list { display: grid; gap: 11px; margin: 18px 0 22px; }
+.b2b-out {
+  margin-top: auto; padding-top: 16px;
+  border-top: 1px solid var(--line-soft);
+  font-size: 0.86rem; color: var(--muted);
+}
+.b2b-out b { color: var(--text); font-weight: 600; }
+.b2b-cta { text-align: center; margin-top: 34px; }
+/* Statt einer Tabelle, in der dreimal „auf Anfrage" stand: ein Satz.
+   Gewerbekunden verhandeln Mengen – eine Zahl auf der Seite kappt die
+   Verhandlung nach oben, bevor sie beginnt. */
+.b2b-preis {
+  max-width: 660px; margin: 0 auto 22px;
+  font-size: 0.95rem; color: var(--muted);
+}
+
+/* ---------- FAQ ---------- */
+.faq-wrap { max-width: 820px; margin: 0 auto; }
+.faq-item { border: 1px solid var(--line); border-radius: var(--radius-sm); background: rgba(17, 26, 38, 0.6); margin-bottom: 12px; overflow: hidden; transition: border-color 0.3s; }
+.faq-item.open { border-color: rgba(34, 211, 238, 0.42); }
+.faq-q {
+  width: 100%; display: flex; justify-content: space-between; align-items: center; gap: 18px;
+  text-align: left; padding: 19px 22px;
+  font-family: var(--font-display); font-weight: 600; font-size: 1rem;
+}
+[dir="rtl"] .faq-q { text-align: right; }
+.faq-q .fx {
+  position: relative; width: 21px; height: 21px; flex: none;
+  border-radius: 50%; border: 1px solid var(--muted);
+  transition: transform 0.35s var(--ease), border-color 0.3s;
+}
+.faq-q .fx::before, .faq-q .fx::after {
+  content: ""; position: absolute; background: var(--muted); border-radius: 2px;
+  top: 50%; left: 50%; transform: translate(-50%, -50%);
+  transition: background 0.3s;
+}
+.faq-q .fx::before { width: 9px; height: 1.4px; }
+.faq-q .fx::after { width: 1.4px; height: 9px; }
+.faq-item.open .fx { transform: rotate(45deg); border-color: var(--cyan); }
+.faq-item.open .fx::before, .faq-item.open .fx::after { background: var(--cyan); }
+.faq-a { display: grid; grid-template-rows: 0fr; transition: grid-template-rows 0.45s var(--ease); }
+.faq-item.open .faq-a { grid-template-rows: 1fr; }
+.faq-a-inner { overflow: hidden; min-height: 0; }
+.faq-a-inner p { padding: 0 22px 20px; color: var(--muted); font-size: 0.95rem; margin: 0; }
+
+/* ---------- Über ---------- */
+.about-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 54px; align-items: center; }
+.about-points { display: grid; gap: 14px; }
+.about-points li {
+  display: flex; gap: 13px; align-items: flex-start;
+  border: 1px solid var(--line); border-radius: var(--radius-sm);
+  background: rgba(17, 26, 38, 0.6); padding: 15px 18px; font-size: 0.94rem;
+}
+.about-points svg { width: 19px; height: 19px; flex: none; margin-top: 2px; }
+.about-points b { display: block; font-family: var(--font-display); color: var(--text); }
+.about-points span { color: var(--muted); font-size: 0.88rem; }
+
+/* ==========================================================================
+   Marken-Band – grosses Logo mit Luft drumherum, direkt vor dem Kontakt.
+   Bewusst nur EINMAL auf der Seite: gross und ruhig wirkt wertiger als oft
+   und klein.
+   ========================================================================== */
+.brand-band {
+  position: relative;
+  padding: 86px 0 82px;
+  text-align: center;
+  border-top: 1px solid var(--line-soft);
+  border-bottom: 1px solid var(--line-soft);
+  background:
+    radial-gradient(620px 300px at 50% 0%, rgba(214, 169, 82, 0.10), transparent 70%),
+    radial-gradient(520px 280px at 50% 100%, rgba(34, 211, 238, 0.07), transparent 70%);
+  overflow: hidden;
+}
+/* zarte Lichtlinie oben */
+.brand-band::before {
+  content: ""; position: absolute; top: -1px; left: 50%; transform: translateX(-50%);
+  width: min(420px, 70%); height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+.brand-band img {
+  width: min(420px, 76%); height: auto; margin: 0 auto 26px;
+  filter: drop-shadow(0 18px 44px rgba(214, 169, 82, 0.22));
+}
+.brand-band .bb-claim {
+  font-family: var(--font-display); font-weight: 700;
+  font-size: clamp(1.45rem, 3.4vw, 2.15rem); letter-spacing: -0.02em;
+  margin: 0 0 12px;
+}
+html[lang="ar"] .brand-band .bb-claim { letter-spacing: 0; }
+.brand-band .bb-sub {
+  color: var(--muted); font-size: 0.96rem; margin: 0 0 20px;
+}
+.brand-band .bb-stars { display: flex; justify-content: center; gap: 7px; }
+.brand-band .bb-stars svg { width: 14px; height: 14px; }
+@media (max-width: 860px) {
+  .brand-band { padding: 62px 0 58px; }
+  .brand-band img { width: min(340px, 84%); margin-bottom: 22px; }
+}
+
+/* ---------- Kontakt ---------- */
+.contact-grid { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 26px; align-items: stretch; }
+.contact-card { display: flex; flex-direction: column; }
+.wa-card { border-color: rgba(37, 211, 102, 0.32); }
+.wa-card:hover { border-color: rgba(37, 211, 102, 0.6); }
+.wa-card .card-icon { background: rgba(37, 211, 102, 0.1); border-color: rgba(37, 211, 102, 0.34); }
+.contact-line { display: flex; align-items: center; gap: 11px; padding: 9px 0; font-size: 0.95rem; color: #C8D4E4; }
+.contact-line svg { width: 18px; height: 18px; flex: none; }
+.contact-card .btn { margin-top: auto; }
+.area-chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0 24px; }
+.area-chips li {
+  border: 1px solid var(--line); border-radius: 999px; padding: 5px 13px;
+  font-size: 0.8rem; color: var(--muted);
+}
+/* Sprach-Hinweis im Kontakt */
+.lang-note {
+  border: 1px solid var(--line); border-radius: var(--radius-sm);
+  background: rgba(34, 211, 238, 0.06);
+  padding: 14px 17px; margin: 4px 0 18px; font-size: 0.87rem; color: #C8D4E4;
+  display: flex; gap: 11px; align-items: flex-start;
+}
+.lang-note svg { width: 18px; height: 18px; flex: none; margin-top: 2px; }
+.lang-note b { color: var(--cyan); font-weight: 600; }
+.form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.field { display: flex; flex-direction: column; gap: 7px; }
+.field.full { grid-column: 1 / -1; }
+.field label { font-size: 0.82rem; font-weight: 600; color: var(--muted); letter-spacing: 0.03em; }
+.field input, .field textarea, .field select {
+  font: inherit; color: var(--text);
+  background: rgba(8, 13, 20, 0.8);
+  border: 1px solid var(--line); border-radius: var(--radius-sm);
+  padding: 12px 15px; transition: border-color 0.25s, box-shadow 0.25s;
+}
+.field textarea { resize: vertical; min-height: 110px; }
+.field input:focus, .field textarea:focus, .field select:focus {
+  outline: none; border-color: rgba(34, 211, 238, 0.65);
+  box-shadow: 0 0 0 3px rgba(34, 211, 238, 0.15);
+}
+.field select option { background: #111A26; }
+.form-note { font-size: 0.8rem; color: var(--muted); margin: 14px 0 18px; }
+
+/* Rückmeldung nach dem Absenden */
+.form-status {
+  margin: 0 0 16px; padding: 13px 16px; border-radius: var(--radius-sm);
+  font-size: 0.9rem; border: 1px solid var(--line);
+}
+.form-status[hidden] { display: none; }
+.form-status.is-ok { border-color: rgba(37, 211, 102, 0.5); background: rgba(37, 211, 102, 0.08); color: #D7F5E3; }
+.form-status.is-err { border-color: rgba(251, 146, 60, 0.5); background: rgba(251, 146, 60, 0.08); color: #FBE3CC; }
+/* kurzes Aufblitzen, wenn ein Paket vorgewählt wurde */
+.field select.just-set {
+  border-color: var(--cyan);
+  box-shadow: 0 0 0 3px rgba(34, 211, 238, 0.18);
+}
+
+/* ---------- Footer ---------- */
+.site-footer { border-top: 1px solid var(--line-soft); padding: 60px 0 34px; margin-top: 40px; background: rgba(7, 12, 19, 0.6); }
+.footer-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 36px; margin-bottom: 44px; }
+.footer-grid h4 { font-size: 0.84rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; }
+html[lang="ar"] .footer-grid h4 { letter-spacing: 0.02em; }
+.footer-grid a, .footer-grid button { display: block; padding: 5px 0; color: var(--muted); font-size: 0.92rem; text-align: left; transition: color 0.2s; }
+[dir="rtl"] .footer-grid a, [dir="rtl"] .footer-grid button { text-align: right; }
+.footer-grid a:hover, .footer-grid button:hover { color: var(--text); }
+.footer-about p { color: var(--muted); font-size: 0.9rem; max-width: 320px; }
+
+/* Grosse Wortmarke im Footer – ersetzt die kleine Kopfzeilen-Variante.
+   Spezifität muss über ".footer-grid a" liegen, sonst greift dort display:block. */
+.footer-grid a.footer-logo-big { display: block; padding: 0; margin: 0 0 16px; }
+.footer-grid a.footer-logo-big img { width: min(250px, 82%); height: auto; }
+.footer-grid a.footer-brand-small { display: none; }
+.footer-bottom {
+  border-top: 1px solid var(--line-soft); padding-top: 24px;
+  display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap;
+  color: var(--muted); font-size: 0.84rem;
+}
+.footer-stars { display: flex; gap: 5px; align-items: center; }
+.footer-stars svg { width: 12px; height: 12px; }
+
+/* ---------- WhatsApp-Float ---------- */
+.wa-float {
+  position: fixed; right: 22px; bottom: 22px; z-index: 65;
+  width: 56px; height: 56px; border-radius: 50%;
+  background: var(--wa); display: grid; place-items: center;
+  box-shadow: 0 14px 36px rgba(37, 211, 102, 0.35);
+  transition: transform 0.25s var(--ease);
+}
+[dir="rtl"] .wa-float { right: auto; left: 22px; }
+.wa-float:hover { transform: scale(1.08); }
+.wa-float svg { width: 29px; height: 29px; }
+.wa-float::before {
+  content: ""; position: absolute; inset: 0; border-radius: 50%;
+  border: 2px solid rgba(37, 211, 102, 0.5);
+  animation: wa-ring 2.4s ease-out infinite;
+}
+@keyframes wa-ring {
+  0% { transform: scale(1); opacity: 1; }
+  100% { transform: scale(1.6); opacity: 0; }
+}
+
+/* ---------- Modals ---------- */
+.modal { position: fixed; inset: 0; z-index: 90; display: grid; place-items: center; padding: 22px; }
+.modal[hidden] { display: none; }
+.modal-backdrop { position: absolute; inset: 0; background: rgba(3, 6, 11, 0.78); -webkit-backdrop-filter: blur(7px); backdrop-filter: blur(7px); }
+.modal-box {
+  position: relative; width: min(720px, 100%); max-height: 82vh; overflow: auto;
+  border: 1px solid var(--line); border-radius: var(--radius);
+  background: linear-gradient(165deg, #16223A, #0C131F);
+  padding: 34px 34px 30px; box-shadow: var(--shadow-lg);
+}
+.modal-box h3 { font-size: 1.36rem; margin-bottom: 18px; }
+.modal-box p, .modal-box li { color: var(--muted); font-size: 0.93rem; }
+.modal-box ul { list-style: disc; padding-left: 20px; margin-bottom: 1em; }
+[dir="rtl"] .modal-box ul { padding-left: 0; padding-right: 20px; }
+.modal-box b { color: var(--text); }
+.modal-close {
+  position: absolute; top: 16px; right: 16px; width: 36px; height: 36px;
+  border-radius: 50%; border: 1px solid var(--line); display: grid; place-items: center;
+  color: var(--muted); transition: color 0.2s, border-color 0.2s, transform 0.2s;
+}
+[dir="rtl"] .modal-close { right: auto; left: 16px; }
+.modal-close:hover { color: var(--text); border-color: var(--cyan); transform: rotate(90deg); }
+body.modal-open { overflow: hidden; }
+
+/* ==========================================================================
+   Gestaffelter Auftritt im Hero
+   Die Elemente kommen nacheinander herein statt alles gleichzeitig – das
+   ist der Effekt, der eine Seite am stärksten „wertig" wirken lässt.
+   ========================================================================== */
+@keyframes heroIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: none; }
+}
+@keyframes heroCard {
+  from { opacity: 0; transform: translateY(26px) scale(.985); }
+  to   { opacity: 1; transform: none; }
+}
+.hero-badge,
+.hero h1,
+.hero .lead,
+.hero-cta,
+/* Zeiten halbiert am 02.08.2026. Vorher war der Hero erst nach 2,5 s fertig
+   (letzter Chip 1,35 s + 0,7 s, Scroll-Hinweis 1,5 s + 1,0 s). Wer die Seite
+   öffnet, sah zwei Sekunden lang Dinge nachwandern – das wirkt langsam, nicht
+   edel. Die Reihenfolge der Einblendung ist unverändert, nur die Dauern und
+   Abstände sind gestrafft: fertig nach rund 1,45 s statt 2,5 s. */
+.trust-chips { animation: heroIn .5s var(--ease) both; }
+.hero-badge  { animation-delay: .04s; }
+.hero h1     { animation-delay: .10s; }
+.hero .lead  { animation-delay: .18s; }
+.hero-cta    { animation-delay: .26s; }
+.trust-chips { animation-delay: .34s; }
+.scan-card   { animation: heroCard .65s var(--ease) both .20s; }
+/* Chips im Scan-Display erscheinen zuletzt, nacheinander.
+   Der zweite Verzögerungswert gehört zum endlosen Schweben – bewusst
+   ungleich, damit die drei nicht im Gleichtakt wippen. */
+.m-chip { animation: heroIn .45s var(--ease) both, float-y 5.6s ease-in-out infinite; }
+.m-chip.c1 { animation-delay: .58s, 1.3s; }
+.m-chip.c2 { animation-delay: .70s, 2.0s; }
+.m-chip.c3 { animation-delay: .82s, 2.6s; }
+.scroll-hint { animation: heroIn .5s var(--ease) both .95s; }
+
+/* Sanftes Parallax – nur Desktop, wird per JS gesetzt */
+.scan-card { will-change: transform; }
+
+/* ---------- Reveal-Animationen ----------
+   Vorher 0,85 s und 28 px Weg. Das ist der Grund, warum sich die Seite beim
+   Scrollen zäh anfühlte: Der Inhalt schwebt langsam hinterher, statt da zu
+   sein. Für Einblendungen sind 300–500 ms das übliche Fenster – darüber
+   wirkt es müde, darunter hektisch.
+   Kürzerer Weg (16 px) passt dazu: Bei 28 px muss das Auge sichtbar
+   nachführen, bei 16 px liest man den Text schon während er ankommt.
+   Die restlichen Übergänge auf der Seite liegen bei 0,2–0,3 s – 0,45 s hier
+   ist bewusst etwas länger, weil größere Flächen bewegt werden. */
+.reveal { opacity: 0; transform: translateY(16px); }
+.reveal.in {
+  opacity: 1; transform: none;
+  transition: opacity 0.45s var(--ease), transform 0.45s var(--ease);
+  transition-delay: var(--d, 0s);
+}
+
+/* ==========================================================================
+   Splash (Sprachauswahl)
+   ========================================================================== */
+body.splash-page { display: flex; flex-direction: column; min-height: 100svh; }
+.splash-main { flex: 1; display: grid; place-items: center; padding: 54px 22px 36px; }
+.splash-wrap { text-align: center; max-width: 1080px; width: 100%; }
+.splash-logo { width: 74px; height: 82px; margin: 0 auto 22px; filter: drop-shadow(0 14px 36px rgba(214, 169, 82, 0.32)); }
+.splash-logo-img {
+  width: min(330px, 72vw); height: auto; margin: 0 auto 30px;
+  filter: drop-shadow(0 16px 44px rgba(214, 169, 82, 0.22));
+}
+.splash-mark {
+  font-family: var(--font-mark); font-weight: 500;
+  font-size: clamp(2.6rem, 7vw, 4.4rem); letter-spacing: 0.2em; text-indent: 0.2em;
+  background: var(--gold-grad); -webkit-background-clip: text; background-clip: text; color: transparent;
+  line-height: 1; margin: 0 0 14px;
+}
+.splash-name {
+  font-family: var(--font-mark); font-size: clamp(0.72rem, 1.8vw, 1rem);
+  letter-spacing: 0.34em; text-indent: 0.34em; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 16px;
+}
+.splash-rule { display: flex; align-items: center; justify-content: center; gap: 14px; margin-bottom: 34px; }
+.splash-rule::before, .splash-rule::after {
+  content: ""; width: min(90px, 16vw); height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(214, 169, 82, 0.65));
+}
+.splash-rule::after { background: linear-gradient(90deg, rgba(214, 169, 82, 0.65), transparent); }
+.splash-stars { display: flex; gap: 6px; }
+.splash-stars svg { width: 13px; height: 13px; }
+/* ---------- Startseite: Inhalt vor der Sprachauswahl ----------
+   Wer hier landet, soll ohne Klick verstehen, worum es geht. Die
+   Kernaussage steht deshalb in allen fünf Sprachen, die Leistungen
+   sprachneutral als Icons mit international lesbaren Begriffen. */
+.splash-claim {
+  display: flex; flex-wrap: wrap; justify-content: center; align-items: center;
+  gap: 8px 14px; margin: 0 auto 18px; max-width: 940px;
+  font-family: var(--font-display); font-weight: 600;
+  font-size: clamp(1.05rem, 2.1vw, 1.5rem); line-height: 1.35;
+  background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.splash-claim .sep { color: rgba(214, 169, 82, 0.4); -webkit-text-fill-color: rgba(214, 169, 82, 0.4); }
+.splash-lead {
+  color: var(--muted); max-width: 660px; margin: 0 auto 30px;
+  font-size: clamp(0.94rem, 1.6vw, 1.06rem); line-height: 1.6;
+}
+.splash-lead b { color: var(--text); font-weight: 600; }
+
+.splash-services {
+  list-style: none; margin: 0 auto 22px; padding: 0; max-width: 820px;
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px;
+}
+.splash-services li {
+  display: flex; flex-direction: column; align-items: center; gap: 5px;
+  padding: 16px 10px; border-radius: var(--radius-sm);
+  border: 1px solid var(--line-soft); background: rgba(23, 34, 51, 0.5);
+}
+.splash-services svg { width: 26px; height: 26px; margin-bottom: 2px; }
+.splash-services b {
+  font-family: var(--font-display); font-size: 0.92rem; font-weight: 600; color: var(--text);
+}
+.splash-services span { font-size: 0.76rem; color: var(--muted); }
+
+.splash-trust {
+  list-style: none; margin: 0 auto 34px; padding: 0;
+  display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 10px;
+}
+.splash-trust li {
+  font-size: 0.8rem; color: var(--muted);
+  border: 1px solid var(--line-soft); border-radius: 999px; padding: 6px 14px;
+}
+.splash-trust li:first-child { color: var(--cyan); border-color: rgba(34, 211, 238, 0.4); }
+
+@media (max-width: 720px) {
+  .splash-services { grid-template-columns: 1fr 1fr; }
+  .splash-claim { font-size: 1.02rem; gap: 6px 10px; }
+}
+
+.splash-sub {
+  color: var(--muted); font-size: clamp(0.88rem, 1.5vw, 1rem);
+  margin-bottom: 40px; display: flex; align-items: center; justify-content: center;
+  gap: 10px; flex-wrap: wrap;
+}
+.splash-sub .sep { color: rgba(214, 169, 82, 0.35); }
+.lang-cards { display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; }
+.lang-card {
+  position: relative; display: flex; flex-direction: column; align-items: flex-start; gap: 5px;
+  text-align: left; padding: 24px 20px 22px;
+  border: 1px solid var(--line); border-radius: var(--radius);
+  background: linear-gradient(165deg, rgba(23, 34, 51, 0.82), rgba(13, 20, 31, 0.86));
+  transition: transform 0.3s var(--ease), border-color 0.3s, box-shadow 0.3s;
+}
+.lang-card:hover { transform: translateY(-6px); border-color: rgba(34, 211, 238, 0.5); box-shadow: var(--shadow); }
+.lang-card[dir="rtl"] { align-items: flex-end; text-align: right; }
+.lang-code {
+  font-family: var(--font-mark); font-weight: 500; font-size: 1.85rem; letter-spacing: 0.1em;
+  background: var(--gold-grad); -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.lang-name { font-family: var(--font-display); font-weight: 600; font-size: 1.05rem; color: var(--text); }
+.lang-desc { color: var(--muted); font-size: 0.82rem; min-height: 60px; line-height: 1.5; }
+.lang-go { display: inline-flex; align-items: center; gap: 7px; margin-top: 10px; font-weight: 600; font-size: 0.86rem; color: var(--cyan); }
+.lang-go svg { width: 15px; height: 15px; transition: transform 0.25s var(--ease); }
+.lang-card:hover .lang-go svg { transform: translateX(5px); }
+.lang-card[dir="rtl"]:hover .lang-go svg { transform: translateX(-5px); }
+.lang-card .suggest-chip {
+  position: absolute; top: -10px; right: 16px;
+  background: var(--grad); color: #071018;
+  font-family: var(--font-display); font-size: 0.64rem; font-weight: 700; letter-spacing: 0.08em;
+  text-transform: uppercase; border-radius: 999px; padding: 4px 11px;
+  opacity: 0; transform: translateY(4px); transition: opacity 0.4s, transform 0.4s;
+}
+.lang-card.suggested .suggest-chip { opacity: 1; transform: none; }
+.lang-card.suggested { border-color: rgba(139, 92, 246, 0.55); }
+.splash-footer { text-align: center; padding: 24px 22px 30px; color: var(--muted); font-size: 0.8rem; }
+
+/* ==========================================================================
+   RTL-Anpassungen (Persisch)
+   ========================================================================== */
+[dir="rtl"] .logo { margin-right: 0; margin-left: auto; }
+[dir="rtl"] .logo-text b, [dir="rtl"] .logo-text span { direction: ltr; }
+[dir="rtl"] .service.flip .service-visual { order: 0; }
+[dir="rtl"] .service:not(.flip) .service-visual { order: 2; }
+[dir="rtl"] .eyebrow::before { background: linear-gradient(270deg, transparent, var(--gold)); }
+[dir="rtl"] .section-head.center .eyebrow::after { background: linear-gradient(270deg, var(--gold), transparent); }
+[dir="rtl"] .card-top::before { left: 22px; right: 22px; }
+
+/* ==========================================================================
+   Responsive
+   ========================================================================== */
+@media (max-width: 1150px) {
+  .lang-cards { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 1080px) {
+  .hero-grid { grid-template-columns: 1fr; gap: 48px; }
+  .hero { padding-top: calc(var(--header-h) + 46px); }
+  .hero .lead { max-width: 640px; }
+  .scan-card { max-width: 620px; }
+  .m-chip.c1 { left: 2%; }
+  .m-chip.c2 { right: 2%; }
+  .service, [dir="rtl"] .service { grid-template-columns: 1fr; gap: 38px; padding: 54px 0; }
+  .service.flip .service-visual, [dir="rtl"] .service .service-visual { order: 0; }
+  .device-frame { min-height: 280px; }
+  .grid-4 { grid-template-columns: 1fr 1fr; }
+  .steps { grid-template-columns: 1fr 1fr; }
+  .step::after { display: none; }
+  .about-grid { grid-template-columns: 1fr; gap: 36px; }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+  .nav-links { display: none; }
+  .burger { display: block; }
+  .mobile-nav { display: block; }
+  .header-cta, .lang-dd { display: none; }
+}
+
+/* Kopfmenü hat jetzt 7 statt 6 Einträge. Bevor es umbricht, wird es
+   schrittweise schmaler – und erst wenn auch das nicht reicht, fällt FAQ
+   raus. FAQ steht ohnehin im Fußbereich und im Handy-Menü. */
+@media (max-width: 1300px) {
+  .nav-links a { padding: 9px 9px; font-size: 0.88rem; }
+}
+@media (max-width: 1160px) {
+  .nav-links a[href="#faq"], .nav-links a[href="#sss"] { display: none; }
+}
+@media (max-width: 860px) {
+  .grid-3 { grid-template-columns: 1fr; }
+  /* Untereinander gestapelt trägt Skalierung nichts mehr – die Karten
+     liegen ja nicht mehr nebeneinander. Die Gewichtung übernehmen hier
+     Reihenfolge (Empfehlung zuerst), Deckkraft und Rahmen. */
+  .price-grid { grid-template-columns: 1fr; max-width: 460px; margin: 0 auto; }
+  .price-card.featured { transform: none; order: -1; }
+  .price-card.featured:hover { transform: translateY(-5px); }
+  .price-card:not(.featured) { transform: none; }
+  .price-card:not(.featured):hover { transform: translateY(-4px); }
+  .price-card.featured .price { font-size: 2.8rem; }
+  .contact-grid { grid-template-columns: 1fr; }
+  .stats-grid { grid-template-columns: 1fr 1fr; }
+  .stat:nth-child(3)::before { display: none; }
+  .lang-cards { grid-template-columns: 1fr 1fr; }
+  .lang-desc { min-height: 0; }
+  .section { padding: 78px 0; }
+}
+@media (max-width: 560px) {
+  body { font-size: 15.5px; }
+  .feature-grid { grid-template-columns: 1fr; }
+  .form-grid { grid-template-columns: 1fr; }
+  .steps { grid-template-columns: 1fr; }
+  .grid-4 { grid-template-columns: 1fr; }
+  .stats-grid { grid-template-columns: 1fr 1fr; }
+  .hero-cta .btn { width: 100%; }
+  .m-chip { font-size: 0.7rem; padding: 6px 10px; }
+  .wa-float { right: 16px; bottom: 16px; width: 52px; height: 52px; }
+  [dir="rtl"] .wa-float { right: auto; left: 16px; }
+  .footer-grid { grid-template-columns: 1fr; gap: 26px; }
+  .modal-box { padding: 26px 22px; }
+  .lang-cards { grid-template-columns: 1fr; max-width: 420px; margin: 0 auto; }
+}
+
+/* ==========================================================================
+   MOBIL-OPTIMIERUNG (Handy & kleines Tablet)
+   Auf kleinen Displays wirkt sehr dunkles Anthrazit erdrückend und ist
+   draußen bei Sonne schlecht lesbar. Deshalb hier: hellerer Untergrund,
+   kräftigere Kontraste, größere Schrift, größeres Logo.
+   ========================================================================== */
+@media (max-width: 860px) {
+  :root {
+    --bg: #243044;              /* deutlich heller als Desktop (#0B1119) */
+    --bg2: #2D3B52;
+    --text: #FAFCFF;
+    --muted: #D4DEEC;           /* heller = besser lesbar, auch draußen */
+    --line: rgba(190, 210, 234, 0.46);
+    --line-soft: rgba(190, 210, 234, 0.26);
+    /* Farbverlauf für Zahlen, Eyebrows und Hervorhebungen: auf dem hellen
+       Untergrund brauchen die Töne deutlich mehr Leuchtkraft, sonst wirken
+       sie matt. Bewusst helle Pastelltöne – bei kurzen Wörtern wie „kaufen"
+       sieht man ohnehin nur einen Ausschnitt des Verlaufs, der muss also
+       an JEDER Stelle hell genug sein.
+       Kontrast gegen --bg (#243044), gerechnet nach WCAG:
+       #6FE6F8 8,8:1 · #C9B6FF 7,3:1 · #FFC48D 8,4:1 — alle über AA (4,5:1),
+       der Violett-Ton lag vorher bei 5,7:1 und wirkte deshalb stumpf. */
+    --grad: linear-gradient(120deg, #6FE6F8, #C9B6FF 52%, #FFC48D);
+    /* Gold für Logo, Preise und die großen Ziffern in den Bildrahmen.
+       Dunkelster Punkt jetzt #E9C176 = 7,8:1 statt vorher #D9A857 = 6,2:1. */
+    --gold-grad: linear-gradient(120deg, #E9C176, #FBE7B4 38%, #FFF6DE 62%, #F2CE8A);
+    --gold: #EFCB86;
+    --violet: #B49BFF;
+    --cyan: #63E3F7;
+  }
+
+  body { font-size: 16.5px; line-height: 1.7; }
+
+  /* Farbschleier kräftiger, damit es nicht flach wirkt */
+  .bg-fx {
+    background:
+      radial-gradient(760px 520px at 88% -8%, rgba(34, 211, 238, 0.20), transparent 62%),
+      radial-gradient(680px 520px at -14% 30%, rgba(139, 92, 246, 0.17), transparent 60%),
+      radial-gradient(800px 620px at 74% 108%, rgba(251, 146, 60, 0.15), transparent 62%),
+      var(--bg);
+  }
+
+  /* Karten & Flächen heller absetzen.
+     Vorher #37485F auf #243044 = 1,43:1 Flächenkontrast — die Boxen
+     verschwammen mit dem Hintergrund. Jetzt 1,72:1 plus sichtbare Kante;
+     die Kante trägt bei Flächen mehr als der Füllton. */
+  .card,
+  .faq-item { background: linear-gradient(165deg, #41546E, #33425A); }
+  .about-points li { background: #3D4F69; }
+  .size-note { background: linear-gradient(165deg, #41546E, #33425A); }
+  .device-frame,
+  .scan-card { background: linear-gradient(160deg, #3A4C67, #2A384D); }
+  .card, .faq-item, .size-note, .about-points li,
+  .einfach-steps > div, .device-frame, .liefer {
+    border: 1px solid rgba(196, 214, 238, 0.34);
+  }
+  .einfach-steps > div { background: #3A4B64; }
+  /* Die farbcodierten Karten behalten ihre Kante — daran erkennt man,
+     welcher Seitenbereich das ist. Nur kräftiger als auf dem Desktop. */
+  .b2b-card  { border-color: rgba(178, 152, 255, 0.62); }
+  .tech-card { border-color: rgba(99, 227, 247, 0.52); }
+  .wa-card   { border-color: rgba(74, 232, 137, 0.62); }
+  .price-card.featured { border-color: rgba(99, 227, 247, 0.75); }
+  .site-header.scrolled { background: rgba(36, 48, 68, 0.95); }
+  .mobile-nav { background: rgba(42, 56, 78, 0.99); }
+  .lang-menu { background: rgba(45, 59, 82, 0.98); }
+  .modal-box { background: linear-gradient(165deg, #37485F, #273346); }
+  .field input, .field textarea, .field select { background: #222E40; }
+  .field select option { background: #2D3B52; }
+  .site-footer { background: #202C3E; }
+
+  /* Alles Farbige kräftiger: auf dem Handy sollen die Verlaufstexte sofort
+     ins Auge springen, nicht im Hintergrund verschwinden. Der Filter wirkt
+     auch auf background-clip:text und hebt den ganzen Verlauf an. */
+  .stat-num,
+  .grad-text,
+  .eyebrow { filter: saturate(1.35); }
+  .stat-num { font-weight: 700; }
+  .stat-label { color: #E2EAF5; }
+
+  /* Die großen Ziffern im Bildrahmen standen auf 30 % Deckkraft und waren
+     dadurch kaum zu sehen. */
+  .device-frame .df-num {
+    color: transparent;
+    background: var(--gold-grad);
+    -webkit-background-clip: text; background-clip: text;
+    opacity: 0.9;
+  }
+
+  /* Bildrahmen heller, damit die Geräte-Grafiken nicht absaufen */
+  .device-frame::before {
+    background: radial-gradient(circle, rgba(34, 211, 238, 0.24), rgba(139, 92, 246, 0.16) 45%, transparent 70%);
+  }
+
+  /* Abschnitts-Etiketten („3D-Aufmaß", „360°-Rundgang") kräftiger */
+  .service-tag {
+    color: #8CEEFF;
+    border-color: rgba(140, 238, 255, 0.55);
+    background: rgba(34, 211, 238, 0.14);
+  }
+  .spec-list li span:last-child { color: #FFFFFF; }
+  .feat { color: #E4EDF8; }
+  .m-chip { color: #FFFFFF; }
+  .tech-sub, .service-tag { color: #CBD8E8; }
+
+  /* Logo deutlich größer und wieder mit vollem Namen */
+  .logo { gap: 12px; }
+  .logo-icon { height: 64px; }
+  .logo-text b { font-size: 1.46rem; letter-spacing: 0.11em; }
+  .logo-text span { display: block; font-size: 0.7rem; letter-spacing: 0.16em; margin-top: 5px; }
+  .site-header { height: 92px; }
+  .header-inner { height: 92px; }
+  :root { --header-h: 92px; }
+
+  /* Schriftgrößen: nichts unter ~14px */
+  .trust-chips { font-size: 0.98rem; gap: 11px 18px; }
+  .feat { font-size: 1rem; }
+  .spec-list li { font-size: 0.92rem; padding: 10px 2px; }
+  .tech-card .tech-name { font-size: 1.15rem; }
+  .tech-card .tech-sub { font-size: 0.95rem; }
+  .tech-card img { width: 152px; margin-bottom: 18px; }
+  .p-hint { font-size: 0.95rem; }
+  .p-feats li { font-size: 1rem; }
+  .size-list li { font-size: 0.97rem; }
+  .size-hint { font-size: 0.96rem; }
+  .form-note, .form-status { font-size: 0.92rem; }
+  .card p, .step p { font-size: 1rem; }
+  .about-points li { font-size: 1rem; }
+  .about-points span { font-size: 0.95rem; }
+  .contact-line { font-size: 1rem; }
+  .area-chips li { font-size: 0.88rem; padding: 6px 14px; }
+  .faq-q { font-size: 1.05rem; }
+  .faq-a-inner p { font-size: 1rem; }
+  .price-note, .tech-note { font-size: 0.96rem; }
+  .service-tag { font-size: 0.8rem; }
+  .hero-badge { font-size: 0.9rem; }
+  .footer-grid a, .footer-grid button { font-size: 1rem; padding: 7px 0; }
+  .footer-about p { font-size: 0.98rem; }
+  .footer-bottom { font-size: 0.92rem; }
+  .modal-box p, .modal-box li { font-size: 1rem; }
+
+  /* Mehr Luft, damit es geordneter wirkt */
+  .section { padding: 68px 0; }
+  .card { padding: 26px 22px; }
+  .section-head { margin-bottom: 40px; }
+  .service { padding: 44px 0; }
+
+  /* Grosses Logo im Footer als Wiedererkennung */
+  .footer-grid a.footer-logo-big { margin: 0 0 20px; }
+  .footer-grid a.footer-logo-big img { width: min(300px, 84%); }
+}
+
+@media (max-width: 480px) {
+  /* Buttons dürfen auf schmalen Displays umbrechen statt zu überstehen */
+  .btn { white-space: normal; text-align: center; line-height: 1.35; }
+  .btn-lg { padding: 15px 20px; }
+}
+
+@media (max-width: 420px) {
+  .logo-icon { height: 58px; }
+  .logo-text b { font-size: 1.3rem; }
+  .logo-text span { font-size: 0.63rem; letter-spacing: 0.13em; }
+  .site-header, .header-inner { height: 86px; }
+  :root { --header-h: 86px; }
+  .container { padding: 0 18px; }
+}
+
+/* ---------- Reduzierte Bewegung ---------- */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.001s !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001s !important;
+  }
+  .reveal { opacity: 1; transform: none; }
+  .scanline, .scroll-hint { display: none; }
+}
+
+/* ==========================================================================
+   TIPPFLÄCHEN AUF TOUCH-GERÄTEN
+   WCAG 2.5.5 und die Apple-Richtlinien nennen 44 × 44 px als Mindestmaß;
+   Lighthouse meldet kleinere Ziele als „Tap targets are not sized
+   appropriately". Gemessen am 02.08.2026 bei 390 px lagen darunter:
+   Sprachumschalter und WhatsApp im Kopf (38–39 px), die Aufklapp-Schalter
+   (38 px) und – am deutlichsten – Telefon- und E-Mail-Zeilen (27 px).
+
+   Bewusst nur für echte Touch-Geräte (hover:none + pointer:coarse), damit
+   die Maus-Ansicht ihre kompaktere Optik behält. Vergrößert wird über
+   min-height plus Innenabstand, nicht über Schriftgröße – das Layout
+   bleibt dadurch unverändert.
+   ========================================================================== */
+@media (hover: none) and (pointer: coarse) {
+  .lang-btn,
+  .lang-menu a,
+  .mn-langs a,
+  .btn-sm,
+  .mehr > summary,
+  details.size-note > summary,
+  .faq-q {
+    min-height: 44px;
+  }
+  .mehr > summary { padding-top: 11px; padding-bottom: 11px; }
+  .mn-langs a { display: inline-flex; align-items: center; justify-content: center; }
+
+  /* Telefon und E-Mail sind Inline-Links – min-height greift dort nur
+     mit einer Flex-Darstellung. */
+  a[data-phone], a[data-phone-tr], a[data-email] {
+    display: inline-flex; align-items: center;
+    min-height: 44px; padding: 2px 0;
+  }
+
+  /* Impressum/Datenschutz im Fuß sind <button>, nicht <a>. */
+  .footer-grid button { min-height: 44px; }
+}

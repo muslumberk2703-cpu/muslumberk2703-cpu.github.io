@@ -1,59 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fivestar Property Scan – Independent Property Inspection in Antalya & Alanya</title>
-  <meta name="description" content="Fivestar Property Scan: independent technical property inspections in Antalya, Alanya and across Turkey. 3D survey, thermal imaging, drone inspection and construction monitoring. Available in 5 languages.">
+  <title>فحص فني للعقار قبل الشراء | أنطاليا وألانيا والمنطقة – Fivestar Property Scan</title>
+  <meta name="description" content="فحص فني مستقل للعقار قبل الشراء في أنطاليا وألانيا وكاش وكالكان: معاينة بصرية منهجية، مسح ثلاثي الأبعاد، تصوير حراري وتوثيق مصوّر. وكذلك فحص التسليم للمباني الجديدة. تقرير رقمي خلال 48 ساعة.">
   <meta name="theme-color" content="#0b1119">
-  <link rel="canonical" href="https://www.fivepropscan.com/">
-  <link rel="alternate" hreflang="tr" href="https://www.fivepropscan.com/tr/">
-  <link rel="alternate" hreflang="en" href="https://www.fivepropscan.com/en/">
+  <link rel="canonical" href="https://www.fivepropscan.com/ar/">
   <link rel="alternate" hreflang="de" href="https://www.fivepropscan.com/de/">
+  <link rel="alternate" hreflang="en" href="https://www.fivepropscan.com/en/">
+  <link rel="alternate" hreflang="tr" href="https://www.fivepropscan.com/tr/">
   <link rel="alternate" hreflang="ru" href="https://www.fivepropscan.com/ru/">
   <link rel="alternate" hreflang="ar" href="https://www.fivepropscan.com/ar/">
   <link rel="alternate" hreflang="x-default" href="https://www.fivepropscan.com/">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Fivestar Property Scan">
-  <meta property="og:title" content="Fivestar Property Scan – Know before you buy.">
-  <meta property="og:description" content="Independent property inspections in Antalya, Alanya and across Turkey – 3D survey, thermal imaging, drone & construction monitoring.">
-  <meta property="og:url" content="https://www.fivepropscan.com/">
-  <link rel="icon" type="image/svg+xml" href="favicon.svg">
-  <link rel="preload" href="fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="css/styles.css?v=20260808-120628">
-
-  <!-- Sofort-Weiterleitung in die passende Sprache.
-       Steht bewusst hier oben und OHNE defer: So läuft es, bevor die Seite
-       gezeichnet wird – der Besucher sieht die Auswahl gar nicht erst
-       aufblitzen. Reihenfolge: zuletzt gewählte Sprache, sonst Browsersprache,
-       sonst Englisch. location.replace() statt href, damit der Zurück-Knopf
-       nicht in einer Schleife landet.
-       Auswahl trotzdem sehen:  /?choose=1
-       Ohne JavaScript bleibt die Auswahlseite stehen – das ist der Rückfall. -->
-  <script>
-    (function () {
-      var LANGS = ["de", "en", "tr", "ru", "ar"];
-      if (/[?&]choose/.test(location.search)) return;
-      var pick = null;
-      try {
-        var s = localStorage.getItem("cpc-lang");
-        if (s && LANGS.indexOf(s) !== -1) pick = s;
-      } catch (e) { /* Privatmodus: egal, dann Browsersprache */ }
-      if (!pick) {
-        var prefs = navigator.languages || [navigator.language || "en"];
-        for (var i = 0; i < prefs.length && !pick; i++) {
-          var c = String(prefs[i]).slice(0, 2).toLowerCase();
-          if (LANGS.indexOf(c) !== -1) pick = c;
-        }
-      }
-      location.replace((pick || "en") + "/");
-    })();
-  </script>
-
-  <script defer src="js/main.js?v=20260808-120628"></script>
+  <meta property="og:title" content="Fivestar Property Scan – اعرف قبل أن تشتري.">
+  <meta property="og:description" content="فحص فني للعقارات في أنطاليا وألانيا: مسح ثلاثي الأبعاد، تصوير حراري، درون ومتابعة البناء. تقرير خلال 48 ساعة.">
+  <meta property="og:locale" content="ar_AR">
+  <meta property="og:url" content="https://www.fivepropscan.com/ar/">
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="preload" href="../fonts/vazirmatn-arabic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../fonts/vazirmatn-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../css/styles.css?v=20260809-015159">
+  <!-- Helles Design. Liegt bewusst NACH styles.css und überschreibt nur die
+       Optik – Layout, RTL, Mobil und Akkordeon bleiben dort. Zum Zurückschalten
+       auf Dunkel genügt es, diese eine Zeile zu entfernen. -->
+  <link rel="stylesheet" href="../css/hell.css?v=20260809-015159">
+  <link rel="preload" href="../fonts/playfair-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <script defer src="../js/main.js?v=20260809-015159"></script>
 </head>
-<body class="splash-page" data-splash>
+<body data-wa-text="مرحباً Fivestar Property Scan! أرغب في إجراء فحص لعقار في أنطاليا/ألانيا. هل يمكنكم إرسال عرض سعر؟" data-mail-subject="طلب فحص عقار – Fivestar Property Scan">
 
   <svg aria-hidden="true" style="position:absolute;width:0;height:0" focusable="false">
     <defs>
@@ -68,100 +45,988 @@
         <stop offset=".62" stop-color="#F8DDA7"/>
         <stop offset="1" stop-color="#C08A3E"/>
       </linearGradient>
-      <path id="ic-arrow" d="M4 12h15m-6-7 7 7-7 7" stroke="currentColor" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <path id="star" d="M11 2.5l2.3 4.7 5.2.75-3.75 3.65.9 5.15L11 14.3l-4.65 2.45.9-5.15L3.5 7.95l5.2-.75z"/>
+      <path id="ic-check" d="M5 13l4 4 10-11" stroke="url(#ig)" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <path id="ic-wa" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.297-.497.1-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/>
     </defs>
   </svg>
 
   <div class="bg-fx" aria-hidden="true"></div>
   <div class="bg-grid" aria-hidden="true"></div>
 
-  <main class="splash-main">
-    <div class="splash-wrap">
-      <img class="splash-logo-img" src="images/logo-fps.png" alt="Fivestar Property Scan">
+  <!-- ================= الرأس ================= -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="#top" aria-label="Fivestar Property Scan – العودة إلى الأعلى">
+        <img class="logo-icon" src="../images/logo-fps-mark-neu.png" alt="">
+        <span class="logo-text"><b>FIVESTAR</b><span>Property Scan</span></span>
+      </a>
+      <nav class="nav-links" aria-label="القائمة الرئيسية">
+        <a href="#services">الخدمات</a>
+        <a href="#business">للشركات</a>
+        <a href="#einfach">آلية العمل</a>
+        <a href="#packages">الباقات</a>
+        <a href="#faq">الأسئلة</a>
+        <a href="#contact">التواصل</a>
+      </nav>
+      <div class="lang-dd">
+        <button class="lang-btn" aria-expanded="false" aria-label="اختر لغتك">
+          <svg class="globe" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.7" fill="none"/><path d="M3 12h18M12 3c2.5 2.4 3.8 5.4 3.8 9s-1.3 6.6-3.8 9c-2.5-2.4-3.8-5.4-3.8-9S9.5 5.4 12 3Z" stroke="currentColor" stroke-width="1.7" fill="none"/></svg>
+          AR
+          <svg class="caret" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6" stroke="currentColor" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="lang-menu">
+          <a href="../de/" data-lang="de" lang="de" dir="ltr"><span class="lc">DE</span><span class="ln">Deutsch</span></a>
+          <a href="../en/" data-lang="en" lang="en" dir="ltr"><span class="lc">EN</span><span class="ln">English</span></a>
+          <a href="../tr/" data-lang="tr" lang="tr" dir="ltr"><span class="lc">TR</span><span class="ln">Türkçe</span></a>
+          <a href="../ru/" data-lang="ru" lang="ru" dir="ltr"><span class="lc">RU</span><span class="ln">Русский</span></a>
+          <a class="active" href="../ar/" data-lang="ar" aria-current="page"><span class="lc">AR</span><span class="ln">العربية</span></a>
+        </div>
+      </div>
+      <a class="btn btn-wa btn-sm header-cta" data-wa href="#contact">
+        <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><use href="#ic-wa"/></svg>
+        واتساب
+      </a>
+      <button class="burger" aria-label="فتح القائمة" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="progress-bar" aria-hidden="true"></div>
+    </div>
+  </header>
+  <nav class="mobile-nav" aria-label="قائمة الجوال">
+    <a class="mn-link" href="#services">الخدمات</a>
+    <a class="mn-link" href="#business">للشركات</a>
+    <a class="mn-link" href="#einfach">آلية العمل</a>
+    <a class="mn-link" href="#packages">الباقات</a>
+    <a class="mn-link" href="#faq">الأسئلة</a>
+    <a class="mn-link" href="#contact">التواصل</a>
+    <div class="mn-extra">
+      <div class="mn-langs">
+        <a href="../de/" data-lang="de">DE</a>
+        <a href="../en/" data-lang="en">EN</a>
+        <a href="../tr/" data-lang="tr">TR</a>
+        <a href="../ru/" data-lang="ru">RU</a>
+        <a class="active" href="../ar/" data-lang="ar">AR</a>
+      </div>
+      <a class="btn btn-wa btn-sm" data-wa href="#contact">واتساب</a>
+    </div>
+  </nav>
 
-      <!-- Kernaussage in allen fünf Sprachen. Bewusst VOR der Sprachauswahl:
-           Wer hier landet, soll sofort sehen, worum es geht – nicht erst
-           nach einem Klick. -->
-      <p class="splash-claim">
-        <span lang="en">Know what you are buying.</span>
-        <span class="sep" aria-hidden="true">·</span>
-        <span lang="tr">Ne satın aldığınızı bilin.</span>
-        <span class="sep" aria-hidden="true">·</span>
-        <span lang="de">Wissen, was Sie kaufen.</span>
-        <span class="sep" aria-hidden="true">·</span>
-        <span lang="ru">Знайте, что покупаете.</span>
-        <span class="sep" aria-hidden="true">·</span>
-        <span lang="ar" dir="rtl">اعرف ما تشتريه.</span>
-      </p>
+  <main id="top">
 
-      <p class="splash-lead">
-        <b>Independent technical property inspection</b> in Antalya, Alanya &amp; Türkiye — for buyers, owners, agents and developers.
-      </p>
+    <!-- ================= القسم الرئيسي ================= -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-grid">
+          <div>
+            <span class="hero-badge"><span class="dot"></span> أنطاليا · ألانيا · فحص فني للعقار قبل الشراء</span>
+            <h1>اعرف قبل أن <span class="grad-text">تشتري</span>.</h1>
+            <p class="lead">نفحص العقار الذي تنوي شراءه في أنطاليا وألانيا – نيابةً عنك، قبل أن توقّع.</p>
+            <div class="hero-cta">
+              <a class="btn btn-wa btn-lg" data-wa href="#contact">
+                <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><use href="#ic-wa"/></svg>
+                استشارة أولية مجانية
+              </a>
+              <a class="btn btn-ghost btn-lg" href="#services">تصفح الخدمات</a>
+            </div>
+            <ul class="trust-chips">
+              <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> مسح ثلاثي الأبعاد</li>
+              <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> تصوير حراري</li>
+              <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> درون</li>
+              <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> تقرير خلال <span class="ltr">48</span> ساعة</li>
+              <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> استقلالية تامة <span class="ltr">100 %</span></li>
+            </ul>
+          </div>
+          <div class="scan-card" aria-hidden="true">
+            <img class="scan-house" src="../images/hero-house.svg" alt="">
+            <span class="scan-tag"><span class="rec"></span> مسح مباشر</span>
+            <span class="scan-corner tl"></span><span class="scan-corner tr"></span>
+            <span class="scan-corner bl"></span><span class="scan-corner br"></span>
+            <span class="m-chip c1"><span class="ind"></span> <span class="ltr">98.2 m²</span> تم القياس</span>
+            <span class="m-chip c2"><span class="ind"></span> <span class="ltr">ΔT 4.2 °C</span> – جسر حراري</span>
+            <span class="m-chip c3"><span class="ind"></span> ميل <span class="ltr">1.8 %</span> ✓</span>
+            <span class="drohne" aria-hidden="true"><img src="../images/drohne.svg" alt="" width="132" height="66" decoding="async"></span>
+            <span class="scanline"></span>
+          </div>
+        </div>
+      </div>
+      <span class="scroll-hint" aria-hidden="true"></span>
+    </section>
 
-      <!-- Technikdaten und Vertrauens-Chips standen hier bis 02.08.2026.
-           Raus, weil sie auf jeder Sprachseite ohnehin stehen: Diese Seite
-           sieht nur noch, wer ohne JavaScript kommt oder /?choose=1 aufruft.
-           Sie hat genau eine Aufgabe – Sprache wählen – und soll dafür auf
-           einen Bildschirm passen. -->
+    <!-- ================= لماذا FPS ================= -->
+    <section class="section" id="why">
+      <div class="container">
+        <div class="section-head center reveal">
+          <span class="eyebrow">لماذا FPS</span>
+          <h2>نحن لا نبيع العقارات. نحن نفحصها.</h2>
+          <p class="lead">الشراء مستمر في الريفييرا التركية – لكن بحذر أكبر مما كان قبل سنوات قليلة. المشترون يأخذون وقتهم ويقارنون ويتفاوضون. الإعلان يُظهر الجانب الجميل. ونحن نُظهر الحالة الفنية: قيم قياس وصور بدلاً من وعود البيع. وما تفعله بها يبقى قرارك أنت.</p>
+        </div>
+        <div class="grid-3">
+          <div class="card card-top reveal">
+            <div class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.5c3.5 3.8 5.5 6.7 5.5 9.3a5.5 5.5 0 1 1-11 0c0-2.6 2-5.5 5.5-9.3Z" stroke="url(#ig)" stroke-width="1.9" fill="none" stroke-linejoin="round"/><path d="M9.5 13.5a2.5 2.5 0 0 0 2.5 2.5" stroke="url(#ig)" stroke-width="1.9" fill="none" stroke-linecap="round"/></svg></div>
+            <h3>ما لا تُظهره العين</h3>
+            <p>ليس كل ما يهم مرئياً. تُظهر الكاميرا الحرارية مؤشرات على رطوبة خلف الطلاء الجديد، وعلى نقص في العزل، وعلى أنابيب مسرّبة – وكذلك ما إذا كانت لوحة الكهرباء أو المقابس تسخن بشكل غير معتاد. دون أن نفتح أي شيء، ومع صورة لكل ملاحظة في التقرير.</p>
+          </div>
+          <div class="card card-top reveal" style="--d:.1s">
+            <div class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 17.5 17.5 3.5l3 3L6.5 20.5h-3v-3Z" stroke="url(#ig)" stroke-width="1.9" fill="none" stroke-linejoin="round"/><path d="m7 14 1.6 1.6M10 11l1.6 1.6M13 8l1.6 1.6" stroke="url(#ig)" stroke-width="1.9" stroke-linecap="round"/></svg></div>
+            <h3>مساحة أقل مما دفعت ثمنه</h3>
+            <p>ما يرد في الإعلان ليس دائماً ما بُني فعلاً. نعيد القياس رقمياً ونقارنه بالإعلان وبالعقد. وبأسعار المتر المربع على الساحل، حتى الفروق الصغيرة تعني مبالغ كبيرة.</p>
+          </div>
+          <div class="card card-top reveal" style="--d:.2s">
+            <div class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 4.5 6v5c0 4.6 3.2 8 7.5 10 4.3-2 7.5-5.4 7.5-10V6L12 3Z" stroke="url(#ig)" stroke-width="1.9" fill="none" stroke-linejoin="round"/><path d="m8.8 11.8 2.3 2.3 4.2-4.6" stroke="url(#ig)" stroke-width="1.9" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <h3>البناء الجديد والتسليم</h3>
+            <p>قبل تسليم المفاتيح نفحص ما إذا كانت الجدران مستقيمة والأرضيات مستوية والمياه تُصرَّف بشكل صحيح والوصلات محكمة. في تلك المرحلة لا يزال بإمكانك التفاوض – ويبقى المطوّر ملزَماً بالإصلاح.</p>
+          </div>
+        </div>
+        <div class="stats-band reveal">
+          <div class="stats-grid">
+            <div class="stat"><span class="stat-num ltr">4 M</span><span class="stat-label">نقطة قياس لكل موضع مسح</span></div>
+            <div class="stat"><span class="stat-num ltr">49,152</span><span class="stat-label">نقطة قياس في كل صورة حرارية</span></div>
+            <div class="stat"><span class="stat-num"><span data-count="48">0</span>&nbsp;ساعة</span><span class="stat-label">حتى تسليم تقريرك الرقمي</span></div>
+            <div class="stat"><span class="stat-num"><span data-count="5">0</span></span><span class="stat-label">لغات: <span class="ltr">AR·EN·DE·TR·RU</span></span></div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-      <p class="splash-sub">
-        <span lang="tr">Dilinizi seçin</span>
-        <span class="sep">·</span>
-        <span>Choose your language</span>
-        <span class="sep">·</span>
-        <span lang="de">Sprache wählen</span>
-        <span class="sep">·</span>
-        <span lang="ru">Выберите язык</span>
-        <span class="sep">·</span>
-        <span lang="ar" dir="rtl">اختر لغتك</span>
-      </p>
-      <div class="lang-cards">
-        <a class="lang-card" href="tr/" data-lang="tr" hreflang="tr" lang="tr">
-          <span class="suggest-chip">Önerilen</span>
-          <span class="lang-code">TR</span>
-          <span class="lang-name">Türkçe</span>
-          <span class="lang-go">Devam et
-            <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-arrow"/></svg>
+    <!-- ================= كيف تسير الأمور ================= -->
+    <section class="section" id="einfach">
+      <div class="container">
+        <div class="section-head center reveal">
+          <span class="eyebrow">بكل بساطة</span>
+          <h2>كيف تسير الأمور معنا</h2>
+          <p class="lead">جوهر عملنا هو الفحص قبل الشراء: نعاين العقار ونقيسه ونمرّ عليه بالكاميرا الحرارية. وكل ذلك يجتمع في تقرير واحد. وفي البناء الجديد نرافقك حتى تسليم المفاتيح. أما الجولة بزاوية 360° ولقطات الدرون فتُضاف عند الحاجة – مع الفحص أو منفردة.</p>
+        </div>
+        <div class="einfach-steps">
+          <div class="reveal">
+            <div class="nr">1</div>
+            <h3>تتواصل معنا</h3>
+            <p>رسالة قصيرة عبر <span class="ltr">WhatsApp</span>: نوع العقار، المساحة التقريبية، الموقع. وتحصل على سعر ثابت قبل أن تقرّر.</p>
+          </div>
+          <div class="reveal" style="--d:.08s">
+            <div class="nr">2</div>
+            <h3>نأتي إلى العقار</h3>
+            <p>موعد واحد، من ساعتين إلى ست ساعات في الموقع. وجودك ليس شرطاً – يكفي أن يفتح لنا أحدهم الباب.</p>
+          </div>
+          <div class="reveal" style="--d:.16s">
+            <div class="nr">3</div>
+            <h3>نفحص كل شيء</h3>
+            <p>حتى حيث لا ترى العين شيئاً: خلف الجدران، وتحت الأرضيات، وفوق السطح. ولهذا توجد الأجهزة.</p>
+          </div>
+          <div class="reveal" style="--d:.24s">
+            <div class="nr">4</div>
+            <h3>تحصل على وضوح</h3>
+            <p>بعد 48 ساعة يصلك التقرير بلغتك: ما هو سليم، وأين تنتظرك تكاليف، وما ينبغي توضيحه قبل التوقيع.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= الخدمات ================= -->
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section-head center reveal">
+          <span class="eyebrow">الخدمات</span>
+          <h2>ما الذي نفحصه – وما الذي تستفيده</h2>
+          <p class="lead">الفحص الفني للعقار هو جوهر عملنا: معاينة بصرية ومسح ثلاثي الأبعاد وتصوير حراري، موثّقة في تقرير واحد. وفي المباني الجديدة نرافقك حتى تسليم المفاتيح. أما الجولة بزاوية 360° والدرون فهما توثيق تكميلي – يمكن حجزهما مع الفحص أو منفردين.</p>
+        </div>
+
+        <!-- المسح ثلاثي الأبعاد -->
+        <article class="service">
+          <div class="service-visual reveal">
+            <figure class="wb-video sc-video">
+              <video autoplay muted loop playsinline preload="none">
+                <source src="../images/3d-scan.mp4" type="video/mp4">
+                
+متصفحك لا يستطيع تشغيل هذا الفيديو.
+              </video>
+              <figcaption>
+                <b>
+المسح ثلاثي الأبعاد: هكذا تنشأ النسخة الرقمية
+</b>
+                <em>
+تسجيل نموذجي
+</em>
+                <span>
+يمسح الجهاز الجدران والأرضيات والأسقف نقطةً نقطة. ومن ذلك نحسب المساحة وأبعاد الغرف وارتفاع الأسقف – إضافة إلى مخطط مطابق للمقياس يمكنك مقارنته بالإعلان وبالعقد.
+</span>
+                <small>
+كل المقاسات مثبتة في التقرير وقابلة للتحقق.
+</small>
+              </figcaption>
+            </figure>
+            <div class="geraet">
+              <div class="geraet-name ltr">Matterport Pro2</div>
+              <div class="geraet-sub">قياس ثلاثي الأبعاد وجولة قابلة للتجول – المساحات الداخلية</div>
+              <ul class="spec-list">
+                <li><span>الدقة التصويرية</span><span><span class="ltr">134 MP</span> لكل موضع</span></li>
+                <li><span>التصوير</span><span><span class="ltr">4 M</span> نقطة لكل موضع</span></li>
+                <li><span>الدقة</span><span><span class="ltr">±1 %</span> من المسافة</span></li>
+                <li><span>التصدير</span><span>مخطط، جولة، نموذج ثلاثي الأبعاد</span></li>
+              </ul>
+            </div>
+          </div>
+          <div class="reveal" style="--d:.1s">
+            <span class="service-tag">المسح ثلاثي الأبعاد</span>
+            <h3>كم متراً مربعاً تحصل عليه فعلاً</h3>
+            <p class="desc">في الإعلان رقم. وغالباً لم يتحقق أحد من صحته. نقيس المساحات الداخلية رقمياً ونعطيك أرقاماً يمكنك التحقق منها: المساحة وأبعاد الغرف وارتفاع الأسقف. كما تحصل على مخطط مطابق للمقياس وعلى نموذج ثلاثي الأبعاد قابل للتجول داخل شقتك. أما استقامة الجدران واستواء الأرضيات وصحة الميل فنقيسها إضافياً بليزر يدوي.</p>
+            <div class="feature-grid">
+              <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> قياس رقمي للمساحة والمخطط – مقارنة الأمتار المربعة بالإعلان والعقد</div>
+              <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> مخطط بمقياس رسم صحيح مع أبعاد الغرف وارتفاع الأسقف ومساحة كل غرفة</div>
+              <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> <b>المساحات الخارجية:</b> نوثّق الأرض والمسبح والواجهة بالدرون وكاميرا <span class="ltr">360°</span>؛ ونقيس الميل وتصريف المياه في الموقع بليزر الميل</div>
+            </div>
+            <details class="mehr">
+              <summary>عرض كل الخدمات</summary>
+              <div class="feature-grid">
+              <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> قياسات تحقّق مفردة بليزر يدوي (ارتفاع السقف، عرض الباب، الميل) – لا تُخلط بدقة المسح الكامل</div>
+              <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> قياس الميل في التراسات والشرفات وحمامات الاستحمام – هل يصرّف الماء بشكل صحيح؟</div>
+              <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> المداخل والمنحدرات والأدراج: الميل وأبعاد الدرجات</div>
+              <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> فحص الشاقولية والاستقامة والاستواء في الجدران والأرضيات</div>
+              <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> أخذ المقاسات للمطبخ والأثاث والتجديد – مباشرة من النموذج ثلاثي الأبعاد</div>
+              <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> الأبواب والنوافذ: مقاسات الفتحات للاستبدال والتعديل</div>
+              <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> توثيق جميع القياسات في التقرير</div>
+              </div>
+            </details>
+            <p class="service-note"><b>مثال نموذجي:</b> التحقق من المساحة الفعلية قبل التوقيع – ففي الريفييرا التركية يتحوّل فارق بضعة أمتار مربعة سريعاً إلى مبلغ من خمسة أرقام.</p>
+          </div>
+        </article>
+
+        <!-- التصوير الحراري -->
+        <article class="service flip">
+          <div class="service-visual reveal">
+            <figure class="wb-video">
+              <video autoplay muted loop playsinline preload="none"
+                     poster="../images/wb-video-vorschau.jpg">
+                <source src="../images/waermebild.mp4" type="video/mp4">
+                
+متصفحك لا يستطيع تشغيل هذا الفيديو.
+              </video>
+              <figcaption>
+                <em>تسجيل نموذجي من عقار في ألمانيا</em>
+                <b>
+تصوير حراري: نقص العزل في السقف
+</b>
+                <span>
+المساحات الداكنة هي المواضع التي يغيب فيها العزل أو ينتهي. في المطبخ يظهر بوضوح أين ينتهي – الجهة الشمالية كلها بلا عزل. وفوق منطقة الجلوس لا يوجد فراغ سقفي أصلاً. مثل هذه الغرف تسخن كثيراً صيفاً وتبرد سريعاً شتاءً، ويعمل المكيّف ضد ذلك باستمرار.
+</span>
+                <small>
+الصورة الحرارية وحدها ليست دليلاً – نضع كل ملاحظة في سياقها داخل التقرير.
+</small>
+              </figcaption>
+            </figure>
+            <div class="geraet">
+              <div class="geraet-name ltr">Thermal Master Thor 002</div>
+              <div class="geraet-sub">تشخيص احترافي بالأشعة تحت الحمراء</div>
+              <ul class="spec-list">
+                <li><span>دقة الأشعة</span><span class="ltr">256 × 192</span></li>
+                <li><span>نقاط القياس</span><span><span class="ltr">49,152</span> لكل صورة</span></li>
+                <li><span>الحساسية</span><span class="ltr">&lt; 0.04 °C</span></li>
+                <li><span>مدى القياس</span><span class="ltr">−20 … +550 °C</span></li>
+              </ul>
+            </div>
+          </div>
+          <div class="reveal" style="--d:.1s">
+            <span class="service-tag">تصوير حراري وأشعة تحت حمراء</span>
+            <h3>ما الذي يختبئ خلف الجدار والأرضية والمقبس</h3>
+            <p class="desc">تُظهر الكاميرا الحرارية فروق الحرارة – حتى حيث لا ترى العين المجردة شيئاً. وفي الجدران والأسقف والأرضيات قد تكون هذه مؤشرات على رطوبة أو نقص في العزل أو أنبوب مسرّب. وبالطريقة نفسها نرى ما إذا كانت لوحة الكهرباء أو المقابس أو الوصلات تسخن بشكل غير معتاد. ولا يُفتح لذلك أي شيء. والصورة الحرارية وحدها ليست دليلاً: نضع كل ملاحظة في سياقها ونثبت في التقرير أين يكون الفحص الأدق مفيداً.</p>
+            <div class="feature-grid">
+              <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> حصر وتوثيق المناطق اللافتة في الجدران والأسقف والأرضيات</div>
+              <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> مؤشرات على أنابيب مسرّبة – مع توصية بفحص إضافي</div>
+              <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> مؤشرات الرطوبة والتفاوتات الحرارية، مع تعليق عليها في التقرير</div>
+            </div>
+            <details class="mehr">
+              <summary>عرض كل الخدمات</summary>
+              <div class="feature-grid">
+              <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> مؤشرات على نقص في العزل وعلى فقدان حراري مرتفع</div>
+              <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> الجسور الحرارية في الواجهات والأسقف وصناديق الستائر</div>
+              <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> ملاحظات لافتة عند وصلات النوافذ والأبواب</div>
+              <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> تفاوتات حرارية على السطح المستوي وطبقات العزل</div>
+              <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> التدفئة الأرضية: إظهار مسار الأنابيب وتقدير عملها</div>
+              <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> تحديد مسارات الأنابيب داخل الجدار – بالقدر الذي يظهر حرارياً</div>
+              <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> تسخّن لافت عند اللوحة والوصلات – لفحصه من قِبل كهربائي مختص</div>
+              <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> المكيّف والسخّان: توثيق التفاوتات الحرارية</div>
+              <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> توثيق ما قبل وما بعد أعمال التجديد</div>
+              </div>
+            </details>
+            <p class="service-note"><b>من المفيد معرفته:</b> مدى دلالة الصورة الحرارية يعتمد على الظروف – فارق الحرارة بين الداخل والخارج، وأشعة الشمس، وكيفية استخدام المكان قبل القياس بقليل. نثبّت هذه الظروف في التقرير حتى تبقى كل ملاحظة قابلة للتحقق.</p>
+          </div>
+        </article>
+
+        <!-- الدرون -->
+        <article class="service">
+          <div class="service-visual reveal">
+            <figure class="wb-video dr-video">
+              <video autoplay muted loop playsinline preload="none">
+                <source src="../images/drohnenflug.mp4" type="video/mp4">
+                
+متصفحك لا يستطيع تشغيل هذا الفيديو.
+              </video>
+              <figcaption>
+                <b>
+طيران بالدرون: السطح والواجهة من الأعلى
+</b>
+                <em>
+تسجيل نموذجي
+</em>
+                <span>
+ما لا تُظهره المعاينة العادية: التغطية، والشقوق الظاهرة، ومناطق العزل، والمزاريب. نطير حول الغلاف الخارجي ونوثّق كل شيء بدقة 4K – وتصلك الصور داخل التقرير.
+</span>
+                <small>
+إمكانية الطيران ونطاقه يعتمدان على الموقع وعلى الأنظمة السارية. ونوضّح ذلك قبل كل موعد.
+</small>
+              </figcaption>
+            </figure>
+            <div class="geraet">
+              <div class="geraet-name ltr">DJI Mini 4 Pro</div>
+              <div class="geraet-sub">تصوير جوي للسطح والواجهة</div>
+              <ul class="spec-list">
+                <li><span>الفيديو</span><span class="ltr">4K/60 HDR</span></li>
+                <li><span>الصور</span><span class="ltr">48 MP · 1/1.3″</span></li>
+                <li><span>زمن الطيران</span><span>حتى <span class="ltr">45 min</span> لكل بطارية</span></li>
+                <li><span>الأمان</span><span>استشعار محيطي للعوائق</span></li>
+              </ul>
+            </div>
+          </div>
+          <div class="reveal" style="--d:.1s">
+            <span class="service-tag">فحص جوي بدقة <span class="ltr">4K</span></span>
+            <h3>السطح الذي لا تراه بغير ذلك أبداً</h3>
+            <p class="desc">لا ترى السطح أبداً في معاينة عادية – ومع ذلك تبدأ هناك غالباً أغلى الأضرار. بالدرون نُظهر السطح والواجهة والأرض من الأعلى ونوثّق كل شيء بدقة 4K. أما إمكانية الطيران ومداه فيعتمدان على الموقع وعلى الأنظمة. نوضّح ذلك قبل كل موعد ونخبرك مسبقاً بما هو ممكن.</p>
+            <div class="feature-grid">
+              <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> توثيق أسطح السقف من الجو: التغطية، الشقوق الظاهرة، مناطق العزل</div>
+              <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> الواجهة: تسجيل الشقوق الظاهرة وتلف القصارة وآثار الرطوبة</div>
+              <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> المداخن والهوائيات والمنشآت فوق السطح</div>
+            </div>
+            <details class="mehr">
+              <summary>عرض كل الخدمات</summary>
+              <div class="feature-grid">
+              <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> المزاريب وتصريف مياه الأمطار</div>
+              <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> الألواح الشمسية وسخانات المياه من الأعلى</div>
+              <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> نظرة عامة على الأرض والمساحات الخارجية من الجو</div>
+              <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> توثيق تقدّم البناء للمشترين خارج البلاد</div>
+              <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> فيديو <span class="ltr">4K</span> وصور عالية الدقة كدليل موثّق</div>
+              <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> توثيق المناطق صعبة الوصول – بالقدر الذي تسمح به الظروف المحلية والأنظمة</div>
+              <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> العقارات الأكبر أيضاً في موعد واحد</div>
+              </div>
+            </details>
+            <p class="service-note"><b>طيران مسؤول:</b> نستخدم طائرة درون بوزن إقلاع أقل من 249 غراماً. نُبلّغ هيئة الطيران المدني التركية <span class="ltr">SHGM</span> مسبقاً بالرحلات التجارية – ونخطّط المهلة اللازمة مع موعدك. ونتحقق من مناطق حظر الطيران قبل كل مهمة؛ ولا نطير إلا حيث يُسمح بذلك.</p>
+          </div>
+        </article>
+
+        <!-- جولة 360 درجة -->
+        <article class="service flip">
+          <div class="service-visual reveal">
+            <figure class="wb-video rg-video">
+              <video autoplay muted loop playsinline preload="none">
+                <source src="../images/rundgang-360.mp4" type="video/mp4">
+                
+متصفحك لا يستطيع تشغيل هذا الفيديو.
+              </video>
+              <figcaption>
+                <b>
+جولة 360°: تجوّل في العقار دون أن تكون فيه
+</b>
+                <em>
+تسجيل نموذجي
+</em>
+                <span>
+نصوّر العقار بزاوية 360° ونحوّله إلى جولة افتراضية. تحصل على رابط – ومن يفتحه ينتقل من غرفة إلى أخرى ويتفقّد المكان كأنه واقف فيه.
+</span>
+                <small>
+رابط واحد لموقعك وإنستغرام وواتساب ومنصات العقارات.
+</small>
+              </figcaption>
+            </figure>
+            <div class="geraet">
+              <div class="geraet-name ltr">Insta360 X4</div>
+              <div class="geraet-sub">جولة 360 درجة داخل عقارك</div>
+              <ul class="spec-list">
+                <li><span>الفيديو</span><span><span class="ltr">8K</span> بزاوية <span class="ltr">360°</span></span></li>
+                <li><span>الصور</span><span class="ltr">72 MP</span></li>
+                <li><span>التثبيت</span><span>جيروسكوب <span class="ltr">6</span> محاور</span></li>
+                <li><span>الناتج</span><span>رابط قابل للتضمين</span></li>
+              </ul>
+            </div>
+          </div>
+          <div class="reveal" style="--d:.1s">
+            <span class="service-tag">جولة 360 درجة</span>
+            <h3>تجوّل في عقارك – في أي وقت ومن أي مكان</h3>
+            <p class="desc">نصوّر عقارك بزاوية 360° ونحوّله إلى جولة افتراضية. تحصل على رابط. ومن يفتحه ينتقل من غرفة إلى أخرى ويتفقّد المكان كأنه واقف فيه – من الهاتف أو الحاسوب، في أي وقت، ودون سفر. من الداخل والخارج معاً: الحديقة والمسبح والمدخل والمحيط نصوّرها في الزيارة نفسها.</p>
+            <div class="feature-grid">
+              <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> جولة افتراضية – تنتقل من غرفة إلى أخرى وتنظر حولك بحرية</div>
+              <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> <b>الخارج والأرض:</b> الواجهة والحديقة والمسبح والمدخل في الجولة نفسها</div>
+              <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> <b>جولة المحيط:</b> البناء المجاور والمنطقة والطريق إلى البحر – السؤال الذي لا يجيب عنه أي إعلان</div>
+            </div>
+            <details class="mehr">
+              <summary>عرض كل الخدمات</summary>
+              <div class="feature-grid">
+              <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> تصوير بدقة <span class="ltr">8K</span> – واضح حتى في الزوايا</div>
+              <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> <b>للمحال والمطاعم:</b> الزبائن وشركاء الامتياز يرون مسبقاً ما ينتظرهم</div>
+              <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> <b>للفنادق وبيوت الضيافة:</b> اعرض الغرف والمرافق بدل أن تصفها</div>
+              <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> <b>للمكاتب والمساحات التجارية:</b> المهتمّون يعاينون دون موعد</div>
+              <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> <b>للشقق والفلل:</b> المشترون من الخارج يتجوّلون من منازلهم</div>
+              <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> رابط واحد لموقعك و<span class="ltr">Instagram</span> و<span class="ltr">WhatsApp</span> ومنصات العقارات</div>
+              <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> يبقى متاحاً بشكل دائم – وأيضاً كأرشيف للحالة في تاريخ محدّد</div>
+              <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> يمكن دمجه مع الصور والفيديو واللقطات الجوية من الزيارة نفسها</div>
+              </div>
+            </details>
+            <p class="service-note"><b>حالة نموذجية:</b> محل تجاري في ألانيا سيُؤجَّر لمستثمر في دبي. بدل السفر وتحديد موعد، يرسل الوسيط رابطاً – والمهتمّ يتجوّل في المكان بنفسه.</p>
+          </div>
+        </article>
+
+        <!-- متابعة البناء -->
+        <article class="service">
+          <div class="service-visual reveal">
+            <div class="device-frame">
+              <span class="df-num">05</span>
+              <img src="../images/service-baubegleitung.svg" alt="رسم توضيحي لمتابعة البناء: هيكل إنشائي مع رافعة وتوثيق مصوّر وخط زمني للمراحل">
+            </div>
+          </div>
+          <div class="reveal" style="--d:.1s">
+            <span class="service-tag">متابعة البناء والتوثيق</span>
+            <h3>ترى كيف يُبنى بيتك – ولو كنت بعيداً</h3>
+            <p class="desc">كثير من الشقق في الريفييرا التركية تُباع قبل أن تكتمل. والمشتري يعيش في الخارج ولا يرى الورشة أبداً. نحن نتولّى ذلك عنك: نمرّ على فترات ثابتة، ونطّلع على سير الأعمال، ونوثّق ما نجده – بالصور وقيم القياس وجولة ثلاثية الأبعاد يمكنك أن تتجوّل فيها بنفسك. فتعرف مبكراً إن كان هناك خلل. وفي تلك المرحلة يمكن تصحيحه عادةً دون عناء كبير.</p>
+            <div class="feature-grid">
+              <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> زيارات ميدانية منتظمة بالوتيرة التي تناسبك – شهرياً أو ربع سنوي أو حسب مراحل البناء</div>
+              <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> <b>جولة ثلاثية الأبعاد لسير العمل:</b> تتجوّل بنفسك في عقارك وتنظر في كل زاوية</div>
+              <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> توثيق بالصور والفيديو بعد كل زيارة</div>
+            </div>
+            <details class="mehr">
+              <summary>عرض كل الخدمات</summary>
+              <div class="feature-grid">
+              <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> لقطات درون: تقدّم البناء والسطح من الجو</div>
+              <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> فحص المراحل الحرجة: الهيكل والصبّة والعزل المائي والكهرباء والسباكة – قبل إغلاق كل شيء</div>
+              <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> قياس الاستواء والشاقولية والميل ما دام التصحيح ممكناً</div>
+              <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> فحص حراري للأنابيب والتدفئة الأرضية قبل تغطيتها</div>
+              <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> التحقق من الأمتار المربعة أثناء البناء – لا عند التسليم فقط</div>
+              <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> المقارنة مع المخططات والمواصفات الفنية</div>
+              <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> تقرير موجز بعد كل زيارة – رقمي وبلغتك</div>
+              <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> تواصل مباشر عبر واتساب لأي استفسار بين الزيارات</div>
+              <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> توثيق متواصل حتى تسليم المفاتيح</div>
+              </div>
+            </details>
+            <p class="service-note"><b>لماذا يهمّ التوقيت:</b> ما دام البناء جارياً تبقى الأنابيب وطبقات العزل والصبّة مكشوفة. ويظهر مدى إتقان العمل. أما لاحقاً فيختفي كل ذلك تحت البلاط والقصارة. ومن لا ينظر بدقة إلا عند تسليم المفاتيح يكون عادةً قد دفع الثمن – ومطالبته بشيء بعد ذلك أصعب بكثير.</p>
+          </div>
+        </article>
+
+        
+<p class="tech-note reveal"><b>كيف تسير الأمور:</b> نوثّق كل شيء رقمياً في الموقع مباشرة، ونحلّله على الحاسوب، ونرسل لك التقرير بصيغة PDF. ونتنقّل بسيارتنا الخاصة – والوصول إليك داخل المنطقة مشمول بالسعر.</p>
+
+        <!-- ما يصل إلى العميل -->
+        <div class="liefer reveal">
+          <span class="eyebrow">النتيجة</span>
+          <h3>ما الذي تحصل عليه</h3>
+          <p>أنت لا تشتري قياسات، بل أساساً تبني عليه قرارك. بعد الزيارة يصلك ما يلي:</p>
+          <div class="liefer-list">
+            <div><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg><span><b>تقرير فحص رقمي بصيغة <span class="ltr">PDF</span></b> – بلغة مفهومة، لا بمصطلحات تقنية</span></div>
+            <div><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg><span><b>توثيق مصوّر</b> لكل ملاحظة، مع الموقع والشرح</span></div>
+            <div><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg><span><b>مخطط بمقياس رسم صحيح</b> وجميع القياسات لتتحقق منها بنفسك</span></div>
+            <div><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg><span><b>صور حرارية مع تعليق</b> – ما الذي يظهر وماذا يعني</span></div>
+            <div><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg><span><b>قائمة عيوب حسب الأولوية</b>: حرج، مهم، شكلي</span></div>
+            <div><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg><span><b>توصية واضحة</b> – ما يجب حسمه قبل الشراء وما يمكن تأجيله</span></div>
+            <div><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg><span><b>تقييم مستقل</b> بلا أي مصلحة في البيع</span></div>
+            <div><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg><span><b>الأسئلة اللاحقة مشمولة</b> – عبر <span class="ltr">WhatsApp</span> حتى تتضح كل التفاصيل</span></div>
+          </div>
+          <p class="liefer-note"><b>ما يميّزنا عن الوسطاء والبائعين:</b> نحن لا نبيع عقارات ولا نتوسّط ولا نعمل لحساب البائع. أتعابنا واحدة سواء وجدنا عيوباً أم لا – فلا سبب لدينا لإغفال أي شيء.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= لمن هذه الخدمة ================= -->
+    <section class="section" id="for-whom">
+      <div class="container">
+        <div class="section-head center reveal">
+          <span class="eyebrow">لمن هذه الخدمة</span>
+          <h2>لكل من يشتري في تركيا – أو اشترى بالفعل</h2>
+        </div>
+        <div class="grid-4">
+          <div class="card card-top reveal">
+            <div class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5" stroke="url(#ig)" stroke-width="1.9" fill="none"/><path d="m16 16 4.5 4.5" stroke="url(#ig)" stroke-width="1.9" stroke-linecap="round"/></svg></div>
+            <h3>المشترون المحتملون</h3>
+            <p>الفحص قبل التوقيع: الحالة والمقاسات والعيوب الخفية مكتوبة بوضوح – وحجّة قوية أيضاً عند التفاوض على السعر.</p>
+          </div>
+          <div class="card card-top reveal" style="--d:.08s">
+            <div class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="4" width="14" height="17" rx="2.5" stroke="url(#ig)" stroke-width="1.9" fill="none"/><path d="M9 4.5V3h6v1.5" stroke="url(#ig)" stroke-width="1.9" fill="none" stroke-linecap="round"/><path d="m8.8 13 2.1 2.1 4.3-4.6" stroke="url(#ig)" stroke-width="1.9" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <h3>استلام البناء الجديد</h3>
+            <p>لا تستلم إلا إذا كان كل شيء سليماً: نعدّ قائمة العيوب للمطوّر قبل أن تتحوّل عيوب البناء إلى مشكلتك أنت.</p>
+          </div>
+          <div class="card card-top reveal" style="--d:.16s">
+            <div class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5" stroke="url(#ig)" stroke-width="1.9" fill="none"/><path d="M3.5 12h17M12 3.5c2.6 2.3 3.9 5.2 3.9 8.5s-1.3 6.2-3.9 8.5c-2.6-2.3-3.9-5.2-3.9-8.5s1.3-6.2 3.9-8.5Z" stroke="url(#ig)" stroke-width="1.9" fill="none"/></svg></div>
+            <h3>المشترون من الخارج</h3>
+            <p>لست في تركيا؟ نفحص في الموقع، ونتابع البناء، ونسلّم كل شيء رقمياً – بما في ذلك جولة ثلاثية الأبعاد، وبلغتك.</p>
+          </div>
+          <div class="card card-top reveal" style="--d:.24s">
+            <div class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20.5V8.7L10.5 4l6.5 4.7v11.8" stroke="url(#ig)" stroke-width="1.9" fill="none" stroke-linejoin="round"/><path d="M2.5 20.5h19M17 11h3.5v9.5" stroke="url(#ig)" stroke-width="1.9" fill="none" stroke-linecap="round"/><path d="M8.5 20.5v-4.5a2 2 0 0 1 4 0v4.5" stroke="url(#ig)" stroke-width="1.9" fill="none"/></svg></div>
+            <h3>المالكون والمؤجّرون</h3>
+            <p>توثيق الحالة للتأجير أو التأمين أو البيع – وتشخيص سريع عندما يتسرّب الماء أو تضيع الطاقة في مكان ما.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= للشركات ================= -->
+    <section class="section section-b2b" id="business">
+      <div class="container">
+        <div class="section-head center reveal">
+          <span class="eyebrow">للشركات</span>
+          <h2>للوسطاء والمطوّرين والفنادق والمنشآت</h2>
+          <p class="lead">التقنية نفسها بهدف مختلف: بدلاً من تقرير فحص، نسلّمك الأساس الرقمي للتسويق والتصميم والتوثيق – جاهزاً وقابلاً للاستخدام مباشرة.</p>
+        </div>
+        <div class="grid-3">
+
+          <div class="card card-top b2b-card reveal">
+            <div class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11.4 3H20.5v9.1l-8.9 8.9-9.1-9.1L11.4 3Z" stroke="url(#ig)" stroke-width="1.9" fill="none" stroke-linejoin="round"/><circle cx="16.2" cy="7.8" r="1.7" fill="url(#ig)"/></svg></div>
+            <div class="b2b-role">تسويق العقارات</div>
+            <h3>الوسطاء والمطوّرون</h3>
+            <p>بِع قبل أن يستقلّ أحد الطائرة: عقاراتك قابلة للتجوّل على مدار الساعة – من برلين أو موسكو أو دبي.</p>
+            <div class="b2b-list">
+                <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> جولة ثلاثية الأبعاد لموقعك الإلكتروني وملف العرض ومنصات العقارات</div>
+                <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> المهتمّون يفرزون أنفسهم مسبقاً – معاينات أقل بكثير بلا نتيجة</div>
+                <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> مخطط بمقياس رسم صحيح بدلاً من رسم يدوي</div>
+              </div>
+              <details class="mehr b2b-mehr">
+                <summary>المزيد</summary>
+                <div class="b2b-list">
+                <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> لقطات جوية للموقع والسطح والمحيط</div>
+                <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> حزمة صور وفيديو من الزيارة نفسها</div>
+                <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> امسح الشقة النموذجية مرة واحدة واستخدمها لكل الوحدات المماثلة</div>
+                </div>
+              </details>
+            <p class="b2b-out"><b>ما تحصل عليه:</b> رابط واحد تُضمّنه في أي مكان – جاهز خلال <span class="ltr">48</span> ساعة.</p>
+          </div>
+
+          <div class="card card-top b2b-card reveal" style="--d:.1s">
+            <div class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 20.5 12 3l8.5 17.5Z" stroke="url(#ig)" stroke-width="1.9" fill="none" stroke-linejoin="round"/><path d="M7.6 13.5h8.8" stroke="url(#ig)" stroke-width="1.9" stroke-linecap="round"/></svg></div>
+            <div class="b2b-role">الفنادق والإيجار السياحي</div>
+            <h3>الفنادق والنُزل والشقق السياحية</h3>
+            <p>اعرض بدل أن تصف – ووثّق الحالة التي سُلّمت بها كل وحدة. الأمران في زيارة واحدة.</p>
+            <div class="b2b-list">
+                <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> جولة قابلة للتجوّل لموقعك ومنصات الحجز ووسائل التواصل</div>
+                <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> توثيق الحالة عند الدخول والخروج – قابل للإثبات بتاريخ محدّد</div>
+                <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> المساحات الخارجية والمسبح والطريق إلى الشاطئ في الجولة نفسها</div>
+              </div>
+              <details class="mehr b2b-mehr">
+                <summary>المزيد</summary>
+                <div class="b2b-list">
+                <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> الوحدات المتطابقة بسعر أفضل ابتداءً من العقار الثاني</div>
+                <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> زيارات متكرّرة عند تغيّر الموسم</div>
+                <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> تصوير حراري إضافي للرطوبة والتكييف والعزل</div>
+                </div>
+              </details>
+            <p class="b2b-out"><b>ما تحصل عليه:</b> جولة جاهزة للتضمين وتوثيق حالة يصمد عند الخلاف.</p>
+          </div>
+
+          <div class="card card-top b2b-card reveal" style="--d:.2s">
+            <div class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20.5V9.2l6-2.7v14M9 20.5V11l6-2.7v12.2M15 20.5v-7.6l6-2.3v9.9" stroke="url(#ig)" stroke-width="1.9" fill="none" stroke-linejoin="round"/><path d="M2 20.5h20" stroke="url(#ig)" stroke-width="1.9" stroke-linecap="round"/></svg></div>
+            <div class="b2b-role">التوثيق</div>
+            <h3>المنشآت التجارية والصناعية</h3>
+            <p>المساحات والتجهيزات والحالة موثّقة – متاحة وقت أن يسأل عنها أحد: شركة التأمين أو المشغّل أو المستأجر الجديد.</p>
+            <div class="b2b-list">
+                <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> المتاجر والمكاتب والمستودعات ومساحات الإنتاج</div>
+                <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> توثيق الحالة لشركات التأمين والمشغّلين</div>
+                <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> محاضر التسليم والاستلام في عقود الإيجار</div>
+              </div>
+              <details class="mehr b2b-mehr">
+                <summary>المزيد</summary>
+                <div class="b2b-list">
+                <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> إدارة المرافق بنموذج قابل للتجوّل</div>
+                <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> حساب المساحات للعقود والرسوم التشغيلية</div>
+                <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> توثيق الأضرار بالتصوير الحراري واللقطات الجوية</div>
+                </div>
+              </details>
+            <p class="b2b-out"><b>ما تحصل عليه:</b> جولة 360 درجة وبيانات قياس تثبت الحالة في تاريخ محدّد.</p>
+          </div>
+
+        </div>
+
+        <div class="b2b-cta reveal">
+          <p class="b2b-preis">الأسعار عند الطلب – وتعتمد على عدد العقارات ونطاق العمل. في التعاون المستمر نعمل بأسعار إطارية ثابتة، والوحدات المتماثلة بسعر أقل ابتداءً من العقار الثاني. أما الشركات المقيمة في تركيا فنصدر لها الفواتير بالليرة التركية – بشروط خاصة بالسوق التركي، وليس بأسعار العملاء الأفراد.</p>
+          <p class="size-hint" style="margin:18px 0 0"><b>الاستقلالية لدينا بالمعنى الحرفي.</b> لكل عقار نعمل إما لصالح البائع أو لصالح المشتري – وليس لكليهما أبداً. طلبات الوسطاء هي توثيق فقط، دون تقييم ودون حكم على العيوب.</p>
+          <a class="btn btn-primary" href="#contact" data-package="طلب للشركات">اطلب عرضاً للشركات</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==============================================================
+         آراء العملاء  —  مخفية حالياً (الخاصية "hidden")
+
+         >>> كيف تُفعّل <<<
+         ١. اجمع آراء حقيقية واطلب الإذن بالاقتباس.
+         ٢. استبدل النصوص النائبة أدناه بالنصوص الحقيقية.
+         ٣. احذف كلمة  hidden  من سطر dem section-Tag.
+
+         لا توجد هنا آراء جاهزة عن قصد. الآراء المُختلقة تُعد منافسة
+         غير مشروعة ويُعاقب عليها في ألمانيا وتركيا. لا شيء أفضل من
+         المُختلق.
+         ============================================================== -->
+    <!-- Abschnitt "Kundenstimmen" am 02.08.2026 entfernt: enthielt nur
+         Platzhaltertexte. Kommt zurueck, sobald echte, freigegebene
+         Rueckmeldungen vorliegen. -->
+
+    <!-- ================= الباقات ================= -->
+    <section class="section" id="packages">
+      <div class="container">
+        <div class="section-head center reveal">
+          <span class="eyebrow">الباقات والأسعار</span>
+          <h2>باقات واضحة. أسعار واضحة.</h2>
+          <p class="lead">كل عقار مختلف – لذلك الأسعار تبدأ من. بعد وصف قصير للعقار تحصل على سعرك الثابت مسبقاً.</p>
+        </div>
+        <div class="price-grid">
+          <div class="card price-card reveal">
+            <div class="p-name">الفحص الفني الأساسي</div>
+            <div class="p-for">للشقق والعقارات الصغيرة</div>
+            <div class="price"><span class="p-from">من</span><span class="ltr">199 €</span></div>
+            <div class="p-hint"><b style="color:var(--text)">حتى <span class="ltr">80 m²</span></b> · نحو 1–2 ساعة في الموقع</div>
+            <ul class="p-feats">
+              <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> فحص بصري منهجي من الداخل</li>
+              <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> مسح حراري لجميع الغرف</li>
+              <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> مؤشرات الرطوبة والتفاوتات الحرارية</li>
+              <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> فحص عيّنة من الكهرباء (المقابس، اللوحة)</li>
+              <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> توثيق بالصور</li>
+              <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> تقرير موجز بصيغة <span class="ltr">PDF</span></li>
+            </ul>
+            <a class="btn btn-ghost" href="#contact" data-package="الفحص الفني الأساسي">اطلب الفحص الفني الأساسي</a>
+          </div>
+          <div class="card price-card featured reveal" style="--d:.1s">
+            <span class="p-badge">الأكثر طلباً</span>
+            <div class="p-name">الفحص الفني للعقار</div>
+            <div class="p-for">لقرار الشراء والتسليم</div>
+            <div class="price"><span class="p-from">من</span><span class="ltr">349 €</span></div>
+            <div class="p-hint"><b style="color:var(--text)">حتى <span class="ltr">130 m²</span></b> · نحو 2–4 ساعات في الموقع</div>
+            <ul class="p-feats">
+              <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> كل ما في الفحص الفني الأساسي</li>
+              <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> مسح ثلاثي الأبعاد: المساحات والغرف والارتفاعات</li>
+              <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> مقارنة الأمتار المربعة بالإعلان / العقد</li>
+              <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> الاستواء والشاقولية والميل (الحمام، التراس، الشرفة)</li>
+              <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> فحص النوافذ والأبواب مع الحشوات</li>
+              <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> تقرير <span class="ltr">PDF</span> مفصّل + قائمة العيوب</li>
+            </ul>
+            <a class="btn btn-primary" href="#contact" data-package="الفحص الفني للعقار">اطلب الفحص الفني للعقار</a>
+          </div>
+          <div class="card price-card reveal" style="--d:.2s">
+            <div class="p-name">الفحص العقاري المتميّز</div>
+            <div class="p-for">أشمل فحص عقاري لدينا</div>
+            <div class="price"><span class="p-from">من</span><span class="ltr">499 €</span></div>
+            <div class="p-hint"><b style="color:var(--text)">حتى <span class="ltr">200 m²</span></b> · نحو 3–5 ساعات في الموقع</div>
+            <ul class="p-feats">
+              <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> كل ما في الفحص الفني للعقار</li>
+              <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> فحص بالدرون: السطح والواجهة بدقة <span class="ltr">4K</span> (بحسب وضع التصاريح، وبزيارة منفصلة عند اللزوم)</li>
+              <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> المساحات الخارجية: الميل والتصريف ومحيط المسبح</li>
+              <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> توثيق بالفيديو للعقار</li>
+              <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> مراجعة شخصية للتقرير (مكالمة فيديو)</li>
+              <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg> مثالي لفحص التسليم والفلل</li>
+            </ul>
+            <a class="btn btn-ghost" href="#contact" data-package="الفحص العقاري المتميّز">اطلب <span class="ltr">الفحص العقاري المتميّز</span></a>
+          </div>
+        </div>
+        <details class="size-note reveal">
+          <summary>خدمات إضافية</summary>
+          <p>العقارات الكبيرة والخدمات الإضافية – يمكن دمجها حسب حاجتك.</p>
+          <ul class="size-list">
+            <li><span>فحص الفيلا</span><span>من <span class="ltr">790 €</span> · منزل مستقل من 200 م² · المساحات الداخلية بالمسح ثلاثي الأبعاد، والأرض والمسبح بالدرون و<span class="ltr">360°</span> والفحص البصري</span></li>
+            <li><span>مرافقة تسليم البناء الجديد</span><span><span class="ltr">449 €</span> · محضر وصور وقائمة عيوب في يوم التسليم</span></li>
+            <li><span>جولة 360°</span><span><span class="ltr">+149 €</span> · متاحة عبر الإنترنت لمدة 6 أشهر، والتمديد عند الطلب</span></li>
+            <li><span>تقرير عاجل</span><span><span class="ltr">+89 €</span> · جاهز خلال 24 ساعة</span></li>
+          </ul>
+          <p class="size-hint"><b>جميع الأسعار باليورو وشاملة ضريبة القيمة المضافة</b> – المبلغ المذكور هو المبلغ الذي تدفعه.</p>
+        </details>
+        <div class="bericht reveal">
+          <div class="bericht-vorschau" aria-hidden="true">
+            <img src="../images/bericht-vorschau.svg" alt="" width="300" height="380" decoding="async">
+          </div>
+          <div class="bericht-text">
+            <span class="eyebrow">تقرير نموذجي</span>
+            <h3>اطّلع مسبقاً على ما ستحصل عليه</h3>
+            <p>في النهاية لن تحصل على انطباع شفوي، بل على مستند يمكنك عرضه على محاميك أو مصرفك أو البائع.</p>
+            <ul class="bericht-list">
+              <li><b>ملخّص في الصفحة الأولى</b> – جميع النتائج حسب الأولوية، كأساس لقرارك</li>
+              <li><b>قائمة العيوب حسب الأولوية</b> – أحمر وأصفر وأخضر بدل المصطلحات التقنية</li>
+              <li><b>قيم القياس والصور الحرارية والصور الفوتوغرافية</b> – كل نتيجة موثّقة</li>
+              <li><b>بلغتك</b> – العربية أو الألمانية أو الإنجليزية أو التركية أو الروسية</li>
+            </ul>
+            <div class="bericht-cta">
+              <a class="btn btn-primary" data-bericht-link hidden>عرض التقرير النموذجي (PDF)</a>
+              <a class="btn btn-primary" data-bericht-wa data-wa href="#contact">اطلب تقريراً نموذجياً</a>
+            </div>
+            <p class="bericht-note">تقريرك الخاص يصلك عادةً خلال <span class="ltr">48</span> ساعة من موعد المعاينة.</p>
+          </div>
+        </div>
+        <p class="price-note reveal"><b style="color:var(--text)">متابعة البناء باشتراك:</b> للمباني الجديدة نقدّم زيارات متكررة مع صور وجولة ثلاثية الأبعاد وتقرير موجز – بسعر يعتمد على الوتيرة ومساحة العقار، ويفضَّل كباقة شهرية. تواصل معنا.<br><br>جميع الأسعار تبدأ من وتعتمد على مساحة العقار وموقعه. الخدمات المفردة (مثل كشف التسربات فقط أو القياس فقط) عند الطلب. التنقل داخل منطقة أنطاليا/ألانيا مشمول.</p>
+      </div>
+    </section>
+
+    <!-- ================= الأسئلة الشائعة ================= -->
+    <section class="section" id="faq">
+      <div class="container">
+        <div class="section-head center reveal">
+          <span class="eyebrow">الأسئلة</span>
+          <h2>الأسئلة الشائعة</h2>
+        </div>
+        <div class="faq-wrap reveal">
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">لماذا لا تكفي المعاينة مع الوسيط العقاري؟<span class="fx" aria-hidden="true"></span></button>
+            <div class="faq-a"><div class="faq-a-inner"><p>الوسيط يريد أن يبيع – ونحن لا. الرطوبة خلف الطلاء الجديد ونقص العزل والميل الخاطئ والكهرباء المحمّاة لا تُرى بالعين المجردة. نحن نوفّر بيانات قياس محايدة تستطيع أن تقرر وتفاوض بناءً عليها.</p></div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">ماذا سيتضمن التقرير بالضبط؟<span class="fx" aria-hidden="true"></span></button>
+            <div class="faq-a"><div class="faq-a-inner"><p>جميع قيم القياس: المساحات وارتفاعات الأسقف، وهل الجدران مستقيمة والأرضيات مستوية، وهل تُصرَّف المياه بشكل صحيح. إضافة إلى صور حرارية مع شرحها، وصور فوتوغرافية، ولقطات درون بحسب الباقة. وفي النهاية قائمة بالعيوب مرتّبة حسب الأولوية مع توصيتنا. تحصل على ذلك كله بصيغة PDF بالألمانية أو الإنجليزية أو التركية؛ ولغات أخرى عند الطلب.</p></div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">بأي لغات يمكنني التواصل معكم؟<span class="fx" aria-hidden="true"></span></button>
+            <div class="faq-a"><div class="faq-a-inner"><p>نتحدث شخصياً <b>الألمانية والتركية والروسية</b> – هاتفياً وعبر واتساب وفي الموقع. وبـ<b>الإنجليزية والعربية ولغات أخرى</b> نجيبك <b>كتابةً عبر البريد الإلكتروني أو واتساب</b>، عادةً خلال ساعات قليلة. أما التقرير فتحصل عليه بالألمانية أو الإنجليزية أو التركية، ولغات أخرى عند الطلب.</p></div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">كم يستغرق الحصول على موعد وعلى التقرير؟<span class="fx" aria-hidden="true"></span></button>
+            <div class="faq-a"><div class="faq-a-inner"><p>المواعيد ممكنة عادةً خلال أيام قليلة – وأسرع إن كنت في مرحلة تفاوض. وتستلم التقرير الجاهز خلال 48 ساعة من الزيارة.</p></div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">كم سيكلفني الفحص بالضبط؟<span class="fx" aria-hidden="true"></span></button>
+            <div class="faq-a"><div class="faq-a-inner"><p>تبدأ الباقات من <span class="ltr">199 €</span>. ويعتمد السعر النهائي على مساحة العقار وموقعه. أرسل لنا عبر واتساب نوع العقار والمساحة التقريبية والموقع – وستحصل فوراً على سعر ثابت قبل أن تلتزم بأي شيء.</p></div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">لست في تركيا – هل يمكنني الطلب رغم ذلك؟<span class="fx" aria-hidden="true"></span></button>
+            <div class="faq-a"><div class="faq-a-inner"><p>نعم – وهذه من أكثر الحالات شيوعاً لدينا. بالتنسيق مع وسيطك أو المقاول نفحص العقار في الموقع ونرسل لك التقرير والصور والفيديوهات رقمياً. وبكل سرور نستعرض كل شيء معك في مكالمة فيديو.</p></div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">هل تعملون أيضاً مع الوسطاء والمطوّرين والمنشآت؟<span class="fx" aria-hidden="true"></span></button>
+            <div class="faq-a"><div class="faq-a-inner"><p>نعم، وهذا مجال مستقل في عملنا. للوسطاء والمطوّرين ننتج جولات افتراضية ثلاثية الأبعاد مع مخطط بمقياس رسم صحيح لأغراض التسويق، وللفنادق وأصحاب الشقق السياحية جولات وتوثيق الحالة عند الدخول والخروج، وللمنشآت توثيق الحالة والمساحات. وفي التعاون المستمر نعمل بأسعار إطارية ثابتة. أخبرنا بعدد العقارات التي تسوّقها أو تديرها شهرياً – وستحصل على عرض يناسبك.</p></div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">هل تفحصون المباني الجديدة قبل التسليم؟<span class="fx" aria-hidden="true"></span></button>
+            <div class="faq-a"><div class="faq-a-inner"><p><b>نعم</b> – الفحص قبل تسليم المفاتيح من خدماتنا الأساسية. نمرّ على العقار ونثبّت ما نجده من عيوب. وتحصل على ذلك مكتوباً قبل أن توقّع محضر التسليم. وهكذا يستطيع المطوّر الإصلاح ما دام ملزَماً بذلك.</p></div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">هل يمكن للدرون الطيران في كل مكان؟<span class="fx" aria-hidden="true"></span></button>
+            <div class="faq-a"><div class="faq-a-inner"><p>لا – في تركيا قواعد واضحة: يجب تسجيل الطائرة، والطيران ممنوع قرب المطارات والموانئ والمناطق العسكرية. نتحقق من التصاريح قبل كل مهمة ولا نطير إلا حيث يُسمح. وإن كان الطيران غير ممكن، نخبرك بذلك بصراحة مسبقاً.</p></div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">هل يحلّ هذا الفحص محل تقرير مهندس إنشائي؟<span class="fx" aria-hidden="true"></span></button>
+            <div class="faq-a"><div class="faq-a-inner"><p><b>لا.</b> نحن نُعدّ توثيقاً فنياً للحالة – <b>وليس تقريراً إنشائياً أو حسابياً أو قانونياً أو تقرير خبرة</b> ولا تقديراً للقيمة. وإذا ظهرت مؤشرات على مشكلات إنشائية، فإننا نسمّيها ونوصي بفحصها لدى مختصين مناسبين. وتقريرنا يمنحهم منطلقاً موثّقاً وجيداً.</p></div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">هل تفتحون الجدران أو الأرضيات أو التكسيات؟<span class="fx" aria-hidden="true"></span></button>
+            <div class="faq-a"><div class="faq-a-inner"><p><b>لا.</b> نعمل دون إتلاف على الإطلاق – لا نثقب ولا نكسر ولا نفكّ شيئاً. وهذه هي الميزة قبل الشراء: لا تحتاج إلى إذن من البائع. وهي في الوقت نفسه حدّ الطريقة: فما يقع خلف عناصر بناء مغلقة ولا يظهر بصرياً ولا حرارياً لا يمكننا الحكم عليه. ونثبّت في التقرير أي المناطق تعذّر الاطلاع عليها.</p></div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">هل تُثبت الصورة الحرارية أن الجدار رطب؟<span class="fx" aria-hidden="true"></span></button>
+            <div class="faq-a"><div class="faq-a-inner"><p><b>لا – ونقولها بوضوح متعمّد.</b> الصورة الحرارية تُظهر فروق الحرارة على السطح فقط. وقد تكون ناتجة عن رطوبة – لكنها قد تنتج بالقدر نفسه عن أنبوب داخل الجدار، أو عن الشمس، أو عن نقص في العزل، أو عن طريقة البناء. نقيّم كل موضع لافت في سياقه، ونصفه في التقرير، ونوصي عند اللزوم بقياس أدق أو بجهة مختصة.</p></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= من نحن ================= -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="about-grid">
+          <div class="reveal">
+            <span class="eyebrow">من نحن</span>
+            <h2>من يقف خلف Fivestar Property Scan</h2>
+            <p class="lead">‏Fivestar Property Scan تفحص العقارات في تركيا – فحصاً فنياً مستقلاً، ولصالح المشتري وحده.</p>
+            <p>نحن لا نبيع العقارات ولا نتقاضى عمولة من أحد. مكسبنا من الفحص لا من البيع. لذلك لا فرق عندنا إن قرّرت في النهاية شراء العقار أو العدول عنه. وما يدخل التقرير هو ما قِسناه ورأيناه – لا أكثر ولا أقل.</p>
+            <p>أنطاليا وألانيا سوقان دوليان. الألمانية والتركية والروسية نتحدثها معك شخصياً – هاتفياً وعبر واتساب وفي الموقع. أما الإنجليزية والعربية ولغات أخرى فنجيب عليها كتابةً.</p>
+          </div>
+          <ul class="about-points reveal" style="--d:.12s">
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg><div><b>استقلالية تامة</b><span>لا ارتباط بالوسطاء ولا عمولة بيع. أنت وحدك من يدفع لنا.</span></div></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg><div><b>معداتنا الخاصة وخبرتنا الخاصة</b><span>الماسح ثلاثي الأبعاد والكاميرا الحرارية والدرون ملك لنا – في استخدام يومي منذ سنوات.</span></div></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg><div><b>الألمانية · التركية · الروسية</b><span>شخصياً ومباشرةً. الإنجليزية والعربية ولغات أخرى كتابةً عبر البريد الإلكتروني.</span></div></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg><div><b>أنطاليا وألانيا</b><span>من كاش وكالكان مروراً بكمر وسيدة وبيليك وصولاً إلى ألانيا – التنقل داخل المنطقة مشمول.</span></div></li>
+          </ul>
+        </div>
+        <!-- Personal introduction. Photo: images/portrait.jpg -->
+        <div class="person reveal">
+          <div class="person-foto">
+            <img src="../images/portrait.jpg" alt="M&uuml;sl&uuml;m Berk, Gr&uuml;nder von Fivestar Property Scan" width="1302" height="868" decoding="async">
+          </div>
+          <div>
+            <h3 class="ltr">Müslüm Berk</h3>
+            <span class="rolle">المؤسس والفاحص الفني</span>
+            <p class="person-claim">مستقل. دقيق. ولا مصلحة لي في البيع.</p>
+            <p>أعمل منذ سنوات بالمسح ثلاثي الأبعاد والتصوير الحراري ولقطات الدرون والتصوير بزاوية 360°. أشغّل الأجهزة بنفسي، وأحلّل البيانات بنفسي، وأكتب التقرير بنفسي. فليس عندي من يقيس وآخر يشرح – من أول اتصال حتى التقرير النهائي تتعامل مع الشخص نفسه.</p>
+            <p>وقبل ذلك عملت لحسابي الخاص في ألمانيا سنوات طويلة. وبقيت طريقة العمل كما هي: فحص دقيق، وتوثيق منظّم، ومصارحة العميل بما يستحق العناء وما لا يستحقه. أنا مواطن تركي وكانت ألمانيا بيتي – أعرف الجانبين: كيف يُبنى ويُباع هنا، وما الذي يتوقعه مشترٍ من ألمانيا أو النمسا أو سويسرا قبل أن يوقّع.</p>
+            <p>وأقول بالوضوح نفسه ما لستُ عليه: لست مهندساً إنشائياً ولست خبيراً معتمداً. أنا أقيس وأصوّر وأوثّق الحالة الفنية. وحيث أبلغ حدّي أكتب ذلك في التقرير وأدلّك على من يساعدك أكثر. جملة صادقة زائدة خير من رقم لا يصمد.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= شريط العلامة ================= -->
+    <section class="brand-band reveal">
+      <div class="container">
+        <img src="../images/logo-fps-neu.png" alt="Fivestar Property Scan">
+        <p class="bb-claim">اعرف قبل أن <span class="grad-text">تشتري</span>.</p>
+        <p class="bb-sub">فحص فني مستقل للعقارات · أنطاليا · ألانيا · تركيا</p>
+        <span class="bb-stars" aria-hidden="true"><svg viewBox="0 0 22 20" fill="url(#goldg)"><use href="#star"/></svg><svg viewBox="0 0 22 20" fill="url(#goldg)"><use href="#star"/></svg><svg viewBox="0 0 22 20" fill="url(#goldg)"><use href="#star"/></svg><svg viewBox="0 0 22 20" fill="url(#goldg)"><use href="#star"/></svg><svg viewBox="0 0 22 20" fill="url(#goldg)"><use href="#star"/></svg><svg viewBox="0 0 22 20" fill="url(#goldg)"><use href="#star"/></svg></span>
+      </div>
+    </section>
+
+    <!-- ================= التواصل ================= -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section-head center reveal">
+          <span class="eyebrow">التواصل</span>
+          <h2>هل اقترب قرار الشراء؟</h2>
+          <p class="lead">أرسل لنا <b>الموقع</b> و<b>المساحة التقريبية</b> و<b>ملف العرض</b> إن وُجد. سنخبرك أي فحص هو المناسب ونعطيك سعراً ثابتاً مسبقاً. دون أي التزام.</p>
+        </div>
+        <div class="contact-grid">
+          <div class="card card-top contact-card wa-card reveal">
+            <div class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true" fill="#25D366"><use href="#ic-wa"/></svg></div>
+            <h3>تواصل مباشر</h3>
+            <p style="color:var(--muted);font-size:.95rem">أسرع طريقة للوصول إلينا هي واتساب – ويمكنك إرفاق صور أو رابط إعلان العقار.</p>
+            <div class="lang-note">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="url(#ig)" stroke-width="1.8" fill="none"/><path d="M3 12h18M12 3c2.5 2.4 3.8 5.4 3.8 9s-1.3 6.6-3.8 9c-2.5-2.4-3.8-5.4-3.8-9S9.5 5.4 12 3Z" stroke="url(#ig)" stroke-width="1.8" fill="none"/></svg>
+              <span><b>اكتب لنا بلغتك.</b> العربية أو الإنجليزية أو الألمانية أو التركية أو الروسية – راسلنا عبر واتساب أو البريد الإلكتروني ونردّ عليك باللغة التي كتبت بها.</span>
+            </div>
+            <div style="margin:2px 0 4px">
+              <div class="contact-line" data-phone-line><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 3.5 9 3l1.7 4-2 1.6a13.5 13.5 0 0 0 6.7 6.7l1.6-2 4 1.7-.5 2.4c-.2 1-1.1 1.7-2.1 1.6C10.6 18.9 5.1 13.4 4.9 5.6c0-1 .7-1.9 1.7-2.1Z" stroke="url(#ig)" stroke-width="1.9" fill="none" stroke-linejoin="round"/></svg><a data-phone class="ltr" href="#">+49 151 7452 0981</a><span class="tel-tag">ألمانيا</span></div>
+              <div class="contact-line" data-phone-tr-line><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 3.5 9 3l1.7 4-2 1.6a13.5 13.5 0 0 0 6.7 6.7l1.6-2 4 1.7-.5 2.4c-.2 1-1.1 1.7-2.1 1.6C10.6 18.9 5.1 13.4 4.9 5.6c0-1 .7-1.9 1.7-2.1Z" stroke="url(#ig)" stroke-width="1.9" fill="none" stroke-linejoin="round"/></svg><a data-phone-tr class="ltr" href="#">+90 568 687 86 86</a><span class="tel-tag">تركيا</span></div>
+              <div class="contact-line"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2.5" stroke="url(#ig)" stroke-width="1.9" fill="none"/><path d="m4 7 8 6 8-6" stroke="url(#ig)" stroke-width="1.9" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><a data-email href="#contact" class="ltr">info@fivepropscan.com</a></div>
+              <div class="contact-line"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5" stroke="url(#ig)" stroke-width="1.9" fill="none"/><path d="M12 7.5V12l3 2" stroke="url(#ig)" stroke-width="1.9" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><span>الاثنين–السبت · <span class="ltr">09:00–18:00</span></span></div>
+            </div>
+            <p style="color:var(--muted);font-size:.85rem;margin-bottom:6px">مناطق خدمتنا:</p>
+            <ul class="area-chips">
+              <li>أنطاليا</li><li>ألانيا</li><li>سيدة</li><li>بيليك</li><li>كمر</li><li>مانافغات</li><li>محمودلار</li><li>كونيا آلتي</li><li>لارا</li><li>كاش وكالكان</li>
+            </ul>
+            <!-- Hinweis auf Nordzypern am 02.08.2026 entfernt: dort wird nicht
+                 regulaer gearbeitet, das Einsatzgebiet bleibt Antalya/Alanya. -->
+            <a class="btn btn-wa btn-lg" data-wa href="#contact">
+              <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><use href="#ic-wa"/></svg>
+              ابدأ محادثة واتساب
+            </a>
+          </div>
+          <div class="card card-top contact-card reveal" style="--d:.1s">
+            <h3>أرسل طلبك</h3>
+            <form data-contact data-subject="طلب فحص عقار (الموقع)" data-sending="جارٍ الإرسال …" data-ok="شكراً لك! وصلنا طلبك – نردّ عادةً خلال ساعات قليلة." data-err="تعذّر الإرسال. راسلنا مباشرة عبر واتساب – فهي أسرع وسيلة للوصول إلينا." data-wa-sent="تم فتح واتساب – اضغط على إرسال هناك." novalidate>
+              <div class="form-grid">
+                <div class="field">
+                  <label for="f-name">الاسم</label>
+                  <input id="f-name" name="name" type="text" autocomplete="name" required>
+                </div>
+                <div class="field">
+                  <label for="f-email">البريد الإلكتروني</label>
+                  <input id="f-email" name="email" type="email" autocomplete="email" required dir="ltr">
+                </div>
+                <div class="field">
+                  <label for="f-phone">الهاتف / واتساب (اختياري)</label>
+                  <input id="f-phone" name="phone" type="tel" autocomplete="tel" dir="ltr">
+                </div>
+                <div class="field">
+                  <label for="f-ort">موقع العقار</label>
+                  <input id="f-ort" name="location" type="text" placeholder="مثلاً ألانيا، محمودلار">
+                </div>
+                <div class="field full">
+                  <label for="f-paket">الباقة المطلوبة</label>
+                  <select id="f-paket" name="package">
+                    <option>لست متأكداً بعد – أرجو النصيحة</option>
+                    <option>الفحص الفني الأساسي</option>
+                    <option>الفحص الفني للعقار</option>
+                    <option>الفحص العقاري المتميّز</option>
+                    <option>بناء جديد / تسليم / متابعة إنشاء</option>
+                    <option>طلب للشركات</option>
+                    <option>توثيق ثلاثي الأبعاد / 360° / درون</option>
+                  </select>
+                </div>
+                <div class="field full">
+                  <label for="f-msg">رسالتك</label>
+                  <textarea id="f-msg" name="message" placeholder="نوع العقار، المساحة التقريبية، سنة البناء، الإطار الزمني …"></textarea>
+                </div>
+              </div>
+              <p class="form-status" data-form-status hidden></p><p class="form-note">يُرسل طلبك عبر اتصال مشفّر ويُستخدم فقط للرد عليك.</p>
+              <div style="display:flex;gap:12px;flex-wrap:wrap">
+                <button class="btn btn-primary" type="submit">أرسل الطلب بالبريد الإلكتروني</button>
+                <button class="btn btn-ghost" type="button" data-form-wa>… أو عبر واتساب</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= التذييل ================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <a class="logo footer-logo-big" href="#top" aria-label="Fivestar Property Scan"><img src="../images/logo-fps-neu.png" alt="Fivestar Property Scan"></a><a class="logo footer-brand-small" href="#top" style="margin-bottom:14px">
+            <img class="logo-icon" src="../images/logo-fps-mark-neu.png" alt="">
+            <span class="logo-text"><b>FIVESTAR</b><span>Property Scan</span></span>
+          </a>
+          <span class="footer-stars" aria-hidden="true" style="margin-bottom:14px">
+            <svg viewBox="0 0 22 20" fill="url(#goldg)"><use href="#star"/></svg>
+            <svg viewBox="0 0 22 20" fill="url(#goldg)"><use href="#star"/></svg>
+            <svg viewBox="0 0 22 20" fill="url(#goldg)"><use href="#star"/></svg>
+            <svg viewBox="0 0 22 20" fill="url(#goldg)"><use href="#star"/></svg>
+            <svg viewBox="0 0 22 20" fill="url(#goldg)"><use href="#star"/></svg>
+            <svg viewBox="0 0 22 20" fill="url(#goldg)"><use href="#star"/></svg>
           </span>
-        </a>
-        <a class="lang-card" href="en/" data-lang="en" hreflang="en">
-          <span class="suggest-chip">Suggested</span>
-          <span class="lang-code">EN</span>
-          <span class="lang-name">English</span>
-          <span class="lang-go">Continue
-            <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-arrow"/></svg>
-          </span>
-        </a>
-        <a class="lang-card" href="de/" data-lang="de" hreflang="de" lang="de">
-          <span class="suggest-chip">Empfohlen</span>
-          <span class="lang-code">DE</span>
-          <span class="lang-name">Deutsch</span>
-          <span class="lang-go">Weiter
-            <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-arrow"/></svg>
-          </span>
-        </a>
-        <a class="lang-card" href="ru/" data-lang="ru" hreflang="ru" lang="ru">
-          <span class="suggest-chip">Рекомендуем</span>
-          <span class="lang-code">RU</span>
-          <span class="lang-name">Русский</span>
-          <span class="lang-go">Продолжить
-            <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-arrow"/></svg>
-          </span>
-        </a>
-        <a class="lang-card" href="ar/" data-lang="ar" hreflang="ar" lang="ar" dir="rtl">
-          <span class="suggest-chip">موصى به</span>
-          <span class="lang-code">AR</span>
-          <span class="lang-name">العربية</span>
-          <span class="lang-go">متابعة
-            <svg viewBox="0 0 24 24" aria-hidden="true" style="transform:scaleX(-1)"><use href="#ic-arrow"/></svg>
-          </span>
-        </a>
+          <p>فحص فني مستقل للعقارات في أنطاليا وألانيا وكاش وكالكان وجميع أنحاء تركيا: مسح ثلاثي الأبعاد وتصوير حراري وفحص بالدرون – مع تقرير رقمي خلال 48 ساعة.</p>
+        </div>
+        <div>
+          <h4>الخدمات</h4>
+          <a href="#services">المسح ثلاثي الأبعاد</a>
+          <a href="#services">التصوير الحراري</a>
+          <a href="#services">الفحص بالدرون</a>
+          <a href="#services">متابعة البناء</a>
+          <a href="#packages">الباقات والأسعار</a>
+        </div>
+        <div>
+          <h4>التنقل</h4>
+          <a href="#business">للوسطاء والمنشآت</a>
+          <a href="#einfach">آلية العمل</a>
+          <a href="#faq">الأسئلة</a>
+          <a href="#contact">التواصل</a>
+        </div>
+        <div>
+          <h4>قانوني واللغة</h4>
+          <button type="button" data-open-modal="modal-impressum">بيانات الناشر</button>
+          <button type="button" data-open-modal="modal-datenschutz">الخصوصية</button>
+          <a href="../?choose=1">تغيير اللغة</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span data-year>2026</span> Fivestar Property Scan · أنطاليا · تركيا</span>
+        <span>اعرف قبل أن تشتري.</span>
       </div>
     </div>
-  </main>
-  <footer class="splash-footer">
-    © <span data-year>2026</span> Fivestar Property Scan · Antalya · Alanya · Türkiye
   </footer>
+
+  <!-- ================= النوافذ ================= -->
+  <div class="modal" id="modal-impressum" hidden role="dialog" aria-modal="true" aria-labelledby="mi-title">
+    <div class="modal-backdrop"></div>
+    <div class="modal-box">
+      <button class="modal-close" data-close-modal aria-label="إغلاق">✕</button>
+      <h3 id="mi-title">بيانات الناشر</h3>
+      <p><b>Fivestar Property Scan (FPS)</b><br>
+      فحص فني للعقارات<br>
+      أنطاليا، تركيا</p>
+      <p>المالك: <em>[يُضاف الاسم]</em><br>
+      العنوان: <em>[يُضاف العنوان]</em></p>
+      <p>البريد الإلكتروني: <span data-email-text class="ltr"></span><br>
+هاتف: <span data-phone class="ltr"></span><span data-phone-tr-line> · <span data-phone-tr class="ltr"></span></span></p>
+      <p>المسؤول عن محتوى هذا الموقع: ‏Fivestar Property Scan. جميع المعلومات دون ضمان.</p>
+    </div>
+  </div>
+  <div class="modal" id="modal-datenschutz" hidden role="dialog" aria-modal="true" aria-labelledby="md-title">
+    <div class="modal-backdrop"></div>
+    <div class="modal-box">
+      <button class="modal-close" data-close-modal aria-label="إغلاق">✕</button>
+      <h3 id="md-title">الخصوصية</h3>
+      <p>هذا الموقع صفحة معلومات ثابتة بالكامل. لا يوجد تتبّع ولا أدوات تحليل ولا ملفات تعريف ارتباط إعلانية.</p>
+      <ul>
+        <li><b>اختيار اللغة:</b> تُحفظ لغتك المختارة محلياً في متصفحك فقط <span class="ltr">(localStorage)</span> ولا تُنقل إلينا.</li>
+        <li><b>نموذج التواصل:</b> تُرسل بياناتك عبر خدمة النماذج Web3Forms بشكل مشفّر إلى بريدنا وتُستخدم فقط للرد على طلبك. ولا تُحفظ على هذا الموقع.</li>
+        <li><b>واتساب:</b> عند التواصل عبر واتساب تسري سياسة الخصوصية الخاصة بواتساب <span class="ltr">(Meta Platforms)</span>. لا ترسل هناك سوى البيانات التي ترغب بمشاركتها.</li>
+        <li><b>الخطوط:</b> جميع الخطوط مستضافة محلياً على هذا الخادم – ولا يتم إنشاء أي اتصال بخوادم جوجل.</li>
+        <li><b>التقارير واللقطات:</b> نتعامل مع بيانات القياس والصور ولقطات الدرون بسرية تامة ونسلّمها لك حصرياً بصفتك العميل.</li>
+      </ul>
+      <p>أسئلة حول الخصوصية: <span data-email-text class="ltr"></span></p>
+    </div>
+  </div>
+
+  <!-- واتساب عائم -->
+  <a class="wa-float" data-wa href="#contact" aria-label="ابدأ محادثة واتساب">
+    <svg viewBox="0 0 24 24" aria-hidden="true" fill="#04240f"><use href="#ic-wa"/></svg>
+  </a>
 
 </body>
 </html>

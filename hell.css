@@ -1,0 +1,909 @@
+/* ==========================================================================
+   FIVESTAR PROPERTY SCAN — HELLES DESIGN
+   --------------------------------------------------------------------------
+   Wird NACH styles.css geladen und legt sich darüber. Absicht: Das gesamte
+   Layout, die RTL-Regeln für Arabisch, die Mobiloptimierung, das Akkordeon,
+   die Abschnittsreihenfolge und die Tippflächen bleiben unangetastet –
+   getauscht wird ausschließlich die Optik.
+   Rückgängig machen = diese eine Zeile aus dem <head> nehmen.
+
+   HALTUNG
+   Ein technischer Prüfbericht verkauft sich über Nüchternheit, nicht über
+   Effekt. Deshalb: heller Grund, Marineblau statt Schwarz, EIN Akzent,
+   kleine Radien, flache Schatten. Die Neonverläufe des dunklen Entwurfs
+   sind ersatzlos weg – auf Weiß wirken sie billig.
+
+   TYPOGRAFIE
+   Überschriften laufen jetzt über Playfair Display (Gewicht 500, nicht fett).
+   Die Schrift ist bereits für die Wortmarke im Paket, kostet also keinen
+   zusätzlichen Ladevorgang, und ihre Serifen geben dem Ganzen den Ernst,
+   den ein Gutachten braucht. Fließtext bleibt Inter. Space Grotesk behält
+   die technischen Rollen: Etiketten, Kennzahlen, Preise.
+
+   EINE AUSNAHME
+   Die Scan-Karte im Hero bleibt dunkel. Sie stellt ein Messgerät-Display
+   dar – ein Bildschirm ist nun mal dunkel. Das ist kein Stilbruch, sondern
+   der einzige Ort, an dem Dunkelheit etwas bedeutet.
+   ========================================================================== */
+
+:root {
+  --bg: #FBFCFD;
+  --bg2: #F1F4F8;
+  --panel: #FFFFFF;
+  --line: #DCE3EB;
+  --line-soft: #EAEFF4;
+  --line-gold: rgba(156, 115, 40, 0.30);
+
+  --text: #0E2439;          /* tiefes Marineblau – nie reines Schwarz */
+  --muted: #5A7089;
+
+  --cyan: #0D6E88;          /* Petrol: technisch, seriös, EIN Akzent */
+  --violet: #0D6E88;        /* zusammengeführt – kein Dreiklang mehr */
+  --orange: #B4670F;        /* nur noch für Hinweise/Warnungen */
+  --gold: #9C7328;
+  --gold-light: #C79A45;
+  --gold-deep: #6E4F16;
+  --wa: #1EA855;
+
+  --grad: #0D6E88;          /* war ein Neonverlauf – jetzt Vollton */
+  --grad-soft: #0D6E88;
+  --gold-grad: #9C7328;
+
+  --radius: 8px;
+  --radius-sm: 6px;
+  --shadow: 0 1px 2px rgba(14, 36, 57, .05), 0 10px 28px -14px rgba(14, 36, 57, .18);
+  --shadow-lg: 0 2px 4px rgba(14, 36, 57, .06), 0 20px 44px -18px rgba(14, 36, 57, .22);
+}
+
+body { background: var(--bg); color: var(--text); }
+
+/* ---------- Typografie ---------- */
+h1, h2, h3, .p-name, .tech-name, .b2b-role {
+  font-family: var(--font-mark);
+  font-weight: 500;
+  letter-spacing: -0.005em;
+}
+h1 { letter-spacing: -0.015em; }
+.hero h1 { font-weight: 500; }
+h4, .eyebrow, .stat-num, .stat-label, .price, .p-from, .p-hint,
+.service-tag, .df-num, .nr, .lang-code { font-family: var(--font-display); }
+
+.eyebrow { color: var(--cyan); font-weight: 700; }
+.lead, .desc, p { color: var(--muted); }
+.grad-text, .stat-num { background: none; -webkit-text-fill-color: currentColor; color: var(--cyan); }
+.hero h1 .grad-text { color: var(--cyan); }
+strong, b { color: var(--text); }
+
+/* ---------- Hintergrund-Effekte raus ---------- */
+.bg-fx, .bg-grid { display: none; }
+
+/* ==========================================================================
+   LOGO
+   --------------------------------------------------------------------------
+   Am 02.08.2026 gegen die neue Fassung getauscht. Die alte Bildmarke war mit
+   WEISSEN Linien gezeichnet und verschwand auf hellem Grund – dafür lag hier
+   vorher eine dunkle Kachel als Notlösung. Die ist jetzt überflüssig: Das neue
+   Logo hat dunkle Linien und einen freigestellten Hintergrund, es steht direkt
+   auf Weiß.
+
+   Zwei Dateien, beide aus derselben Vorlage:
+     logo-fps-mark-neu.png   nur die Bildmarke (Drohne, FPS-Baukörper, Stativ)
+                             – für die Kopfzeile neben der Wortmarke in HTML
+     logo-fps-neu.png        vollständige Sperrung inkl. Schriftzug
+                             – für Fußzeile und Markenband
+
+   Hinweis: Der dunkle Entwurf in styles.css erwartet ein helles Logo. Wer auf
+   Dunkel zurückschaltet, muss auch die Logodateien zurücktauschen.
+   ========================================================================== */
+.logo-icon { background: none; padding: 0; }
+
+/* Die Wortmarke daneben steht in HTML und lief noch über den Goldverlauf.
+   Neben dem marineblauen Logo wirkte das wie zwei verschiedene Marken –
+   jetzt in derselben Farbe wie der Schriftzug im Logo. */
+.logo-text b {
+  background: none; -webkit-text-fill-color: var(--text); color: var(--text);
+}
+.logo-text span { color: var(--muted); }
+
+/* Das alte Logo war QUERformatig, deshalb steht in styles.css eine feste
+   Breite (250 px im Fuß, 420 px im Markenband). Das neue Logo ist HOCHformatig
+   – zusammen mit einer Höhenbegrenzung ergab das zwei widersprüchliche Zwänge
+   und ein gestauchtes Bild. Deshalb hier: Höhe vorgeben, Breite rechnen lassen.
+   Die Selektoren sind bewusst so spezifisch wie die in styles.css, sonst
+   gewinnt dort die Breitenangabe. */
+   Nachtrag 04.08.2026: Das Logo ist wieder ein Querformat (Marke über
+   Wortmarke, 760×307). Eine feste Höhe macht es dadurch sehr breit – deshalb
+   jetzt die Breite begrenzen und die Höhe rechnen lassen. */
+.footer-grid a.footer-logo-big img { width: 260px; height: auto; max-width: 100%; }
+@media (max-width: 860px) {
+  .footer-grid a.footer-logo-big img { width: 220px; }
+}
+/* Die Bildmarke im Kopf ist jetzt hochformatig (240×291). Ohne Begrenzung
+   zieht sie die Kopfzeile auseinander. */
+.logo .logo-icon { height: 40px; width: auto; }
+@media (max-width: 860px) {
+  .logo .logo-icon { height: 34px; }
+}
+
+/* Das Markenband über dem Fuß zeigte nur noch einmal das Logo. Zwischen
+   Logo in der Kopfzeile und Logo im Fuß war das die dritte Wiederholung
+   auf derselben Seite – ohne neue Information. Raus.
+   Wieder einblenden: diese Regel löschen. */
+.brand-band { display: none; }
+
+/* ---------- Kopfzeile ---------- */
+.site-header.scrolled {
+  background: rgba(251, 252, 253, 0.88);
+  -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px);
+  border-bottom-color: var(--line);
+}
+.nav-links a:hover { color: var(--cyan); background: var(--bg2); }
+.lang-btn { background: #FFF; border-color: var(--line); color: var(--text); }
+.lang-btn:hover { background: var(--bg2); border-color: var(--cyan); }
+.lang-menu { background: #FFF; border-color: var(--line); box-shadow: var(--shadow); }
+.lang-menu a:hover { background: var(--bg2); }
+.lang-menu a.active { background: var(--bg2); color: var(--cyan); }
+.mobile-nav { background: #FFF; border-color: var(--line); }
+.mn-link { color: var(--text); }
+
+/* ---------- Flächen und Karten ---------- */
+.card, .tech-card, .b2b-card, .price-card, .contact-card,
+.faq-item, .stimme, .bericht, .liefer, .size-note, .wa-card,
+.einfach-steps > div, .device-frame, .modal-box, .person {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+}
+.card::before, .b2b-card::before, .card-top::before, .device-frame::before,
+.brand-band::before, .splash-rule::before, .splash-rule::after { display: none; }
+.card:hover, .wa-card:hover { border-color: var(--cyan); box-shadow: var(--shadow-lg); }
+.card-icon, .b2b-card .card-icon, .wa-card .card-icon {
+  background: var(--bg2); border: 1px solid var(--line); color: var(--cyan);
+}
+
+/* Abschnittswechsel über einen minimal kühleren Grund */
+#fuer-wen, #for-whom, #kimler-icin, #dlya-kogo,
+#pakete, #packages, #paketler, #pakety,
+#technik, #equipment, #ekipman, #oborudovanie,
+#faq, #sss { background: var(--bg2); }
+
+/* ---------- Schaltflächen ---------- */
+.btn-primary {
+  background: var(--cyan); color: #FFF; border: 1px solid var(--cyan);
+  box-shadow: 0 1px 2px rgba(13, 110, 136, .2);
+}
+.btn-primary:hover { background: #0A5C73; border-color: #0A5C73; }
+.btn-ghost { background: #FFF; color: var(--text); border: 1px solid var(--line); }
+.btn-ghost:hover { background: var(--bg2); border-color: var(--cyan); color: var(--cyan); }
+/* WhatsApp-Grün abgedunkelt: Das Markengrün #25D366 bzw. #1EA855 ergibt mit
+   weißer Schrift nur 3,09 : 1 – für Fließtextgröße sind 4,5 : 1 nötig.
+   #157F41 kommt auf 5,1 : 1 und bleibt zusammen mit dem Symbol eindeutig als
+   WhatsApp erkennbar. Der runde Knopf unten behält das hellere Grün: dort
+   sitzt nur ein Symbol, und für Grafik genügen 3 : 1. */
+.btn-wa { background: #157F41; color: #FFF; border: 1px solid #157F41; }
+.btn-wa:hover { background: #0F6633; border-color: #0F6633; }
+
+/* ---------- Hero ---------- */
+.hero-badge { background: #FFF; border: 1px solid var(--line); color: var(--muted); }
+.trust-chips li { color: var(--muted); }
+
+/* Die Scan-Karte bleibt bewusst dunkel: sie zeigt ein Messgerät-Display. */
+.scan-card {
+  background: linear-gradient(165deg, #14202E, #0B131C);
+  border: 1px solid #223141;
+  box-shadow: 0 2px 6px rgba(14, 36, 57, .10), 0 26px 56px -22px rgba(14, 36, 57, .40);
+}
+.m-chip { background: rgba(8, 14, 22, .82); color: #DCE8F4; border: 1px solid rgba(120, 160, 195, .22); }
+.scan-corner { border-color: rgba(80, 200, 230, .75); }
+.scroll-hint { border-color: var(--line); }
+.scroll-hint::after { background: var(--cyan); }
+
+/* ---------- Kennzahlen ---------- */
+.stats-band { background: var(--panel); border: 1px solid var(--line); box-shadow: var(--shadow); }
+.stat-num { color: var(--cyan); }
+.stat-label { color: var(--muted); }
+
+/* ---------- Ablauf ---------- */
+.einfach-steps .nr { background: var(--cyan); color: #FFF; border: 0; }
+.einfach-frage { background: var(--bg2); border: 1px solid var(--line); border-left: 3px solid var(--cyan); }
+.step::after { background: var(--line); }
+[dir="rtl"] .step::after { background: var(--line); }
+
+/* ---------- Leistungen ---------- */
+.service-tag { background: var(--bg2); color: var(--cyan); border: 1px solid var(--line); }
+.service-note { background: #FDF6EC; border: 1px solid #EBD9BC; border-left: 3px solid var(--orange); color: var(--text); }
+.service-visual { background: var(--bg2); border: 1px solid var(--line); }
+.feat { color: var(--muted); }
+.feat b { color: var(--text); }
+
+/* ---------- Technik ---------- */
+.device-frame { background: var(--bg2); }
+/* Die Ziffern standen auf --line: 1,3:1. Als 48px-Zeichen sind 3:1 gefordert.
+   Aus dem alten Entwurf hängen an .df-num noch ein Gold-Hintergrund mit
+   background-clip:text und opacity .9 – beides zieht den Wert wieder nach
+   unten. Deshalb hier Hintergrund weg, volle Deckkraft, klare Farbe: 3,1:1. */
+.device-frame .df-num {
+  color: #7A8CA0;
+  -webkit-text-fill-color: #7A8CA0;
+  background: none;
+  opacity: 1;
+}
+.tech-name { color: var(--text); }
+.tech-sub { color: var(--muted); }
+/* Gerätedaten sitzen jetzt in der Leistungskarte, nicht mehr in einem
+   eigenen Abschnitt. */
+.geraet { background: var(--panel); border-color: var(--line); box-shadow: var(--shadow); }
+.geraet-name { color: var(--text); }
+.geraet-sub { color: var(--muted); }
+/* Der Gerätename ist die anklickbare Zeile, die vier Messwerte liegen
+   dahinter. main.js baut die Hülle; ohne JavaScript steht alles offen. */
+.geraet-klapp > summary {
+  display: flex; align-items: center; gap: 12px;
+  cursor: pointer; list-style: none; padding: 2px 0;
+}
+.geraet-klapp > summary::-webkit-details-marker { display: none; }
+.geraet-klapp > summary > div { flex: 1 1 auto; min-width: 0; }
+.geraet-klapp > summary::after {
+  content: ""; width: 8px; height: 8px; flex: none; margin-inline-start: auto;
+  border-right: 2px solid var(--cyan); border-bottom: 2px solid var(--cyan);
+  transform: rotate(45deg) translate(-2px, -2px);
+  transition: transform 250ms var(--ease);
+}
+.geraet-klapp[open] > summary::after { transform: rotate(-135deg) translate(-2px, -2px); }
+.geraet-klapp > summary:hover .geraet-name { color: var(--cyan); }
+.geraet-klapp > summary:focus-visible { outline: 2px solid var(--cyan); outline-offset: 4px; border-radius: 6px; }
+.geraet-klapp .spec-list { margin-top: 10px; }
+@media (hover: none) and (pointer: coarse) {
+  .geraet-klapp > summary { min-height: 44px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .geraet-klapp > summary::after { transition: none; }
+}
+.spec-list li { border-color: var(--line-soft); }
+.spec-list li span:first-child { color: var(--muted); }
+.spec-list li span:last-child { color: var(--text); font-weight: 600; }
+
+/* ---------- Pakete ---------- */
+.price-card:not(.featured) { background: var(--panel); opacity: 1; }
+.price-card.featured {
+  background: var(--panel);
+  border: 2px solid var(--cyan);
+  box-shadow: 0 2px 6px rgba(13, 110, 136, .10), 0 22px 48px -20px rgba(13, 110, 136, .34);
+}
+.p-badge { background: var(--cyan); color: #FFF; border: 0; }
+.price { color: var(--text); }
+.price-card.featured .price { color: var(--cyan); }
+.p-from, .p-for { color: var(--muted); }
+.p-feats li { color: var(--muted); }
+.size-hint { background: #EEF6F9; border-left: 2px solid var(--cyan); color: var(--text); }
+.bericht-list li { color: var(--muted); }
+
+/* ==========================================================================
+   PREISKARTEN KOMPAKT
+   --------------------------------------------------------------------------
+   Vorher: 729–811 px je Karte, der Preisbereich auf dem Handy über vier
+   Bildschirme. Zwei Hebel:
+   1. Die sechs Leistungspunkte (allein 356 px) wandern hinter einen
+      Aufklapper – gebaut in main.js, damit die fünf HTML-Dateien
+      unangetastet bleiben.
+   2. Polster, Preisgröße und Abstände zurückgenommen.
+
+   Sichtbar bleibt, was beim Vergleichen zählt: Name, Preis, Größenangabe,
+   Knopf. Alles andere holt sich, wer sich für ein Paket interessiert.
+   ========================================================================== */
+.price-card { padding: 20px 18px; gap: 0; }
+.price-card .p-name { font-size: 1.05rem; margin-bottom: 1px; }
+.price-card .p-for  { font-size: 0.8rem; margin-bottom: 12px; }
+.price-card .price  { font-size: 1.85rem; margin-bottom: 2px; line-height: 1.1; }
+.price-card .p-from { font-size: 0.72rem; }
+.price-card .p-hint { font-size: 0.78rem; margin-bottom: 14px; }
+.price-card .p-badge { font-size: 0.63rem; padding: 3px 10px; }
+
+/* Der Aufklapper sitzt zwischen Größenangabe und Knopf. */
+.p-mehr { margin: 0 0 14px; }
+.p-mehr > summary {
+  display: flex; align-items: center; justify-content: space-between; gap: 10px;
+  cursor: pointer; list-style: none;
+  font-family: var(--font-display); font-size: 0.8rem; font-weight: 600;
+  color: var(--cyan); padding: 9px 0; border-top: 1px solid var(--line-soft);
+  transition: color .2s;
+}
+.p-mehr > summary::-webkit-details-marker { display: none; }
+.p-mehr > summary::after {
+  content: ""; width: 7px; height: 7px; flex: none;
+  border-right: 2px solid currentColor; border-bottom: 2px solid currentColor;
+  transform: rotate(45deg) translateY(-2px); transition: transform .25s var(--ease);
+}
+.p-mehr[open] > summary::after { transform: rotate(-135deg) translateY(-1px); }
+.p-mehr > summary:hover { color: var(--text); }
+.p-mehr > summary:focus-visible { outline: 2px solid var(--cyan); outline-offset: 2px; border-radius: 3px; }
+.p-mehr .p-feats { margin: 2px 0 6px; }
+.p-mehr .p-feats li { padding: 5px 0; font-size: 0.86rem; }
+@media (prefers-reduced-motion: reduce) { .p-mehr > summary::after { transition: none; } }
+
+/* Auf Touch-Geräten bleibt die Mindestgröße für Tippflächen erhalten. */
+@media (hover: none) and (pointer: coarse) {
+  .p-mehr > summary { min-height: 44px; }
+}
+
+/* --------------------------------------------------------------------------
+   MUSTER-BERICHT UND KLEINGEDRUCKTES
+   Nachdem die Karten geschrumpft sind, war der Muster-Bericht mit 1.333 px
+   der größte Posten im Preisbereich – größer als alle drei Karten zusammen.
+   Die Vorschaugrafik ist mit 300 × 380 px angegeben und wuchs auf schmalen
+   Displays auf volle Breite. Hier wird sie begrenzt und der Block gestrafft.
+   -------------------------------------------------------------------------- */
+.bericht { padding: 24px 22px 22px; gap: 22px; margin-top: 32px; }
+.bericht-vorschau { max-width: 150px; margin-inline: auto; }
+.bericht-text h3 { font-size: 1.15rem; margin-bottom: 6px; }
+.bericht-text > p { font-size: 0.9rem; margin-bottom: 14px; }
+.bericht-list { gap: 7px; margin-bottom: 16px; }
+.bericht-list li { font-size: 0.88rem; }
+
+/* Das Kleingedruckte unter den Preisen war 366 px hoch. Es ist wichtig,
+   aber niemand liest es beim Vergleichen – also zusammenklappen. */
+.price-note { font-size: 0.84rem; line-height: 1.6; }
+
+/* ---------- Für Firmen ---------- */
+.b2b-card { border-top: 3px solid var(--cyan); }
+.b2b-role { color: var(--text); }
+.b2b-out { color: var(--muted); }
+.b2b-preis { color: var(--muted); }
+
+/* ---------- FAQ ---------- */
+.faq-item { background: var(--panel); }
+.faq-item.open { border-color: var(--cyan); }
+.faq-q { color: var(--text); }
+.faq-a-inner p { color: var(--muted); }
+
+/* ---------- Über uns ---------- */
+.person, .person-foto, .kopf-bild { background: var(--bg2); border-color: var(--line); }
+/* Diese Kacheln behielten am Desktop ihren dunklen Grund aus dem alten
+   Entwurf – mit der neuen dunklen Schrift ergab das 1,11 : 1, also nichts
+   Lesbares. Am Handy war es bereits gerichtet, hier fehlte es. */
+.about-points li {
+  background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius-sm);
+  color: var(--muted);
+}
+.about-points li b { color: var(--text); }
+.about-points li span { color: var(--muted); }
+.zypern-hinweis { background: var(--bg2); border: 1px solid var(--line); color: var(--muted); }
+
+/* ---------- Kundenstimmen ---------- */
+.stimme-text { color: var(--text); }
+.stimme-quelle { color: var(--muted); }
+.stimmen-hinweis { background: var(--bg2); border: 1px solid var(--line); color: var(--muted); }
+
+/* ---------- Kontakt & Formular ---------- */
+#kontakt::before, #contact::before, #iletisim::before { display: none; }
+.contact-line { color: var(--muted); }
+.contact-line a { color: var(--text); }
+.tel-tag { background: var(--bg2); color: var(--muted); border: 1px solid var(--line); }
+.field label { color: var(--text); }
+.field input, .field textarea, .field select {
+  background: #FFF; border: 1px solid var(--line); color: var(--text);
+}
+.field input:focus, .field textarea:focus, .field select:focus {
+  border-color: var(--cyan); box-shadow: 0 0 0 3px rgba(13, 110, 136, .14); outline: 0;
+}
+.field select.just-set { border-color: var(--cyan); }
+.field input::placeholder, .field textarea::placeholder { color: #90A2B5; }
+/* styles.css faerbt die Auswahleintraege dunkel (#111A26) – das galt fuer
+   ALLE Breiten, meine Korrektur stand zuerst nur im Handy-Block. Aufgeklappt
+   war die Liste am Desktop dunkel auf dunkel. */
+.field select option { background: #FFF; color: var(--text); }
+.form-status.is-ok  { background: #E7F4EC; color: #15613C; border: 1px solid #BFE0CC; }
+.form-status.is-err { background: #FBEBE7; color: #97301C; border: 1px solid #EFC9C0; }
+.wa-card { border-left: 3px solid var(--wa); }
+
+/* ---------- Fuß ---------- */
+.site-footer { background: var(--bg2); border-top: 1px solid var(--line); color: var(--muted); }
+.site-footer h4 { color: var(--text); }   /* lag bei 3,89 : 1 */
+.site-footer a { color: var(--muted); }
+.site-footer a:hover { color: var(--cyan); }
+.brand-band { background: var(--bg2); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.brand-band img { opacity: 1; filter: none; }
+
+/* ---------- Dialoge ---------- */
+.modal-backdrop { background: rgba(14, 36, 57, .40); -webkit-backdrop-filter: blur(3px); backdrop-filter: blur(3px); }
+.modal-box { background: #FFF; border: 1px solid var(--line); box-shadow: var(--shadow-lg); color: var(--text); }
+.modal-box p, .modal-box li { color: var(--muted); }
+.modal-close { background: var(--bg2); border: 1px solid var(--line); color: var(--text); }
+
+/* ---------- WhatsApp-Knopf unten ---------- */
+.wa-float { background: var(--wa); box-shadow: 0 4px 14px rgba(30, 168, 85, .34); }
+.wa-float::before { background: rgba(30, 168, 85, .34); }
+.kopier-toast { background: var(--text); color: #FFF; }
+
+/* ---------- Sprachauswahl (Rückfallseite) ---------- */
+body.splash-page { background: var(--bg); }
+.splash-logo-img { filter: none; }
+.splash-claim, .splash-sub { color: var(--muted); }
+.splash-claim .sep, .splash-sub .sep { color: var(--line); }
+.splash-lead { color: var(--muted); }
+.lang-card { background: #FFF; border: 1px solid var(--line); box-shadow: var(--shadow); color: var(--text); }
+.lang-card:hover { border-color: var(--cyan); box-shadow: var(--shadow-lg); }
+.lang-card.suggested { border-color: var(--cyan); }
+.suggest-chip { background: var(--cyan); color: #FFF; }
+.lang-code { color: var(--cyan); }
+.lang-go { color: var(--cyan); }
+.splash-footer { color: var(--muted); }
+
+/* ---------- Trennlinien der Abschnitte ---------- */
+.eyebrow::before, [dir="rtl"] .eyebrow::before,
+.section-head.center .eyebrow::after,
+[dir="rtl"] .section-head.center .eyebrow::after { background: var(--gold); }
+
+/* ==========================================================================
+   ÜBERSEHENE HELLE SCHRIFTEN AUS DEM DUNKLEN ENTWURF
+   Diese drei Regeln setzen die Textfarbe fest auf #D5E0EE bzw. #C8D4E4 –
+   auf hellem Grund praktisch unsichtbar (gemessen 1,21 : 1).
+   ========================================================================== */
+.einfach-frage p { color: var(--muted); }
+.liefer-list > div { color: var(--muted); }
+.liefer-list > div b { color: var(--text); }
+.lang-note { background: #EEF6F9; border-color: var(--line); color: var(--text); }
+.service-note b { color: #8A4E0B; }
+.scan-tag { color: rgba(230, 240, 250, .9); }
+
+/* ==========================================================================
+   HANDY UND KLEINES TABLET
+   --------------------------------------------------------------------------
+   Der dunkle Entwurf hat unter 860 px einen eigenen Block: Dort wird der
+   Untergrund absichtlich aufgehellt (#243044) und Kästen bekommen ein
+   dunkles Blaugrau – #3A4B64, #3D4F69, #41546E. Diese Kästen blieben nach
+   dem Umbau dunkel, während meine helle Auflage die Schrift darin dunkel
+   gemacht hat. Ergebnis: dunkelgraue Felder mit dunkler Schrift, unlesbar.
+   Betroffen waren „Das bekommen Sie", „Was ist eigentlich eine Wärmebild-
+   kamera" und „Wer hinter Fivestar Property Scan steht".
+
+   Hier werden dieselben Regeln auf helle Werte zurückgeholt. Die Auswahl
+   folgt exakt der Liste im Mobil-Block von styles.css – wer dort etwas
+   ergänzt, muss es hier mitziehen.
+   ========================================================================== */
+@media (max-width: 860px) {
+  :root {
+    --bg: #FBFCFD; --bg2: #F1F4F8;
+    --text: #0E2439;
+    --muted: #526780;   /* etwas dunkler als am Desktop – draußen bei Sonne lesbarer */
+    --line: #D3DBE4; --line-soft: #E6EBF1;
+    --cyan: #0B6379; --violet: #0B6379; --orange: #A25C0D;
+    --gold: #8C6722; --gold-grad: #8C6722; --grad: #0B6379; --grad-soft: #0B6379;
+  }
+
+  .faq-item, .size-note, .modal-box { background: var(--panel); }
+  .about-points li { background: var(--bg2); color: var(--muted); }
+  .einfach-steps > div { background: var(--panel); }
+  .site-header.scrolled { background: rgba(251, 252, 253, .96); }
+  .mobile-nav { background: #FFF; }
+  .lang-menu  { background: #FFF; }
+  .site-footer { background: var(--bg2); }
+
+  .field input, .field textarea, .field select { background: #FFF; color: var(--text); }
+  .field select option { background: #FFF; color: var(--text); }
+
+  .feat { color: var(--muted); }
+  .stat-label { color: var(--muted); }
+  .spec-list li span:last-child { color: var(--text); }
+  .service-tag { background: var(--bg2); color: var(--cyan); border-color: var(--line); }
+  .tech-sub { color: var(--muted); }
+
+  .b2b-card { border-color: var(--line); border-top: 3px solid var(--cyan); }
+  .tech-card, .wa-card { border-color: var(--line); }
+  .price-card.featured { border-color: var(--cyan); }
+  .device-frame::before { display: none; }
+
+  /* Bleibt dunkel – es ist ein Gerätedisplay. */
+  .scan-card { background: linear-gradient(160deg, #16202D, #0C131C); }
+  .m-chip { color: #E4EDF8; }
+}
+
+/* ==========================================================================
+   INTERAKTION — Feinschliff
+   --------------------------------------------------------------------------
+   Drei Dinge, die im Entwurf fehlten und die man einzeln kaum bemerkt,
+   in der Summe aber den Unterschied machen zwischen „funktioniert" und
+   „fühlt sich richtig an".
+   ========================================================================== */
+
+/* 1 · DRUCKZUSTAND
+   Es gab auf der ganzen Seite keinen einzigen :active-Zustand. Ein Knopf
+   ohne Druckreaktion fühlt sich an, als hätte die Seite den Klick nicht
+   gehört – besonders auf dem Handy, wo es keinen Hover als Vorstufe gibt.
+   Bewusst dezent (0,97) und schnell (140 ms): Rückmeldung, keine Show. */
+.btn, .lang-btn, .faq-q, .p-mehr > summary, .mehr > summary,
+details.size-note > summary, .wa-float, .modal-close, .lang-card {
+  transition: transform 140ms var(--ease), background 200ms var(--ease),
+              border-color 200ms var(--ease), color 200ms var(--ease),
+              box-shadow 200ms var(--ease);
+}
+.btn:active, .lang-btn:active, .faq-q:active, .lang-card:active,
+.p-mehr > summary:active, .mehr > summary:active,
+details.size-note > summary:active { transform: scale(.97); }
+.wa-float:active { transform: scale(.94); }
+
+/* 2 · HOVER NUR MIT ZEIGEGERÄT
+   Elf Hover-Regeln bewegen Elemente (translateY, scale, rotate). Auf einem
+   Touchscreen löst das Antippen den Hover aus – und er bleibt hängen, bis
+   woanders getippt wird. Die Karte steht dann dauerhaft angehoben da.
+   Farbwechsel dürfen bleiben, Bewegung nicht. */
+@media (hover: none) {
+  .btn-primary:hover, .btn-ghost:hover, .btn-wa:hover,
+  .card:hover, .lang-card:hover, .wa-float:hover { transform: none; }
+  .price-card.featured:hover { transform: none; }
+  .price-card:not(.featured):hover { transform: none; }
+  .modal-close:hover { transform: none; }
+  .lang-card:hover .lang-go svg { transform: none; }
+}
+
+/* 3 · AUSKLAPPER ÖFFNEN VOM AUSLÖSER
+   Das Sprachmenü skalierte aus seiner Mitte auf – es gehört aber an den
+   Knopf darüber. Nach rechts oben verankert wirkt es, als käme es aus dem
+   Schalter heraus, statt aus dem Nichts. */
+.lang-menu { transform-origin: top right; }
+[dir="rtl"] .lang-menu { transform-origin: top left; }
+
+/* 4 · DAUERN
+   Ein- und Ausklappen lag bei 400–450 ms. Für ein Bedienelement ist das zu
+   träge; 150–250 ms ist der Bereich, in dem es noch als unmittelbar gilt.
+   Der Schubladen-Übergang im Handymenü darf länger bleiben – Schubladen
+   dürfen 200–500 ms brauchen. */
+.faq-a { transition: grid-template-rows 240ms var(--ease); }
+
+/* 5 · WENIGER BEWEGUNG
+   Reduzierte Bewegung heißt weniger und sanfter, nicht gar nichts:
+   Farbe und Deckkraft bleiben, Verschiebung und Skalierung fallen weg. */
+@media (prefers-reduced-motion: reduce) {
+  .btn:active, .lang-btn:active, .faq-q:active, .lang-card:active,
+  .wa-float:active, .p-mehr > summary:active { transform: none; }
+}
+
+/* ---------- Auswahlfarbe ---------- */
+::selection { background: rgba(13, 110, 136, .16); color: var(--text); }
+
+/* ==========================================================================
+   REIHENFOLGE NACH VORBILD CERTA
+   --------------------------------------------------------------------------
+   Gemessen auf certa-gutachten.de: Preise stehen dort an Position 3 bei rund
+   1.400 px, „wer wir sind" an Position 2. Hier standen die Preise an Position 6
+   bei 5.800 px und „Über uns" an Position 6. Das ist der Kern des Unterschieds.
+
+   Übernommen wird die Logik, nicht die Reihenfolge eins zu eins – und zwar aus
+   einem Grund: CERTA verkauft eine BEKANNTE Leistung. Wer „Immobilienbewertung"
+   googelt, weiß schon, was er will, dort darf der Preis sofort kommen.
+   Ein technischer Kaufcheck ist in der Türkei dagegen unbekannt. Fiele der
+   Problem-Abschnitt weg, stünde der Preis vor der Frage „wozu überhaupt?" –
+   und eine Zahl ohne Anlass vergleicht der Leser mit nichts.
+
+   Deshalb: Problem bleibt vorn (kurz), danach sofort Vertrauen und Preis.
+       Hero → Problem → Wer prüft → PREISE → Leistungen → Für wen
+       → Ablauf → Technik → Stimmen → Fragen → Kontakt → Firmen
+
+   PREISE STEHEN VOR DEN LEISTUNGEN – das ist der eigentliche Certa-Griff.
+   Dort heißt der Abschnitt „Unsere Leistungen und Preise" und ist EIN Block.
+   Hier geht das genauso auf, weil die Paketkarten den Umfang bereits
+   auflisten („Sichtprüfung, Wärmebild-Scan, Feuchtecheck, Bericht als PDF").
+   Wer nur die Karten liest, weiß genug zum Anfragen. Der Leistungsabschnitt
+   ist danach die Vertiefung für alle, die es genauer wissen wollen – und
+   nicht mehr die 2,8 Bildschirme hohe Hürde davor.
+
+   Preise wandern damit von Bildschirm 6,5 auf rund 3,5.
+   Umkehren: diesen Block löschen, dann gilt wieder styles.css.
+   ========================================================================== */
+/* Neu sortiert am 02.08.2026 – die Seite erzählt jetzt eine Geschichte
+   von oben nach unten, statt Abschnitte nach Wichtigkeit zu stapeln:
+
+     1 Warum      Worum geht es überhaupt? (Problem)
+     2 Für wen    Bin ich gemeint?
+     3 Über mich  Wer macht das – und warum unabhängig?
+     4 Leistungen Was genau wird geprüft?
+     5 Pakete     Was kostet es?
+     6 Ablauf     Wie läuft es ab?
+     7 Technik    Womit wird gearbeitet?
+     8 Für Firmen andere Zielgruppe, deshalb spät
+     9 Kontakt    die Anfrage
+    10 FAQ        Nachschlagewerk ganz unten, direkt über dem Fuß
+
+   Die Fragen stehen bewusst ZULETZT: Wer bis dorthin liest, sucht gezielt
+   eine Antwort – das ist ein Nachschlagewerk, kein Teil der Erzählung. */
+/* Neue Reihenfolge ab 05.08.2026: Direkt nach dem Hero kommt, was wir
+   tatsächlich machen – mit den Videos. Danach, wer dahintersteht. Erst
+   dann die Einordnung (warum, für wen) und die Preise. */
+#leistungen, #services, #hizmetler, #uslugi                      { order: 1; }
+#ueber, #about, #hakkimizda, #o-nas                              { order: 2; }
+#warum, #why, #neden, #pochemu                                   { order: 3; }
+#fuer-wen, #for-whom, #kimler-icin, #dlya-kogo                   { order: 4; }
+#pakete, #packages, #paketler, #pakety                           { order: 5; }
+#einfach                                                         { order: 6; }
+/* Der eigene Technik-Abschnitt (order 7) ist entfallen – die Gerätedaten
+   stehen jetzt in den Leistungskarten. Die Nummer bleibt frei. */
+#stimmen                                                         { order: 8; }
+#firmen, #business, #kurumsal, #biznes                           { order: 9; }
+#kontakt, #contact, #iletisim                                    { order: 10; }
+#faq, #sss                                                       { order: 11; }
+.brand-band                                                      { order: 12; }
+
+/* Abwechselnder Grund, der neuen Reihenfolge folgend – sonst stünden zwei
+   graue Abschnitte nebeneinander. */
+/* Abwechselnd, der neuen Reihenfolge folgend:
+   leistungen(grau) · über(hell) · warum(grau) · für-wen(hell) · pakete(grau)
+   · ablauf(hell) · firmen(petrol) · kontakt(hell) · faq(grau) */
+#ueber, #about, #hakkimizda, #o-nas,
+#fuer-wen, #for-whom, #kimler-icin, #dlya-kogo,
+#einfach,
+#kontakt, #contact, #iletisim { background: var(--bg); }
+
+#leistungen, #services, #hizmetler, #uslugi,
+#warum, #why, #neden, #pochemu,
+#pakete, #packages, #paketler, #pakety,
+#stimmen,
+#faq, #sss { background: var(--bg2); }
+
+/* ⚠️ #firmen war der einzige Abschnitt, der beim Umbau durchgerutscht ist.
+   Er hatte KEINE background-color, sondern einen dunklen VERLAUF aus dem
+   alten Entwurf: linear-gradient(rgba(16,24,39,.85), …) mit violettem
+   Schleier. Darauf stand nach dem Umbau dunkle Schrift – unlesbar.
+
+   Warum es die Kontrollmessung nicht gefunden hat: Sie las nur
+   `background-color`. Die war transparent, also lief die Suche weiter nach
+   oben und fand den hellen Seitenhintergrund – rechnerisch alles in Ordnung,
+   sichtbar nicht. Wer hier nachmisst, muss `background-image` mitlesen.
+
+   Der Firmen-Bereich behält bewusst einen eigenen Ton: andere Zielgruppe,
+   also darf er sich absetzen – nur eben hell.
+
+   Nachtrag: Das Grau (--bg2) war rechnerisch in Ordnung, wurde aber weiter
+   als grauer, schwer lesbarer Kasten wahrgenommen. Deshalb jetzt ein heller
+   Petrol-Ton statt Grau – erkennbar eine eigene Farbe – und die Fließtexte
+   im Abschnitt eine Stufe dunkler als das übliche --muted. */
+#firmen, #business, #kurumsal, #biznes {
+  background: #E7F0F3;
+  background-image: none;
+  border-top: 1px solid #CBDDE3;
+  border-bottom: 1px solid #CBDDE3;
+}
+#firmen::before, #business::before, #kurumsal::before, #biznes::before { display: none; }
+
+/* Die sechs goldenen Sterne im Fuß (und im ausgeblendeten Marken-Band) sind
+   raus. Sie waren als Zierde gemeint, lesen sich neben dem Firmennamen aber
+   wie eine Fünf-Sterne-Bewertung – eine Behauptung, die es nicht gibt. */
+.footer-stars, .bb-stars { display: none; }
+
+/* Auf sehr schmalen Geräten (320 px, iPhone SE) standen zwei Kacheln der
+   Zahlenleiste 2 px über den Rand. Kein Scrollbalken, aber angeschnitten. */
+@media (max-width: 360px) {
+  .stats-grid { gap: 10px; }
+  .stat { min-width: 0; }
+  .stat-label { overflow-wrap: anywhere; }
+}
+
+/* Das Badge nennt wieder Ort und Leistung ("Antalya · Alanya · Technische
+   Immobilienprüfung vor dem Kauf"). Das ist auf dem Handy zu lang und brach
+   auf drei Zeilen. Etwas kleiner gesetzt passt es auf zwei. */
+@media (max-width: 620px) {
+  .hero-badge {
+    font-size: 0.72rem;
+    letter-spacing: 0.02em;
+    line-height: 1.45;
+    padding-top: 7px; padding-bottom: 7px;
+  }
+}
+
+/* ---------- Wärmebild-Video in der Leistung ----------
+   Steht unter der Illustration und erklärt sich über die Bildunterschrift
+   selbst – ein Wärmebild braucht keine Tonspur, um zu wirken.
+   preload="none" im HTML sorgt dafür, dass die Datei erst geladen wird,
+   wenn jemand auf Abspielen drückt. */
+/* Das Video steht jetzt anstelle der Illustration und läuft von selbst –
+   stumm und in Schleife, wie ein bewegtes Bild. Deshalb kein Rand oben. */
+.wb-video { margin: 0; }
+/* Die Aufnahme ist hochkant (720×1280, mit dem Telefon gefilmt). Ohne
+   Begrenzung würde sie über 600 px hoch und schöbe alles andere weg –
+   deshalb über die Höhe begrenzen und mittig setzen. */
+/* Kein dunkler Kasten mehr hinter dem Video: Wenn eine Aufnahme schwarze
+   Balken mitbringt, misst main.js sie aus und setzt das Seitenverhältnis
+   auf das echte Bild – object-fit schneidet den Rest weg. Damit bleibt
+   nichts Schwarzes übrig, das noch hinterlegt werden müsste. */
+.wb-video video {
+  display: block; margin: 0 auto;
+  max-height: 560px; width: auto; max-width: 100%; height: auto;
+  object-fit: cover;
+  border-radius: 14px; border: 1px solid var(--line);
+  background: transparent; box-shadow: var(--shadow);
+}
+@media (max-width: 860px) {
+  .wb-video video { max-height: 420px; }
+}
+/* Hochkant-Aufnahmen lassen in einer breiten Spalte viel Luft. Ab Tablet
+   steht die Erklärung deshalb NEBEN dem Video statt darunter – dann füllt
+   das Paar die Spalte und wirkt nicht verloren.
+   Bei Querformat gilt das Gegenteil: Das Video nimmt die volle Breite, die
+   Erklärung steht darunter. Welcher Fall vorliegt, trägt main.js nach dem
+   Laden als Klasse ein – die Dateien lassen sich also jederzeit gegen
+   andere Formate tauschen, ohne dass hier etwas anzupassen wäre. */
+@media (min-width: 861px) {
+  .wb-video.hochkant {
+    display: grid; grid-template-columns: minmax(0, 300px) minmax(0, 1fr);
+    gap: 20px; align-items: start;
+  }
+  .wb-video.hochkant video { max-height: 520px; margin: 0; }
+  .wb-video.hochkant figcaption { margin-top: 0; }
+}
+.wb-video.quer video { max-height: none; width: 100%; }
+/* Wer in den Systemeinstellungen weniger Bewegung angefordert hat, bekommt
+   das Video nicht automatisch abgespielt, sondern mit Bedienleiste. Das
+   schaltet main.js um; hier nur der Fall ohne JavaScript. */
+@media (prefers-reduced-motion: reduce) {
+  .wb-video video { animation: none; }
+}
+.wb-video figcaption {
+  display: block; margin-top: 12px;
+  padding: 14px 16px; border-radius: 12px;
+  background: var(--panel); border: 1px solid var(--line);
+  font-size: 0.88rem; line-height: 1.6;
+}
+.wb-video figcaption b { display: block; color: var(--text); font-weight: 700; }
+.wb-video figcaption em {
+  display: block; margin-top: 2px; font-style: normal;
+  font-size: 0.78rem; color: var(--muted);
+}
+.wb-video figcaption span { display: block; margin-top: 8px; color: #33475E; }
+.wb-video figcaption small {
+  display: block; margin-top: 10px; padding-top: 9px;
+  border-top: 1px solid var(--line-soft);
+  font-size: 0.79rem; color: var(--muted);
+}
+
+/* ---------- Leistungen und Vorstellung eindampfen ----------
+   Sichtbar bleibt Überschrift und erklärender Absatz. Häkchen, Gerätedaten
+   und Hinweiskasten liegen hinter einem Klick – derselbe Mechanismus wie
+   beim Firmen-Bereich, nur als schlichter Textschalter. main.js baut die
+   Hüllen nachträglich; ohne JavaScript steht alles offen da. */
+.svc-klapp > summary,
+.person-klapp > summary {
+  display: inline-flex; align-items: center; gap: 8px; cursor: pointer;
+  list-style: none; margin-top: 6px; padding: 9px 2px;
+  font-family: var(--font-display); font-size: 0.92rem; font-weight: 600;
+  color: var(--cyan);
+  transition: color 200ms var(--ease);
+}
+.svc-klapp > summary::-webkit-details-marker,
+.person-klapp > summary::-webkit-details-marker { display: none; }
+.svc-klapp > summary::after,
+.person-klapp > summary::after {
+  content: ""; width: 8px; height: 8px; flex: none;
+  border-right: 2px solid currentColor; border-bottom: 2px solid currentColor;
+  transform: rotate(45deg) translate(-2px, -2px);
+  transition: transform 250ms var(--ease);
+}
+.svc-klapp[open] > summary::after,
+.person-klapp[open] > summary::after { transform: rotate(-135deg) translate(-2px, -2px); }
+.svc-klapp > summary:hover,
+.person-klapp > summary:hover { color: var(--text); }
+.svc-klapp > summary:focus-visible,
+.person-klapp > summary:focus-visible { outline: 2px solid var(--cyan); outline-offset: 3px; border-radius: 4px; }
+.svc-klapp[open] > summary,
+.person-klapp[open] > summary { margin-bottom: 6px; }
+/* Der innere "Alle Leistungen"-Schalter säße sonst direkt unter dem äußeren. */
+.svc-klapp .mehr { margin-top: 4px; }
+@media (hover: none) and (pointer: coarse) {
+  .svc-klapp > summary, .person-klapp > summary { min-height: 44px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .svc-klapp > summary, .svc-klapp > summary::after,
+  .person-klapp > summary, .person-klapp > summary::after { transition: none; }
+}
+
+/* ---------- Nur Handy: "Weitere Informationen" ----------
+   Auf dem Desktop steht alles offen; diese Hülle baut main.js nur, wenn
+   der Bildschirm schmal ist. Sichtbar bleiben Überschrift, Beschreibung,
+   Video und Bildunterschrift – der Rest liegt hinter einem Klick. */
+.mobil-mehr > summary {
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  cursor: pointer; list-style: none;
+  margin-top: 14px; padding: 13px 16px;
+  border: 1px solid #CBDDE3; border-radius: 999px; background: #F2F8FA;
+  font-family: var(--font-display); font-size: 0.92rem; font-weight: 600;
+  color: var(--cyan); min-height: 44px;
+}
+.mobil-mehr > summary::-webkit-details-marker { display: none; }
+.mobil-mehr > summary::after {
+  content: ""; width: 8px; height: 8px; flex: none;
+  border-right: 2px solid currentColor; border-bottom: 2px solid currentColor;
+  transform: rotate(45deg) translate(-2px, -2px);
+  transition: transform 250ms var(--ease);
+}
+.mobil-mehr[open] > summary::after { transform: rotate(-135deg) translate(-2px, -2px); }
+.mobil-mehr[open] > summary { margin-bottom: 14px; }
+.mobil-mehr > summary:focus-visible { outline: 2px solid var(--cyan); outline-offset: 3px; }
+@media (prefers-reduced-motion: reduce) {
+  .mobil-mehr > summary::after { transition: none; }
+}
+
+/* ---------- Firmen-Abschnitt als Aufklapper ----------
+   Der Bereich richtet sich an einen Bruchteil der Besucher. Zugeklappt steht
+   dort nur noch eine anklickbare Zeile; der private Käufer scrollt vorbei
+   statt an drei Karten für Makler und Architekten. Die Hülle baut main.js
+   nachträglich – ohne JavaScript bleibt alles offen und lesbar. */
+.firmen-klapp > summary {
+  display: flex; align-items: center; justify-content: center; gap: 12px;
+  cursor: pointer; list-style: none;
+  margin: 4px auto 0; max-width: 460px;
+  padding: 15px 26px; border-radius: 999px;
+  border: 1px solid #BBD3DB; background: #FFF;
+  font-family: var(--font-display); font-size: 1rem; font-weight: 600;
+  color: var(--cyan); text-align: center;
+  transition: transform 140ms var(--ease), border-color 200ms var(--ease), background 200ms var(--ease);
+}
+.firmen-klapp > summary::-webkit-details-marker { display: none; }
+.firmen-klapp > summary::after {
+  content: ""; width: 9px; height: 9px; flex: none;
+  border-right: 2px solid currentColor; border-bottom: 2px solid currentColor;
+  transform: rotate(45deg) translate(-2px, -2px);
+  transition: transform 250ms var(--ease);
+}
+.firmen-klapp[open] > summary::after { transform: rotate(-135deg) translate(-2px, -2px); }
+.firmen-klapp > summary:hover { border-color: var(--cyan); background: #F2F8FA; }
+.firmen-klapp > summary:active { transform: scale(.98); }
+.firmen-klapp > summary:focus-visible { outline: 2px solid var(--cyan); outline-offset: 3px; }
+.firmen-klapp[open] > summary { margin-bottom: 30px; }
+
+/* Innerhalb: jede Zielgruppe einzeln, dezenter als der Hauptschalter. */
+.b2b-klapp > summary {
+  display: inline-flex; align-items: center; gap: 8px; cursor: pointer;
+  list-style: none; padding: 9px 2px; margin-top: 4px;
+  font-family: var(--font-display); font-size: 0.9rem; font-weight: 600;
+  color: var(--cyan);
+}
+.b2b-klapp > summary::-webkit-details-marker { display: none; }
+.b2b-klapp > summary::after {
+  content: ""; width: 8px; height: 8px; flex: none;
+  border-right: 2px solid currentColor; border-bottom: 2px solid currentColor;
+  transform: rotate(45deg) translate(-2px, -2px);
+  transition: transform 250ms var(--ease);
+}
+.b2b-klapp[open] > summary::after { transform: rotate(-135deg) translate(-2px, -2px); }
+.b2b-klapp > summary:hover { color: var(--text); }
+.b2b-klapp > summary:focus-visible { outline: 2px solid var(--cyan); outline-offset: 3px; border-radius: 4px; }
+@media (hover: none) and (pointer: coarse) {
+  .firmen-klapp > summary, .b2b-klapp > summary { min-height: 44px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .firmen-klapp > summary, .firmen-klapp > summary::after,
+  .b2b-klapp > summary::after { transition: none; }
+}
+
+/* Fließtext im Firmen-Abschnitt: --muted (#526780) käme auf 5,0:1 und wäre
+   formal AA, wirkt auf der Fläche aber blass. #33475E ergibt 8,2:1. */
+#firmen, #business, #kurumsal, #biznes { color: var(--text); }
+#firmen .lead, #business .lead, #kurumsal .lead, #biznes .lead,
+#firmen p, #business p, #kurumsal p, #biznes p,
+#firmen .feat, #business .feat, #kurumsal .feat, #biznes .feat,
+#firmen .b2b-out, #business .b2b-out, #kurumsal .b2b-out, #biznes .b2b-out,
+#firmen .b2b-preis, #business .b2b-preis, #kurumsal .b2b-preis, #biznes .b2b-preis {
+  color: #33475E;
+}
+#firmen h2, #business h2, #kurumsal h2, #biznes h2,
+#firmen h3, #business h3, #kurumsal h3, #biznes h3,
+#firmen b, #business b, #kurumsal b, #biznes b,
+#firmen .b2b-role, #business .b2b-role, #kurumsal .b2b-role, #biznes .b2b-role {
+  color: var(--text);
+}
+/* Die weißen Karten heben sich auf dem Petrol-Ton flacher ab als auf Grau –
+   deshalb eine etwas deutlichere Kante. */
+#firmen .b2b-card, #business .b2b-card, #kurumsal .b2b-card, #biznes .b2b-card {
+  border-color: #CBDDE3;
+  border-top: 3px solid var(--cyan);
+}
+#firmen .card-icon, #business .card-icon, #kurumsal .card-icon, #biznes .card-icon {
+  background: #F2F8FA; border-color: #CBDDE3;
+}
+
+/* styles.css setzt beim aktiven Sprach-Chip der Mobil-Navigation fast
+   schwarze Schrift. Das passte zum hellen Cyan des Dunkeldesigns; auf dem
+   Petrol der hellen Variante sind es nur 2,8:1. */
+.mn-langs a.active { color: #FFF; }
+
+/* Die Gerätenummern standen auf --line: 1,3:1. Als 48px-Ziffer sind 3:1
+   gefordert – #7A8CA0 liefert 3,1:1 und bleibt dezent. */
+.device-frame .df-num { color: #7A8CA0; }
