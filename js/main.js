@@ -290,9 +290,16 @@ var CPC_FOTOS = {
      Fall vollständig im Quelltext – auch für Suchmaschinen.
 
      Der erste Block ist offen. Ein Stapel aus lauter zugeklappten Zeilen
-     sieht aus wie ein Inhaltsverzeichnis, nicht wie ein Angebot. */
-  var leistungen = Array.prototype.slice.call(
-    document.querySelectorAll("#leistungen .service, #services .service, #hizmetler .service, #uslugi .service")
+     sieht aus wie ein Inhaltsverzeichnis, nicht wie ein Angebot.
+
+     NACHTRAG 10.08.2026: Auf der eigenen Seite leistungen.html wird NICHT
+     mehr zusammengeklappt. Dort ist der Inhalt der Zweck der Seite - wer
+     sie oeffnet, will die Leistungen sehen und nicht fuenf geschlossene
+     Zeilen. Das Zusammenklappen bleibt nur dort sinnvoll, wo die
+     Leistungen ein Abschnitt unter vielen sind. */
+  var aufLeistungsseite = /(^|\/)leistungen\.html$/.test(location.pathname);
+  var leistungen = aufLeistungsseite ? [] : Array.prototype.slice.call(
+    document.querySelectorAll("#leistungen .service, #services .service, #hizmetler .service, #uslugi .service, #leistungen-detail .service")
   );
 
   leistungen.forEach(function (block, nr) {

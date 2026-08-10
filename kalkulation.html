@@ -201,9 +201,9 @@
       <div class="card">
         <h2>2 · Paket wählen (setzt die Häkchen unten)</h2>
         <div class="pkgs">
-          <button class="pkg" data-pkg="basis"><b>Basis-Check</b><span>ab 179 € · Sicht + Wärmebild</span></button>
-          <button class="pkg" data-pkg="komplett"><b>Komplett-Check</b><span>ab 299 € · + 3D &amp; Maße</span></button>
-          <button class="pkg" data-pkg="premium"><b>Premium 360°</b><span>ab 429 € · + Drohne &amp; Rundgang</span></button>
+          <button class="pkg" data-pkg="basis"><b>Immobilien-Check S</b><span>ab 199 € · bis 80 m²</span></button>
+          <button class="pkg" data-pkg="komplett"><b>Immobilien-Check M</b><span>ab 349 € · bis 130 m²</span></button>
+          <button class="pkg" data-pkg="premium"><b>Immobilien-Check L</b><span>ab 499 € · bis 200 m²</span></button>
           <button class="pkg" data-pkg="makler"><b>Makler-Paket</b><span>ab 249 € · Rundgang + Grundriss</span></button>
           <button class="pkg" data-pkg="frei"><b>Frei zusammenstellen</b><span>nur Einzelleistungen</span></button>
         </div>
@@ -223,7 +223,7 @@
         </div>
         <div class="row">
           <label class="f">Objekt / Kunde<input type="text" id="nk_name" placeholder="z. B. Villa Kargicak"></label>
-          <label class="f">Berechnet €<input type="number" id="nk_preis" step="10" placeholder="299"></label>
+          <label class="f">Berechnet €<input type="number" id="nk_preis" step="10" placeholder="349"></label>
           <label class="f">Anfahrt Std.<input type="number" id="nk_fahrt" step="0.25" placeholder="1"></label>
           <label class="f">Vor Ort Std.<input type="number" id="nk_ort" step="0.25" placeholder="3"></label>
           <label class="f">Bericht Std.<input type="number" id="nk_ber" step="0.25" placeholder="2.5"></label>
@@ -324,7 +324,7 @@ var KM_FREI     = 20;      // erste x km inklusive (einfache Strecke)
 var LEISTUNGEN = [
   { gr:"3D-Scan & Aufmaß", items:[
     { id:"l3d",   nm:"3D-Scan Innenräume (Matterport)", sub:"alle Räume innen, Grundriss & begehbares Modell", eur:149, min_ort:45, min_ber:30 },
-    { id:"lplan", nm:"Maßhaltiger Grundriss aus dem Scan", sub:"Raummaße & Fläche je Zimmer", eur:59, min_ort:0, min_ber:35 },
+    { id:"lplan", nm:"Maßstabsgetreuer Grundriss (Maße per Laser)", sub:"Raummaße & Fläche je Zimmer", eur:59, min_ort:0, min_ber:35 },
     { id:"ltour", nm:"360°-Rundgang", sub:"Link zum Einbetten, 6 Monate online", eur:49, min_ort:0, min_ber:20 },
     { id:"lqm",   nm:"m²-Abgleich mit Kaufvertrag/Exposé", sub:"schriftliche Gegenüberstellung", eur:39, min_ort:10, min_ber:25 },
     { id:"leben", nm:"Ebenheit & Lot (Laser-Stichproben)", sub:"Estrich, Flucht, Winkel", eur:49, min_ort:20, min_ber:20 },
@@ -356,9 +356,9 @@ var LEISTUNGEN = [
 ];
 
 var PAKETE = {
-  basis:    { nm:"Basis-Check",    eur:179, bis:80,  ids:["lwb","lel","lfoto","lkurz"] },
-  komplett: { nm:"Komplett-Check", eur:299, bis:130, ids:["l3d","lplan","lqm","leben","lgef","lwb","lel","lfen","lfoto","lvoll"] },
-  premium:  { nm:"Premium 360°",   eur:429, bis:200, ids:["l3d","lplan","ltour","lqm","leben","lgef","laus","lwb","lel","lfen","ldr","lvid","lfoto","lvoll","lcall"] },
+  basis:    { nm:"Immobilien-Check S", eur:199, bis:80,  ids:["l3d","lplan","lqm","leben","lgef","lwb","lel","lfen","lfoto","lvoll"] },
+  komplett: { nm:"Immobilien-Check M", eur:349, bis:130, ids:["l3d","lplan","lqm","leben","lgef","lwb","lel","lfen","lfoto","lvoll"] },
+  premium:  { nm:"Immobilien-Check L", eur:499, bis:200, ids:["l3d","lplan","lqm","leben","lgef","lwb","lel","lfen","lfoto","lvoll"] },
   makler:   { nm:"Makler-Paket",   eur:249, bis:130, ids:["l3d","lplan","ltour","lfoto","bexpo"] },
   frei:     { nm:"Individuell",    eur:0,   bis:80,  ids:[] }
 };
@@ -601,7 +601,8 @@ document.getElementById("nk_add").addEventListener("click", function(){
   document.getElementById(id).addEventListener("change", rechne);
 });
 
-/* Start: Komplett-Check vorauswählen */
+/* Start: Immobilien-Check M vorauswählen (der Schlüssel heißt weiterhin
+   "komplett" – nur die Anzeige wurde auf S/M/L umgestellt) */
 document.querySelector('.pkg[data-pkg="komplett"]').click();
 zeichneListe();
 </script>
