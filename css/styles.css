@@ -2184,15 +2184,14 @@ body.splash-page { display: flex; flex-direction: column; min-height: 100svh; }
   align-items: start;
 }
 
-/* Das Visual laeuft beim Lesen mit, statt am oberen Rand zu
-   verschwinden. Nur ab Zweispaltigkeit - einspaltig waere es
-   stoerend. */
-@media (min-width: 1081px) {
-  .service-visual {
-    position: sticky;
-    top: calc(var(--header-h) + 22px);
-  }
-}
+/* Das Visual lief beim Lesen mit (position: sticky), solange dort nur
+   Video und Geraetebox standen - rund 420 px und damit gut unter der
+   Fensterhoehe. Seit die Hinweiskaesten mit in der Bildspalte stehen,
+   ist sie 850 bis 1040 px hoch. Ein sticky Element, das nicht ins
+   Fenster passt, klebt oben fest und sein unteres Ende bleibt beim
+   Scrollen unerreichbar - der Hinweiskasten waere nie ganz lesbar.
+   Deshalb laeuft die Spalte jetzt normal mit. */
+.service-visual { position: relative; }
 
 /* Die Illustration im letzten Block war nur halb so hoch wie
    die Videos daneben. */

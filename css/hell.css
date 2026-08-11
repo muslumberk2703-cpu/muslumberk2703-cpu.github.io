@@ -1006,3 +1006,29 @@ details.size-note > summary:active { transform: scale(.97); }
   .addon-liste li { grid-template-columns: 1fr; }
   .a-preis { grid-column: 1; grid-row: auto; margin-top: 3px; }
 }
+
+/* ==========================================================================
+   CLAIM-ZEILE IM HERO
+   --------------------------------------------------------------------------
+   Die alte H1 "Sie sind nicht vor Ort. Wir sind es." benannte das Geschaeft
+   noch mit. Der neue Satz "Vertrauen ist gut, Kontrolle ist besser." ist
+   reiner Anspruch - wer die Seite zum ersten Mal sieht, weiss danach nicht,
+   was hier verkauft wird. Diese Zeile schliesst die Luecke: sie steht direkt
+   unter der Ueberschrift, deutlich groesser als der Fliesstext, und nennt
+   Leistung und Ort. border-inline-start statt border-left, damit die Kante
+   im Arabischen von selbst auf die andere Seite wandert.
+   -------------------------------------------------------------------------- */
+.hero-claim {
+  font-family: var(--font-display);
+  font-size: clamp(1.12rem, 2vw, 1.4rem);
+  font-weight: 600;
+  line-height: 1.45;
+  color: var(--text);
+  max-width: 620px;
+  margin: -4px 0 22px;
+  padding-inline-start: 15px;
+  border-inline-start: 3px solid var(--cyan);
+  animation: heroIn .5s var(--ease) both;
+  animation-delay: .14s;
+}
+@media (prefers-reduced-motion: reduce) { .hero-claim { animation: none; } }
